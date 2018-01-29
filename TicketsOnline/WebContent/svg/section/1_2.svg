@@ -1,0 +1,2354 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+   sodipodi:docname="1_1.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="184.61242"
+     inkscape:cy="730.48771"
+     inkscape:document-units="mm"
+     inkscape:current-layer="svg8"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:measure-start="0,0"
+     inkscape:measure-end="0,0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <ellipse
+     id="2_A_1"
+     cx="17.792419"
+     cy="40.365898"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-1">
+    <desc
+       id="desc14">Asiento 2-A-1</desc>
+    <title
+       id="title12">Asiento 2-A-1</title>
+  </ellipse>
+  <ellipse
+     id="2_A_2"
+     cx="30.454622"
+     cy="40.365898"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-2">
+    <desc
+       id="desc36">Asiento 2-A-2</desc>
+    <title
+       id="title38">Asiento 2-A-2</title>
+  </ellipse>
+  <ellipse
+     id="2_A_3"
+     cx="43.683788"
+     cy="40.743874"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-3">
+    <desc
+       id="desc41">Asiento 2-A-3</desc>
+    <title
+       id="title43">Asiento 2-A-3</title>
+  </ellipse>
+  <ellipse
+     id="2_A_4"
+     cx="54.6451"
+     cy="40.365898"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-4">
+    <desc
+       id="desc53">Asiento 2-A-4</desc>
+    <title
+       id="title55">Asiento 2-A-4</title>
+  </ellipse>
+  <ellipse
+     id="2_A_5"
+     cx="69.413033"
+     cy="39.485809"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-5">
+    <desc
+       id="desc58">Asiento 2-A-5</desc>
+    <title
+       id="title60">Asiento 2-A-5</title>
+  </ellipse>
+  <ellipse
+     id="2_A_6"
+     cx="115.90775"
+     cy="43.038593"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-6">
+    <desc
+       id="desc63">Asiento 2-A-6</desc>
+    <title
+       id="title65">Asiento 2-A-6</title>
+  </ellipse>
+  <ellipse
+     id="2_A_7"
+     cx="141.56563"
+     cy="43.573132"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-7">
+    <desc
+       id="desc842">Asiento 2-A-7</desc>
+    <title
+       id="title844">Asiento 2-A-7</title>
+  </ellipse>
+  <ellipse
+     id="2_A_8"
+     cx="159.20541"
+     cy="43.573132"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-8">
+    <desc
+       id="desc847">Asiento 2-A-8</desc>
+    <title
+       id="title849">Asiento 2-A-8</title>
+  </ellipse>
+  <ellipse
+     id="2_A_9"
+     cx="37.330513"
+     cy="58.005688"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-9">
+    <desc
+       id="desc852">Asiento 2-A-9</desc>
+    <title
+       id="title854">Asiento 2-A-9</title>
+  </ellipse>
+  <ellipse
+     id="2_A_10"
+     cx="51.763065"
+     cy="56.936611"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-10">
+    <desc
+       id="desc857">Asiento 2-A-10</desc>
+    <title
+       id="title859">Asiento 2-A-10</title>
+  </ellipse>
+  <ellipse
+     id="2_A_11"
+     cx="63.522926"
+     cy="56.936607"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-11">
+    <desc
+       id="desc862">Asiento 2-A-11</desc>
+    <title
+       id="title864">Asiento 2-A-11</title>
+  </ellipse>
+  <ellipse
+     id="2_A_12"
+     cx="76.886406"
+     cy="59.074764"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-12">
+    <desc
+       id="desc867">Asiento 2-A-12</desc>
+    <title
+       id="title869">Asiento 2-A-12</title>
+  </ellipse>
+  <ellipse
+     id="2_A_13"
+     cx="89.180801"
+     cy="58.540226"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-13">
+    <desc
+       id="desc872">Asiento 2-A-13</desc>
+    <title
+       id="title874">Asiento 2-A-13</title>
+  </ellipse>
+  <ellipse
+     id="2_A_14"
+     cx="104.68243"
+     cy="60.143845"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-14">
+    <desc
+       id="desc877">Asiento 2-A-14</desc>
+    <title
+       id="title879">Asiento 2-A-14</title>
+  </ellipse>
+  <ellipse
+     id="2_A_15"
+     cx="122.32222"
+     cy="63.351078"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-15">
+    <desc
+       id="desc882">Asiento 2-A-15</desc>
+    <title
+       id="title884">Asiento 2-A-15</title>
+  </ellipse>
+  <ellipse
+     id="2_A_16"
+     cx="143.16925"
+     cy="64.954697"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-16">
+    <desc
+       id="desc887">Asiento 2-A-16</desc>
+    <title
+       id="title889">Asiento 2-A-16</title>
+  </ellipse>
+  <ellipse
+     id="2_A_17"
+     cx="164.55081"
+     cy="65.489235"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-17">
+    <desc
+       id="desc892">Asiento 2-A-17</desc>
+    <title
+       id="title894">Asiento 2-A-17</title>
+  </ellipse>
+  <ellipse
+     id="2_A_18"
+     cx="28.777887"
+     cy="71.903702"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-18">
+    <desc
+       id="desc897">Asiento 2-A-18</desc>
+    <title
+       id="title899">Asiento 2-A-18</title>
+  </ellipse>
+  <ellipse
+     id="2_A_19"
+     cx="44.81406"
+     cy="69.765549"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-19">
+    <desc
+       id="desc902">Asiento 2-A-19</desc>
+    <title
+       id="title904">Asiento 2-A-19</title>
+  </ellipse>
+  <ellipse
+     id="2_A_20"
+     cx="57.108459"
+     cy="72.972778"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-20">
+    <desc
+       id="desc907">Asiento 2-A-20</desc>
+    <title
+       id="title909">Asiento 2-A-20</title>
+  </ellipse>
+  <ellipse
+     id="2_A_21"
+     cx="72.610092"
+     cy="75.645477"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-21">
+    <desc
+       id="desc912">Asiento 2-A-21</desc>
+    <title
+       id="title914">Asiento 2-A-21</title>
+  </ellipse>
+  <ellipse
+     id="2_A_22"
+     cx="85.439026"
+     cy="78.318169"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-22">
+    <desc
+       id="desc917">Asiento 2-A-22</desc>
+    <title
+       id="title919">Asiento 2-A-22</title>
+  </ellipse>
+  <ellipse
+     id="2_A_23"
+     cx="99.337044"
+     cy="79.387253"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-23">
+    <desc
+       id="desc922">Asiento 2-A-23</desc>
+    <title
+       id="title924">Asiento 2-A-23</title>
+  </ellipse>
+  <ellipse
+     id="2_A_24"
+     cx="113.23506"
+     cy="78.852707"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-24">
+    <desc
+       id="desc927">Asiento 2-A-24</desc>
+    <title
+       id="title929">Asiento 2-A-24</title>
+  </ellipse>
+  <ellipse
+     id="2_A_25"
+     cx="126.59853"
+     cy="79.921791"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-25">
+    <desc
+       id="desc932">Asiento 2-A-25</desc>
+    <title
+       id="title934">Asiento 2-A-25</title>
+  </ellipse>
+  <ellipse
+     id="2_A_26"
+     cx="139.96201"
+     cy="77.249092"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-26">
+    <desc
+       id="desc937">Asiento 2-A-26</desc>
+    <title
+       id="title939">Asiento 2-A-26</title>
+  </ellipse>
+  <ellipse
+     id="2_A_27"
+     cx="152.79095"
+     cy="78.318169"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-27">
+    <desc
+       id="desc942">Asiento 2-A-27</desc>
+    <title
+       id="title944">Asiento 2-A-27</title>
+  </ellipse>
+  <ellipse
+     id="2_A_28"
+     cx="169.89619"
+     cy="78.852707"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-28">
+    <desc
+       id="desc947">Asiento 2-A-28</desc>
+    <title
+       id="title949">Asiento 2-A-28</title>
+  </ellipse>
+  <ellipse
+     id="2_A_29"
+     cx="41.606827"
+     cy="83.663559"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-29">
+    <desc
+       id="desc952">Asiento 2-A-29</desc>
+    <title
+       id="title954">Asiento 2-A-29</title>
+  </ellipse>
+  <ellipse
+     id="2_A_30"
+     cx="49.09037"
+     cy="89.008949"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-30">
+    <desc
+       id="desc957">Asiento 2-A-30</desc>
+    <title
+       id="title959">Asiento 2-A-30</title>
+  </ellipse>
+  <ellipse
+     id="2_A_31"
+     cx="63.522926"
+     cy="88.474411"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-31">
+    <desc
+       id="desc962">Asiento 2-A-31</desc>
+    <title
+       id="title964">Asiento 2-A-31</title>
+  </ellipse>
+  <ellipse
+     id="2_A_32"
+     cx="78.490021"
+     cy="88.474411"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-32">
+    <desc
+       id="desc967">Asiento 2-A-32</desc>
+    <title
+       id="title969">Asiento 2-A-32</title>
+  </ellipse>
+  <ellipse
+     id="2_A_33"
+     cx="96.129807"
+     cy="91.681648"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-33">
+    <desc
+       id="desc972">Asiento 2-A-33</desc>
+    <title
+       id="title974">Asiento 2-A-33</title>
+  </ellipse>
+  <ellipse
+     id="2_A_34"
+     cx="112.70052"
+     cy="93.819801"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-34">
+    <desc
+       id="desc977">Asiento 2-A-34</desc>
+    <title
+       id="title979">Asiento 2-A-34</title>
+  </ellipse>
+  <ellipse
+     id="2_A_35"
+     cx="127.66761"
+     cy="92.750725"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-35">
+    <desc
+       id="desc982">Asiento 2-A-35</desc>
+    <title
+       id="title984">Asiento 2-A-35</title>
+  </ellipse>
+  <ellipse
+     id="2_A_36"
+     cx="140.49655"
+     cy="93.285263"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-36">
+    <desc
+       id="desc987">Asiento 2-A-36</desc>
+    <title
+       id="title989">Asiento 2-A-36</title>
+  </ellipse>
+  <ellipse
+     id="2_A_37"
+     cx="152.79095"
+     cy="92.216187"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-37">
+    <desc
+       id="desc992">Asiento 2-A-37</desc>
+    <title
+       id="title994">Asiento 2-A-37</title>
+  </ellipse>
+  <ellipse
+     id="2_A_38"
+     cx="172.56889"
+     cy="91.14711"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-38">
+    <desc
+       id="desc997">Asiento 2-A-38</desc>
+    <title
+       id="title999">Asiento 2-A-38</title>
+  </ellipse>
+  <ellipse
+     id="2_A_39"
+     cx="32.716911"
+     cy="96.018204"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-39">
+    <desc
+       id="desc1002">Asiento 2-A-39</desc>
+    <title
+       id="title1004">Asiento 2-A-39</title>
+  </ellipse>
+  <ellipse
+     id="2_A_40"
+     cx="51.993698"
+     cy="100.17594"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-40">
+    <desc
+       id="desc1007">Asiento 2-A-40</desc>
+    <title
+       id="title1009">Asiento 2-A-40</title>
+  </ellipse>
+  <ellipse
+     id="2_A_41"
+     cx="64.088936"
+     cy="100.55392"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-41">
+    <desc
+       id="desc1012">Asiento 2-A-41</desc>
+    <title
+       id="title1014">Asiento 2-A-41</title>
+  </ellipse>
+  <ellipse
+     id="2_A_42"
+     cx="77.696083"
+     cy="100.55392"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-42">
+    <desc
+       id="desc1017">Asiento 2-A-42</desc>
+    <title
+       id="title1019">Asiento 2-A-42</title>
+  </ellipse>
+  <ellipse
+     id="2_A_43"
+     cx="90.925247"
+     cy="103.9557"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-43">
+    <desc
+       id="desc1022">Asiento 2-A-43</desc>
+    <title
+       id="title1024">Asiento 2-A-43</title>
+  </ellipse>
+  <ellipse
+     id="2_A_44"
+     cx="105.66632"
+     cy="103.9557"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-44">
+    <desc
+       id="desc1027">Asiento 2-A-44</desc>
+    <title
+       id="title1029">Asiento 2-A-44</title>
+  </ellipse>
+  <ellipse
+     id="2_A_45"
+     cx="118.13953"
+     cy="106.22356"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-45">
+    <desc
+       id="desc1032">Asiento 2-A-45</desc>
+    <title
+       id="title1034">Asiento 2-A-45</title>
+  </ellipse>
+  <ellipse
+     id="2_A_46"
+     cx="132.8806"
+     cy="110.3813"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-46">
+    <desc
+       id="desc1037">Asiento 2-A-46</desc>
+    <title
+       id="title1039">Asiento 2-A-46</title>
+  </ellipse>
+  <ellipse
+     id="2_A_47"
+     cx="147.62167"
+     cy="108.49142"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-47">
+    <desc
+       id="desc1042">Asiento 2-A-47</desc>
+    <title
+       id="title1044">Asiento 2-A-47</title>
+  </ellipse>
+  <ellipse
+     id="2_A_48"
+     cx="160.85083"
+     cy="107.35749"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-48">
+    <desc
+       id="desc1047">Asiento 2-A-48</desc>
+    <title
+       id="title1049">Asiento 2-A-48</title>
+  </ellipse>
+  <ellipse
+     id="2_A_49"
+     cx="176.72583"
+     cy="106.97952"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-49">
+    <desc
+       id="desc1052">Asiento 2-A-49</desc>
+    <title
+       id="title1054">Asiento 2-A-49</title>
+  </ellipse>
+  <ellipse
+     id="2_A_50"
+     cx="30.82703"
+     cy="110.75928"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-50">
+    <desc
+       id="desc1057">Asiento 2-A-50</desc>
+    <title
+       id="title1059">Asiento 2-A-50</title>
+  </ellipse>
+  <ellipse
+     id="2_A_51"
+     cx="40.654411"
+     cy="113.40511"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-51">
+    <desc
+       id="desc1062">Asiento 2-A-51</desc>
+    <title
+       id="title1064">Asiento 2-A-51</title>
+  </ellipse>
+  <ellipse
+     id="2_A_52"
+     cx="48.969887"
+     cy="113.02713"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-52">
+    <desc
+       id="desc1067">Asiento 2-A-52</desc>
+    <title
+       id="title1069">Asiento 2-A-52</title>
+  </ellipse>
+  <ellipse
+     id="2_A_53"
+     cx="59.553223"
+     cy="113.78309"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-53">
+    <desc
+       id="desc1072">Asiento 2-A-53</desc>
+    <title
+       id="title1074">Asiento 2-A-53</title>
+  </ellipse>
+  <ellipse
+     id="2_A_54"
+     cx="71.270485"
+     cy="116.80689"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-54">
+    <desc
+       id="desc1077">Asiento 2-A-54</desc>
+    <title
+       id="title1079">Asiento 2-A-54</title>
+  </ellipse>
+  <ellipse
+     id="2_A_55"
+     cx="81.853821"
+     cy="120.58665"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-55">
+    <desc
+       id="desc1082">Asiento 2-A-55</desc>
+    <title
+       id="title1084">Asiento 2-A-55</title>
+  </ellipse>
+  <ellipse
+     id="2_A_56"
+     cx="95.082985"
+     cy="120.58665"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-56">
+    <desc
+       id="desc1087">Asiento 2-A-56</desc>
+    <title
+       id="title1089">Asiento 2-A-56</title>
+  </ellipse>
+  <ellipse
+     id="2_A_57"
+     cx="105.28835"
+     cy="121.34261"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-57">
+    <desc
+       id="desc1092">Asiento 2-A-57</desc>
+    <title
+       id="title1094">Asiento 2-A-57</title>
+  </ellipse>
+  <ellipse
+     id="2_A_58"
+     cx="116.24966"
+     cy="122.09856"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-58">
+    <desc
+       id="desc1097">Asiento 2-A-58</desc>
+    <title
+       id="title1099">Asiento 2-A-58</title>
+  </ellipse>
+  <ellipse
+     id="2_A_59"
+     cx="126.07703"
+     cy="123.61047"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-59">
+    <desc
+       id="desc1102">Asiento 2-A-59</desc>
+    <title
+       id="title1104">Asiento 2-A-59</title>
+  </ellipse>
+  <ellipse
+     id="2_A_60"
+     cx="138.55025"
+     cy="123.98844"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-60">
+    <desc
+       id="desc1107">Asiento 2-A-60</desc>
+    <title
+       id="title1109">Asiento 2-A-60</title>
+  </ellipse>
+  <ellipse
+     id="2_A_61"
+     cx="156.6931"
+     cy="123.61047"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-61">
+    <desc
+       id="desc1112">Asiento 2-A-61</desc>
+    <title
+       id="title1114">Asiento 2-A-61</title>
+  </ellipse>
+  <ellipse
+     id="2_A_62"
+     cx="174.83595"
+     cy="122.47654"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-62">
+    <desc
+       id="desc1117">Asiento 2-A-62</desc>
+    <title
+       id="title1119">Asiento 2-A-62</title>
+  </ellipse>
+  <ellipse
+     id="2_A_63"
+     cx="27.803221"
+     cy="129.28011"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-63">
+    <desc
+       id="desc1122">Asiento 2-A-63</desc>
+    <title
+       id="title1124">Asiento 2-A-63</title>
+  </ellipse>
+  <ellipse
+     id="2_A_64"
+     cx="40.654411"
+     cy="129.28011"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-64">
+    <desc
+       id="desc1127">Asiento 2-A-64</desc>
+    <title
+       id="title1129">Asiento 2-A-64</title>
+  </ellipse>
+  <ellipse
+     id="2_A_65"
+     cx="51.993698"
+     cy="130.03606"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-65">
+    <desc
+       id="desc1132">Asiento 2-A-65</desc>
+    <title
+       id="title1134">Asiento 2-A-65</title>
+  </ellipse>
+  <ellipse
+     id="2_A_66"
+     cx="64.466911"
+     cy="129.28011"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-66">
+    <desc
+       id="desc1137">Asiento 2-A-66</desc>
+    <title
+       id="title1139">Asiento 2-A-66</title>
+  </ellipse>
+  <ellipse
+     id="2_A_67"
+     cx="76.562157"
+     cy="133.43785"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-67">
+    <desc
+       id="desc1142">Asiento 2-A-67</desc>
+    <title
+       id="title1144">Asiento 2-A-67</title>
+  </ellipse>
+  <ellipse
+     id="2_A_68"
+     cx="91.303223"
+     cy="134.1938"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-68">
+    <desc
+       id="desc1147">Asiento 2-A-68</desc>
+    <title
+       id="title1149">Asiento 2-A-68</title>
+  </ellipse>
+  <ellipse
+     id="2_A_69"
+     cx="106.0443"
+     cy="137.21761"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-69">
+    <desc
+       id="desc1152">Asiento 2-A-69</desc>
+    <title
+       id="title1154">Asiento 2-A-69</title>
+  </ellipse>
+  <ellipse
+     id="2_A_70"
+     cx="118.51751"
+     cy="139.48546"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-70">
+    <desc
+       id="desc1157">Asiento 2-A-70</desc>
+    <title
+       id="title1159">Asiento 2-A-70</title>
+  </ellipse>
+  <ellipse
+     id="2_A_71"
+     cx="131.74667"
+     cy="140.24141"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-71">
+    <desc
+       id="desc1162">Asiento 2-A-71</desc>
+    <title
+       id="title1164">Asiento 2-A-71</title>
+  </ellipse>
+  <ellipse
+     id="2_A_72"
+     cx="143.46393"
+     cy="137.97356"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-72">
+    <desc
+       id="desc1167">Asiento 2-A-72</desc>
+    <title
+       id="title1169">Asiento 2-A-72</title>
+  </ellipse>
+  <ellipse
+     id="2_A_73"
+     cx="158.205"
+     cy="139.86343"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-73">
+    <desc
+       id="desc1172">Asiento 2-A-73</desc>
+    <title
+       id="title1174">Asiento 2-A-73</title>
+  </ellipse>
+  <ellipse
+     id="2_A_74"
+     cx="178.23775"
+     cy="140.6194"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-74">
+    <desc
+       id="desc1177">Asiento 2-A-74</desc>
+    <title
+       id="title1179">Asiento 2-A-74</title>
+  </ellipse>
+  <ellipse
+     id="2_A_75"
+     cx="27.425245"
+     cy="143.26523"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-75">
+    <desc
+       id="desc1182">Asiento 2-A-75</desc>
+    <title
+       id="title1184">Asiento 2-A-75</title>
+  </ellipse>
+  <ellipse
+     id="2_A_76"
+     cx="36.874653"
+     cy="144.02116"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-76">
+    <desc
+       id="desc1187">Asiento 2-A-76</desc>
+    <title
+       id="title1189">Asiento 2-A-76</title>
+  </ellipse>
+  <ellipse
+     id="2_A_77"
+     cx="49.347866"
+     cy="145.15511"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-77">
+    <desc
+       id="desc1192">Asiento 2-A-77</desc>
+    <title
+       id="title1194">Asiento 2-A-77</title>
+  </ellipse>
+  <ellipse
+     id="2_A_78"
+     cx="64.466911"
+     cy="147.045"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-78">
+    <desc
+       id="desc1197">Asiento 2-A-78</desc>
+    <title
+       id="title1199">Asiento 2-A-78</title>
+  </ellipse>
+  <ellipse
+     id="2_A_79"
+     cx="78.830009"
+     cy="150.0688"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-79">
+    <desc
+       id="desc1202">Asiento 2-A-79</desc>
+    <title
+       id="title1204">Asiento 2-A-79</title>
+  </ellipse>
+  <ellipse
+     id="2_A_80"
+     cx="93.193108"
+     cy="151.95866"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-80">
+    <desc
+       id="desc1207">Asiento 2-A-80</desc>
+    <title
+       id="title1209">Asiento 2-A-80</title>
+  </ellipse>
+  <ellipse
+     id="2_A_81"
+     cx="107.93417"
+     cy="155.36046"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-81">
+    <desc
+       id="desc1212">Asiento 2-A-81</desc>
+    <title
+       id="title1214">Asiento 2-A-81</title>
+  </ellipse>
+  <ellipse
+     id="2_A_82"
+     cx="120.78537"
+     cy="156.11641"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-82">
+    <desc
+       id="desc1217">Asiento 2-A-82</desc>
+    <title
+       id="title1219">Asiento 2-A-82</title>
+  </ellipse>
+  <ellipse
+     id="2_A_83"
+     cx="132.12465"
+     cy="159.14023"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-83">
+    <desc
+       id="desc1222">Asiento 2-A-83</desc>
+    <title
+       id="title1224">Asiento 2-A-83</title>
+  </ellipse>
+  <ellipse
+     id="2_A_84"
+     cx="148.7556"
+     cy="154.60451"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-84">
+    <desc
+       id="desc1227">Asiento 2-A-84</desc>
+    <title
+       id="title1229">Asiento 2-A-84</title>
+  </ellipse>
+  <ellipse
+     id="2_A_85"
+     cx="163.49667"
+     cy="153.47058"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-85">
+    <desc
+       id="desc1232">Asiento 2-A-85</desc>
+    <title
+       id="title1234">Asiento 2-A-85</title>
+  </ellipse>
+  <ellipse
+     id="2_A_86"
+     cx="181.63953"
+     cy="156.87238"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-86">
+    <desc
+       id="desc1237">Asiento 2-A-86</desc>
+    <title
+       id="title1239">Asiento 2-A-86</title>
+  </ellipse>
+  <ellipse
+     id="2_A_87"
+     cx="20.999649"
+     cy="161.78606"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-87">
+    <desc
+       id="desc1242">Asiento 2-A-87</desc>
+    <title
+       id="title1244">Asiento 2-A-87</title>
+  </ellipse>
+  <ellipse
+     id="2_A_88"
+     cx="33.850842"
+     cy="162.16403"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-88">
+    <desc
+       id="desc1247">Asiento 2-A-88</desc>
+    <title
+       id="title1249">Asiento 2-A-88</title>
+  </ellipse>
+  <ellipse
+     id="2_A_89"
+     cx="42.922272"
+     cy="164.80988"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-89">
+    <desc
+       id="desc1252">Asiento 2-A-89</desc>
+    <title
+       id="title1254">Asiento 2-A-89</title>
+  </ellipse>
+  <ellipse
+     id="2_A_90"
+     cx="59.175247"
+     cy="167.45569"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-90">
+    <desc
+       id="desc1257">Asiento 2-A-90</desc>
+    <title
+       id="title1259">Asiento 2-A-90</title>
+  </ellipse>
+  <ellipse
+     id="2_A_91"
+     cx="76.184181"
+     cy="173.88129"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-91">
+    <desc
+       id="desc1262">Asiento 2-A-91</desc>
+    <title
+       id="title1264">Asiento 2-A-91</title>
+  </ellipse>
+  <ellipse
+     id="2_A_92"
+     cx="94.327034"
+     cy="171.99141"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-92">
+    <desc
+       id="desc1267">Asiento 2-A-92</desc>
+    <title
+       id="title1269">Asiento 2-A-92</title>
+  </ellipse>
+  <ellipse
+     id="2_A_93"
+     cx="111.33597"
+     cy="173.12534"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-93">
+    <desc
+       id="desc1272">Asiento 2-A-93</desc>
+    <title
+       id="title1274">Asiento 2-A-93</title>
+  </ellipse>
+  <ellipse
+     id="2_A_94"
+     cx="124.94311"
+     cy="173.88129"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-94">
+    <desc
+       id="desc1277">Asiento 2-A-94</desc>
+    <title
+       id="title1279">Asiento 2-A-94</title>
+  </ellipse>
+  <ellipse
+     id="2_A_95"
+     cx="142.70798"
+     cy="170.47951"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-95">
+    <desc
+       id="desc1282">Asiento 2-A-95</desc>
+    <title
+       id="title1284">Asiento 2-A-95</title>
+  </ellipse>
+  <ellipse
+     id="2_A_96"
+     cx="160.09488"
+     cy="169.72356"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-96">
+    <desc
+       id="desc1287">Asiento 2-A-96</desc>
+    <title
+       id="title1289">Asiento 2-A-96</title>
+  </ellipse>
+  <ellipse
+     id="2_A_97"
+     cx="179.37167"
+     cy="170.47951"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-97">
+    <desc
+       id="desc1292">Asiento 2-A-97</desc>
+    <title
+       id="title1294">Asiento 2-A-97</title>
+  </ellipse>
+  <ellipse
+     id="2_A_98"
+     cx="19.865721"
+     cy="181.06284"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-98">
+    <desc
+       id="desc1297">Asiento 2-A-98</desc>
+    <title
+       id="title1299">Asiento 2-A-98</title>
+  </ellipse>
+  <ellipse
+     id="2_A_99"
+     cx="33.094887"
+     cy="180.30688"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-99">
+    <desc
+       id="desc1302">Asiento 2-A-99</desc>
+    <title
+       id="title1304">Asiento 2-A-99</title>
+  </ellipse>
+  <ellipse
+     id="2_A_100"
+     cx="47.83596"
+     cy="182.95271"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-100">
+    <desc
+       id="desc1307">Asiento 2-A-100</desc>
+    <title
+       id="title1309">Asiento 2-A-100</title>
+  </ellipse>
+  <ellipse
+     id="2_A_101"
+     cx="59.175247"
+     cy="187.48843"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-101">
+    <desc
+       id="desc1312">Asiento 2-A-101</desc>
+    <title
+       id="title1314">Asiento 2-A-101</title>
+  </ellipse>
+  <ellipse
+     id="2_A_102"
+     cx="73.538345"
+     cy="192.78011"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-102">
+    <desc
+       id="desc1317">Asiento 2-A-102</desc>
+    <title
+       id="title1319">Asiento 2-A-102</title>
+  </ellipse>
+  <ellipse
+     id="2_A_103"
+     cx="93.571083"
+     cy="192.02415"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-103">
+    <desc
+       id="desc1322">Asiento 2-A-103</desc>
+    <title
+       id="title1324">Asiento 2-A-103</title>
+  </ellipse>
+  <ellipse
+     id="2_A_104"
+     cx="114.73775"
+     cy="195.80391"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-104">
+    <desc
+       id="desc1327">Asiento 2-A-104</desc>
+    <title
+       id="title1329">Asiento 2-A-104</title>
+  </ellipse>
+  <ellipse
+     id="2_A_105"
+     cx="132.8806"
+     cy="196.55986"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-105">
+    <desc
+       id="desc1332">Asiento 2-A-105</desc>
+    <title
+       id="title1334">Asiento 2-A-105</title>
+  </ellipse>
+  <ellipse
+     id="2_A_106"
+     cx="155.1812"
+     cy="191.64616"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-106">
+    <desc
+       id="desc1337">Asiento 2-A-106</desc>
+    <title
+       id="title1339">Asiento 2-A-106</title>
+  </ellipse>
+  <ellipse
+     id="2_A_107"
+     cx="178.61572"
+     cy="193.15808"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-107">
+    <desc
+       id="desc1342">Asiento 2-A-107</desc>
+    <title
+       id="title1344">Asiento 2-A-107</title>
+  </ellipse>
+  <ellipse
+     id="2_A_108"
+     cx="17.219889"
+     cy="204.30836"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-108">
+    <desc
+       id="desc1347">Asiento 2-A-108</desc>
+    <title
+       id="title1349">Asiento 2-A-108</title>
+  </ellipse>
+  <ellipse
+     id="2_A_109"
+     cx="29.504112"
+     cy="205.82027"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-109">
+    <desc
+       id="desc1352">Asiento 2-A-109</desc>
+    <title
+       id="title1354">Asiento 2-A-109</title>
+  </ellipse>
+  <ellipse
+     id="2_A_110"
+     cx="42.544292"
+     cy="206.19824"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-110">
+    <desc
+       id="desc1357">Asiento 2-A-110</desc>
+    <title
+       id="title1359">Asiento 2-A-110</title>
+  </ellipse>
+  <ellipse
+     id="2_A_111"
+     cx="55.584473"
+     cy="208.08813"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-111">
+    <desc
+       id="desc1362">Asiento 2-A-111</desc>
+    <title
+       id="title1364">Asiento 2-A-111</title>
+  </ellipse>
+  <ellipse
+     id="2_A_112"
+     cx="69.19162"
+     cy="209.97801"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-112">
+    <desc
+       id="desc1367">Asiento 2-A-112</desc>
+    <title
+       id="title1369">Asiento 2-A-112</title>
+  </ellipse>
+  <ellipse
+     id="2_A_113"
+     cx="85.255608"
+     cy="214.13574"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-113">
+    <desc
+       id="desc1372">Asiento 2-A-113</desc>
+    <title
+       id="title1374">Asiento 2-A-113</title>
+  </ellipse>
+  <ellipse
+     id="2_A_114"
+     cx="96.216919"
+     cy="213.19081"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-114">
+    <desc
+       id="desc1377">Asiento 2-A-114</desc>
+    <title
+       id="title1379">Asiento 2-A-114</title>
+  </ellipse>
+  <ellipse
+     id="2_A_115"
+     cx="109.44609"
+     cy="214.70271"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-115">
+    <desc
+       id="desc1382">Asiento 2-A-115</desc>
+    <title
+       id="title1384">Asiento 2-A-115</title>
+  </ellipse>
+  <ellipse
+     id="2_A_116"
+     cx="122.86425"
+     cy="210.54497"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-116">
+    <desc
+       id="desc1387">Asiento 2-A-116</desc>
+    <title
+       id="title1389">Asiento 2-A-116</title>
+  </ellipse>
+  <ellipse
+     id="2_A_117"
+     cx="137.7943"
+     cy="211.86789"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-117">
+    <desc
+       id="desc1392">Asiento 2-A-117</desc>
+    <title
+       id="title1394">Asiento 2-A-117</title>
+  </ellipse>
+  <ellipse
+     id="2_A_118"
+     cx="157.26007"
+     cy="212.62384"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-118">
+    <desc
+       id="desc1397">Asiento 2-A-118</desc>
+    <title
+       id="title1399">Asiento 2-A-118</title>
+  </ellipse>
+  <ellipse
+     id="2_A_119"
+     cx="177.4818"
+     cy="212.62384"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-119">
+    <desc
+       id="desc1402">Asiento 2-A-119</desc>
+    <title
+       id="title1404">Asiento 2-A-119</title>
+  </ellipse>
+  <ellipse
+     id="2_A_120"
+     cx="13.251139"
+     cy="217.53754"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-120">
+    <desc
+       id="desc1407">Asiento 2-A-120</desc>
+    <title
+       id="title1409">Asiento 2-A-120</title>
+  </ellipse>
+  <ellipse
+     id="2_A_121"
+     cx="25.91334"
+     cy="220.56134"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-121">
+    <desc
+       id="desc1412">Asiento 2-A-121</desc>
+    <title
+       id="title1414">Asiento 2-A-121</title>
+  </ellipse>
+  <ellipse
+     id="2_A_122"
+     cx="39.520485"
+     cy="222.82919"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-122">
+    <desc
+       id="desc1417">Asiento 2-A-122</desc>
+    <title
+       id="title1419">Asiento 2-A-122</title>
+  </ellipse>
+  <ellipse
+     id="2_A_123"
+     cx="52.371674"
+     cy="226.60896"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-123">
+    <desc
+       id="desc1422">Asiento 2-A-123</desc>
+    <title
+       id="title1424">Asiento 2-A-123</title>
+  </ellipse>
+  <ellipse
+     id="2_A_124"
+     cx="69.569595"
+     cy="228.49884"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-124">
+    <desc
+       id="desc1427">Asiento 2-A-124</desc>
+    <title
+       id="title1429">Asiento 2-A-124</title>
+  </ellipse>
+  <ellipse
+     id="2_A_125"
+     cx="88.279419"
+     cy="229.44379"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-125">
+    <desc
+       id="desc1432">Asiento 2-A-125</desc>
+    <title
+       id="title1434">Asiento 2-A-125</title>
+  </ellipse>
+  <ellipse
+     id="2_A_126"
+     cx="106.98925"
+     cy="230.95569"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-126">
+    <desc
+       id="desc1437">Asiento 2-A-126</desc>
+    <title
+       id="title1439">Asiento 2-A-126</title>
+  </ellipse>
+  <ellipse
+     id="2_A_127"
+     cx="119.84042"
+     cy="228.87682"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-127">
+    <desc
+       id="desc1442">Asiento 2-A-127</desc>
+    <title
+       id="title1444">Asiento 2-A-127</title>
+  </ellipse>
+  <ellipse
+     id="2_A_128"
+     cx="143.27495"
+     cy="226.79794"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-128">
+    <desc
+       id="desc1447">Asiento 2-A-128</desc>
+    <title
+       id="title1449">Asiento 2-A-128</title>
+  </ellipse>
+  <ellipse
+     id="2_A_129"
+     cx="160.09489"
+     cy="227.55391"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-129">
+    <desc
+       id="desc1452">Asiento 2-A-129</desc>
+    <title
+       id="title1454">Asiento 2-A-129</title>
+  </ellipse>
+  <ellipse
+     id="2_A_130"
+     cx="175.21394"
+     cy="228.30986"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-130">
+    <desc
+       id="desc1457">Asiento 2-A-130</desc>
+    <title
+       id="title1459">Asiento 2-A-130</title>
+  </ellipse>
+  <ellipse
+     id="2_A_131"
+     cx="17.597864"
+     cy="238.32622"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-131">
+    <desc
+       id="desc1462">Asiento 2-A-131</desc>
+    <title
+       id="title1464">Asiento 2-A-131</title>
+  </ellipse>
+  <ellipse
+     id="2_A_132"
+     cx="31.771969"
+     cy="238.89319"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-132">
+    <desc
+       id="desc1467">Asiento 2-A-132</desc>
+    <title
+       id="title1469">Asiento 2-A-132</title>
+  </ellipse>
+  <ellipse
+     id="2_A_133"
+     cx="45.757092"
+     cy="242.48396"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-133">
+    <desc
+       id="desc1472">Asiento 2-A-133</desc>
+    <title
+       id="title1474">Asiento 2-A-133</title>
+  </ellipse>
+  <ellipse
+     id="2_A_134"
+     cx="59.931198"
+     cy="246.45271"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-134">
+    <desc
+       id="desc1477">Asiento 2-A-134</desc>
+    <title
+       id="title1479">Asiento 2-A-134</title>
+  </ellipse>
+  <ellipse
+     id="2_A_135"
+     cx="71.837456"
+     cy="251.36641"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-135">
+    <desc
+       id="desc1482">Asiento 2-A-135</desc>
+    <title
+       id="title1484">Asiento 2-A-135</title>
+  </ellipse>
+  <ellipse
+     id="2_A_136"
+     cx="89.224358"
+     cy="249.85449"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-136">
+    <desc
+       id="desc1487">Asiento 2-A-136</desc>
+    <title
+       id="title1489">Asiento 2-A-136</title>
+  </ellipse>
+  <ellipse
+     id="2_A_137"
+     cx="102.64252"
+     cy="249.66551"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-137">
+    <desc
+       id="desc1492">Asiento 2-A-137</desc>
+    <title
+       id="title1494">Asiento 2-A-137</title>
+  </ellipse>
+  <ellipse
+     id="2_A_138"
+     cx="115.68269"
+     cy="252.50034"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-138">
+    <desc
+       id="desc1497">Asiento 2-A-138</desc>
+    <title
+       id="title1499">Asiento 2-A-138</title>
+  </ellipse>
+  <ellipse
+     id="2_A_139"
+     cx="128.91187"
+     cy="247.96461"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-139">
+    <desc
+       id="desc1502">Asiento 2-A-139</desc>
+    <title
+       id="title1504">Asiento 2-A-139</title>
+  </ellipse>
+  <ellipse
+     id="2_A_140"
+     cx="146.29875"
+     cy="245.31879"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-140">
+    <desc
+       id="desc1507">Asiento 2-A-140</desc>
+    <title
+       id="title1509">Asiento 2-A-140</title>
+  </ellipse>
+  <ellipse
+     id="2_A_141"
+     cx="166.52048"
+     cy="247.96461"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-141">
+    <desc
+       id="desc1512">Asiento 2-A-141</desc>
+    <title
+       id="title1514">Asiento 2-A-141</title>
+  </ellipse>
+  <ellipse
+     id="2_A_142"
+     cx="21.188635"
+     cy="259.11493"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-142">
+    <desc
+       id="desc1517">Asiento 2-A-142</desc>
+    <title
+       id="title1519">Asiento 2-A-142</title>
+  </ellipse>
+  <ellipse
+     id="2_A_143"
+     cx="35.362747"
+     cy="258.54797"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-143">
+    <desc
+       id="desc1522">Asiento 2-A-143</desc>
+    <title
+       id="title1524">Asiento 2-A-143</title>
+  </ellipse>
+  <ellipse
+     id="2_A_144"
+     cx="48.591911"
+     cy="262.89468"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-144">
+    <desc
+       id="desc1527">Asiento 2-A-144</desc>
+    <title
+       id="title1529">Asiento 2-A-144</title>
+  </ellipse>
+  <ellipse
+     id="2_A_145"
+     cx="58.419292"
+     cy="265.91849"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-145">
+    <desc
+       id="desc1532">Asiento 2-A-145</desc>
+    <title
+       id="title1534">Asiento 2-A-145</title>
+  </ellipse>
+  <ellipse
+     id="2_A_146"
+     cx="73.538353"
+     cy="266.67444"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-146">
+    <desc
+       id="desc1537">Asiento 2-A-146</desc>
+    <title
+       id="title1539">Asiento 2-A-146</title>
+  </ellipse>
+  <ellipse
+     id="2_A_147"
+     cx="86.389542"
+     cy="268.75333"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-147">
+    <desc
+       id="desc1542">Asiento 2-A-147</desc>
+    <title
+       id="title1544">Asiento 2-A-147</title>
+  </ellipse>
+  <ellipse
+     id="2_A_148"
+     cx="104.53239"
+     cy="270.64319"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-148">
+    <desc
+       id="desc1547">Asiento 2-A-148</desc>
+    <title
+       id="title1549">Asiento 2-A-148</title>
+  </ellipse>
+  <ellipse
+     id="2_A_149"
+     cx="117.57257"
+     cy="268.37534"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-149">
+    <desc
+       id="desc1552">Asiento 2-A-149</desc>
+    <title
+       id="title1554">Asiento 2-A-149</title>
+  </ellipse>
+  <ellipse
+     id="2_A_150"
+     cx="133.63655"
+     cy="264.21759"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-150">
+    <desc
+       id="desc1557">Asiento 2-A-150</desc>
+    <title
+       id="title1559">Asiento 2-A-150</title>
+  </ellipse>
+  <ellipse
+     id="2_A_151"
+     cx="147.0547"
+     cy="261.76074"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-151">
+    <desc
+       id="desc1562">Asiento 2-A-151</desc>
+    <title
+       id="title1564">Asiento 2-A-151</title>
+  </ellipse>
+  <ellipse
+     id="2_A_152"
+     cx="163.68565"
+     cy="261.38278"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-152">
+    <desc
+       id="desc1567">Asiento 2-A-152</desc>
+    <title
+       id="title1569">Asiento 2-A-152</title>
+  </ellipse>
+  <ellipse
+     id="2_A_153"
+     cx="26.480303"
+     cy="281.98248"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-153">
+    <desc
+       id="desc1572">Asiento 2-A-153</desc>
+    <title
+       id="title1574">Asiento 2-A-153</title>
+  </ellipse>
+  <ellipse
+     id="2_A_154"
+     cx="40.465424"
+     cy="283.87234"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-154">
+    <desc
+       id="desc1577">Asiento 2-A-154</desc>
+    <title
+       id="title1579">Asiento 2-A-154</title>
+  </ellipse>
+  <ellipse
+     id="2_A_155"
+     cx="50.103817"
+     cy="284.6283"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-155">
+    <desc
+       id="desc1582">Asiento 2-A-155</desc>
+    <title
+       id="title1584">Asiento 2-A-155</title>
+  </ellipse>
+  <ellipse
+     id="2_A_156"
+     cx="63.143997"
+     cy="283.49438"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-156">
+    <desc
+       id="desc1587">Asiento 2-A-156</desc>
+    <title
+       id="title1589">Asiento 2-A-156</title>
+  </ellipse>
+  <ellipse
+     id="2_A_157"
+     cx="74.861267"
+     cy="285.76224"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-157">
+    <desc
+       id="desc1592">Asiento 2-A-157</desc>
+    <title
+       id="title1594">Asiento 2-A-157</title>
+  </ellipse>
+  <ellipse
+     id="2_A_158"
+     cx="93.760078"
+     cy="285.19525"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-158">
+    <desc
+       id="desc1597">Asiento 2-A-158</desc>
+    <title
+       id="title1599">Asiento 2-A-158</title>
+  </ellipse>
+  <ellipse
+     id="2_A_159"
+     cx="109.06811"
+     cy="285.95123"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-159">
+    <desc
+       id="desc1602">Asiento 2-A-159</desc>
+    <title
+       id="title1604">Asiento 2-A-159</title>
+  </ellipse>
+  <ellipse
+     id="2_A_160"
+     cx="124.18716"
+     cy="286.1402"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-160">
+    <desc
+       id="desc1607">Asiento 2-A-160</desc>
+    <title
+       id="title1609">Asiento 2-A-160</title>
+  </ellipse>
+  <ellipse
+     id="2_A_161"
+     cx="137.98328"
+     cy="284.06134"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-161">
+    <desc
+       id="desc1612">Asiento 2-A-161</desc>
+    <title
+       id="title1614">Asiento 2-A-161</title>
+  </ellipse>
+  <ellipse
+     id="2_A_162"
+     cx="156.12613"
+     cy="285.95123"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-162">
+    <desc
+       id="desc1617">Asiento 2-A-162</desc>
+    <title
+       id="title1619">Asiento 2-A-162</title>
+  </ellipse>
+  <ellipse
+     id="2_A_163"
+     cx="189.76601"
+     cy="290.86493"
+     rx="3.0735991"
+     ry="2.80633"
+     style="fill:#2697e5;fill-opacity:1;stroke:#000000;stroke-width:0.09017658"
+     onclick=" console.log(this.id);    console.log(this.style.fill);    if (this.style.fill=='rgb(38, 151, 229)'){       this.style.fill='#ffff66'   }else if (this.style.fill=='rgb(255, 255, 102)'){     this.style.fill='#2697e5'   }   "
+     inkscape:label="Asiento 2-A-163">
+    <desc
+       id="desc1622">Asiento 2-A-163</desc>
+    <title
+       id="title1624">Asiento 2-A-163</title>
+  </ellipse>
+
+  <rect
+     style="fill:none;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1"
+     id="rect48"
+     width="188.42502"
+     height="22.45064"
+     x="10.423512"
+     y="3.5380576" />
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+     x="79.379051"
+     y="18.505152"
+     id="text52"><tspan
+       sodipodi:role="line"
+       id="tspan50"
+       x="79.379051"
+       y="18.505152"
+       style="stroke-width:0.26458332">Escenario</tspan></text>
+</svg>
