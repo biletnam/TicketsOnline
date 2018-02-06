@@ -9,6 +9,8 @@ Ext.define('app.view.grid.Show' ,{
     	this.items = [
     		{
     			xtype: 'grid',
+    			name: 'seatGrid',
+    			id: 'seatGrid',
     			margins: {top:40, left:0, right: 0, bottom:0},
     			border : false,
     			store: Ext.data.StoreManager.lookup('Grid'),
@@ -47,6 +49,7 @@ Ext.define('app.view.grid.Show' ,{
 					{
 						fieldLabel:	'Subtotal',
 						name:	'subTotal',
+						id:	'subTotal',
 						maskRe: /[0-9\$\.]/,
 						value: '0.00',
 						readOnly:	true,
@@ -62,6 +65,7 @@ Ext.define('app.view.grid.Show' ,{
 					{
 						fieldLabel:	'Impuestos',
 						name:	'tax',
+						id:	'tax',
 						maskRe: /[0-9\$\.]/,
 						value: '0.00',
 						readOnly:	true,
@@ -77,6 +81,7 @@ Ext.define('app.view.grid.Show' ,{
 					{
 						fieldLabel:	'Total',
 						name:	'total',
+						id:	'total',
 						maskRe: /[0-9\$\.]/,
 						value: '0.00',
 						readOnly:	true,

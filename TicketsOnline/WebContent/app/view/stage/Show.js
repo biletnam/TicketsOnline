@@ -1,3 +1,15 @@
+function actionSeat(seat_){
+	var img = Ext.getCmp('StageImage');
+	 	
+ 	img.fireEvent('onImageClick', img, seat_);
+}
+
+function back(layout_){
+	window.history.back();
+	console.log(Ext.getCmp('gridShow'));
+	Ext.getCmp('gridShow').fireEvent('onLayoutBack');
+}
+
 Ext.define('app.view.stage.Show' ,{
     extend: 'Ext.panel.Panel',
     alias: 'widget.stageshow',
@@ -20,12 +32,11 @@ Ext.define('app.view.stage.Show' ,{
                     tag: 'iframe',
                     id: 'location',
                     src: '/TicketsOnline/svg/location/1.svg',
-                    height: '3000px'
+                    height: '1000px'
                 },
     			flex: 3,
     			listeners:{
     	            'onclick':function (comp) {
-    	            	alert(1);
     	                comp.getEl().on('click', function (el) {
     	                    this.fireEvent('onImageClick', this);
     	                }, this);
@@ -72,7 +83,9 @@ Ext.define('app.view.stage.Show' ,{
     	    					fieldCls:'size18',
     	    				},
     	    				{
-    	    					xtype: 'gridshow'
+    	    					xtype: 'gridshow',
+    	    					name: 'gridShow',
+    	    					id: 'gridShow'
     	    				}
     	    			],
     	    			dockedItems: [

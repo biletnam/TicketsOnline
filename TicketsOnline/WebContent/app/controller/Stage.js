@@ -37,28 +37,41 @@ Ext.define('app.controller.Stage', {
     	panel01.layout.setActiveItem(2);
     },
     
-    selectSeat: function(image){
+    selectSeat: function(image, seat_){
     	var grid = image.getBubbleTarget().query('grid')[0];
     	var form = grid.getBubbleTarget().query('form')[0];
     	var store = grid.getStore();
-    	var seat = 'A1';
-    	var cost = 100.99;
     	var n = store.getCount();
     	var totalCost = 0.00;
     	var totalTax = 0.00;
     	var grandTotal = 0.00;
+    	//Asiento
+    	var id = seat_.id;
+    	var cost = parseFloat(seat_.getAttribute('cost'));
     	
-    	store.add({seat: 'A'+(n+1), cost: cost * (n+1)});
-    	totalCost = store.sum('cost');
-    	totalTax = totalCost * .16;
-    	grandTotal = totalCost + totalTax;
-    	
-    	if (grandTotal > 0){
-    		Ext.getCmp('buyBtn').setDisabled(false);
+    	if (seat_){
+    		
+    		if (seat_.style.fill=='rgb(38, 151, 229)'){
+    			store.add({seat: id, cost: cost});
+         		seat_.style.fill='#ffff66'; 
+         	}else if (seat_.style.fill=='rgb(255, 255, 102)'){
+ 				store.removeAt(store.find('seat', id));
+ 				seat_.style.fill='#2697e5';
+         	}
+    		
+    		totalCost = store.sum('cost');
+	    	totalTax = totalCost * .16;
+	    	grandTotal = totalCost + totalTax;
+	    	
+	    	if (grandTotal > 0){
+	    		Ext.getCmp('buyBtn').setDisabled(false);
+	    	}else{
+	    		Ext.getCmp('buyBtn').setDisabled(true);
+	    	}
+	    	
+	    	form.query('textfield[name=subTotal]')[0].setValue(totalCost);
+	    	form.query('textfield[name=tax]')[0].setValue(totalTax);
+	    	form.query('textfield[name=total]')[0].setValue(grandTotal);
     	}
-    	
-    	form.query('textfield[name=subTotal]')[0].setValue(totalCost);
-    	form.query('textfield[name=tax]')[0].setValue(totalTax);
-    	form.query('textfield[name=total]')[0].setValue(grandTotal);
     }
 });
