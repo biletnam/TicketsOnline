@@ -4,28 +4,51 @@ Ext.define('app.view.grid.Show' ,{
     
     initComponent: function() {
     	console.log('Inicializando vista grid...');
-    	this.layout = {type: 'vbox'};
+    	this.layout = 
+    		{
+    			type: 'vbox',
+    			align: 'stretch',
+    	        pack: 'start',
+    		};
     	this.border = false,
     	this.items = [
     		{
     			xtype: 'grid',
     			name: 'seatGrid',
     			id: 'seatGrid',
-    			margins: {top:40, left:0, right: 0, bottom:0},
+    			margins: {top:0, left:0, right: 0, bottom:0},
     			border : false,
     			store: Ext.data.StoreManager.lookup('Grid'),
     	        columns: [
     	        	{
     	        		text: 'Asiento',
     	        		dataIndex: 'seat',
-    	        		width: 148
+    	        		flex: 1
     	        	},
     	        	{
     	        		xtype: 'numbercolumn',
-    	        		text: 'Costo en $',
+    	        		text: 'Costo',
     	                dataIndex: 'cost',
     	                maskRe: /[0-9\$\.]/,
-    	                width: 148,
+    	                flex: 1,
+    	                align:'right', 
+    	                style: 'text-align:left',
+    	        	},
+    	        	{
+    	        		xtype: 'numbercolumn',
+    	        		text: 'Comision',
+    	                dataIndex: 'commision',
+    	                maskRe: /[0-9\$\.]/,
+    	                flex: 1,
+    	                align:'right', 
+    	                style: 'text-align:left',
+    	        	},
+    	        	{
+    	        		xtype: 'numbercolumn',
+    	        		text: 'Subtotal',
+    	                dataIndex: 'sutTotal',
+    	                maskRe: /[0-9\$\.]/,
+    	                flex: 1,
     	                align:'right', 
     	                style: 'text-align:left',
     	        	}
@@ -33,18 +56,16 @@ Ext.define('app.view.grid.Show' ,{
     		},
     		{
 				xtype: 'form',
-				border: false,
-				width: 300,
+				border: true,
 				layout: {
-					type: 'vbox',
-			        align: 'stretch'
+					type: 'anchor',
+			        pack: 'right',
 			    },
 				defaultType:	'textfield',
-				defaults: {
-					labelWidth: 60,
-			        labelAlign: 'left',
-			        margin: '10 2 2 2'
-			    },
+//				defaults: {
+//					labelWidth: 60,
+//			        margin: '10 2 2 2'
+//			    },
 				items: [
 					{
 						fieldLabel:	'Subtotal',

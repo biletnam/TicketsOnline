@@ -33,10 +33,6 @@ public class SVG {
 	
 	public static void main(String[] args) {
 		ArrayList<Seat> arr = new ArrayList<Seat>();
-		arr.add(new Seat("1_A_1", 451.99, false));
-		arr.add(new Seat("1_A_2", 500, true));
-		arr.add(new Seat("1_A_3", 600, false));
-		arr.add(new Seat("1_A_4", 700, true));
 		
 		System.out.println(new SVG("C:\\Users\\Hp Pro\\Desktop\\1_1.svg", arr).getXML());
 	}
@@ -89,7 +85,6 @@ public class SVG {
 				for (int j = 0; j < seats.size(); j++) {
 					seat = seats.get(j);
 					
-					
 					if (id.equals(seat.getId())) {
 						
 						if (seat.isReserved()) {
@@ -97,7 +92,9 @@ public class SVG {
 						}else {
 							((Element) circle).setAttribute("style", "fill:#2697e5;stroke:#000000;stroke-width:0.4445;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1");
 							((Element) circle).setAttribute("cost", Double.toString(seat.getCost()));
-							((Element) circle).setAttribute("onclick", "window.parent.parent.parent.actionSeat(this);");
+							((Element) circle).setAttribute("commision", Double.toString(seat.getCommision()));
+							((Element) circle).setAttribute("subTotal", Double.toString(seat.getSubTotal()));
+							((Element) circle).setAttribute("onclick", "window.parent.actionSeat(this);");
 							title = doc.createElement("title");
 							title.appendChild(doc.createTextNode("Seccion " + id.substring(0, id.indexOf("_")) + ", Asiento " + id.substring(id.indexOf("_") + 1, id.length() ) + ", Precio: $" + seat.getCost()));
 							circle.appendChild(title);
@@ -113,6 +110,9 @@ public class SVG {
 			}
 			
 		} catch (DOMException e) {
+			e.printStackTrace();
+			res = false;
+		} catch (Exception e) {
 			e.printStackTrace();
 			res = false;
 		}

@@ -1,0 +1,63 @@
+<script src="https://www.paypalobjects.com/api/checkout.js"></script>
+<div id="paypal-button-container" style="width: 50%; margin: 30 auto; text-align: center"></div>
+<script>
+	var amount = 0; 
+    // Render the PayPal button
+
+    paypal.Button.render({
+
+        // Set your environment
+        env: 'sandbox', // sandbox | production
+
+        // Specify the style of the button
+
+        style: {
+            layout: 'vertical',  // horizontal | vertical
+            size:   'medium',    // medium | large | responsive
+            shape:  'rect',      // pill | rect
+            color:  'gold'       // gold | blue | silver | black
+        },
+
+        // Specify allowed and disallowed funding sources
+        //
+        // Options:
+        // - paypal.FUNDING.CARD
+        // - paypal.FUNDING.CREDIT
+        // - paypal.FUNDING.ELV
+
+        funding: {
+            allowed: [ paypal.FUNDING.CARD, paypal.FUNDING.CREDIT ],
+            disallowed: [ ]
+        },
+
+        // PayPal Client IDs - replace with your own
+        // Create a PayPal app: https://developer.paypal.com/developer/applications/create
+
+        client: {
+            sandbox:    'ASCFh3irOfSJ2Rlv1Eu71d50F9tdB858YsJDUcNiw9yCUqqjn7s4_Lo1k2WVWTyzyjIP2tduuPPbLYB3',
+            production: 'AWoN2LtRzcbea_5Cxp_xooNKDdAFyzxFsikiOicbQhbYtilQYMAZleA-_CJxBOts_iso5Qhdgi2k3KMx'
+        },
+
+        payment: function(data, actions) {
+        	window.top.document.getElementById('minute-counter').contentWindow.stop();
+        	return actions.payment.create({
+                payment: {
+                    transactions: [
+                        {
+                            amount: { total: amount, currency: 'MXN' }
+                        }
+                    ]
+                }
+            });
+        },
+
+        onAuthorize: function(data, actions) {
+            return actions.payment.execute().then(function() {
+                window.alert('Pago completado con exito');
+            });
+        }
+
+    }, '#paypal-button-container');
+
+</script>
+    

@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="../css/flipclock.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="../js/flipclock.js"></script>
+	<script type="text/javascript">
+		var clock = null;
+		var started = false;
+		var n = 0;
+		var grandTotal = null;
+		var res = null;
+		var onTime = true;
+		
+		function update(grandTotal_){
+			onTime = false;
+			grandTotal = grandTotal_;
+			
+			if (!started && grandTotal > 0){
+				clock.start();
+				started = true;
+			}else if (grandTotal <= 0){
+				clock.stop();
+				clock.reset();
+				started = false;
+			}
+		}
+		
+		function stop(){
+			onTime = true;
+			clock.stop();
+			clock.reset();
+			started = false;
+		}
+	</script>		
+	</head>
+	<body>
+		<div class="clock" style="width: 50%; margin: 30 auto; text-align: center"></div>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				clock = $('.clock').FlipClock(300, {
+					autoStart: false,
+			        countdown: true,
+			        callbacks: {
+			        	stop: function() {
+			        		if (grandTotal > 0 && !onTime){
+			        			res = window.confirm('Estimado cliente, se termino el tiempo para comprar asientos');
+			        			if (res){
+			        				window.parent.frame.document.getElementById('returnBtn').click();
+			        			}else{
+			        				window.parent.frame.document.getElementById('returnBtn').click();
+			        			}
+			        		}
+			        	}
+			        }
+			    });
+		
+			});
+		</script>
+	</body>
+</html>

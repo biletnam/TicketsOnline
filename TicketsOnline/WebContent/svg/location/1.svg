@@ -9,9 +9,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="500px"
-   height="600px"
-   viewBox="0 0 210 297"
+   width="1150"
+   height="600"
+   viewBox="0 0 483 297"
    version="1.1"
    id="svg8"
    inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
@@ -27,11 +27,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.98994949"
-     inkscape:cx="191.7428"
-     inkscape:cy="374.83844"
+     inkscape:zoom="0.7"
+     inkscape:cx="479.28571"
+     inkscape:cy="249.54289"
      inkscape:document-units="mm"
-     inkscape:current-layer="g1155"
+     inkscape:current-layer="svg8"
      showgrid="false"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
@@ -53,220 +53,331 @@
   <g
      id="g830"
      onclick="window.location.href='/TicketsOnline/Accion/Layout?location=1&amp;section=1';"
-     transform="translate(-19.8,14.85)">
+     transform="matrix(2.0481405,0,0,1.6736973,-30.021706,-20.850174)"
+     style="fill:none;stroke:#ebe3dd;stroke-opacity:1">
     <rect
        y="42.826679"
        x="15.501633"
        height="39.288624"
        width="49.444862"
        id="rect821"
-       style="fill:none;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1" />
+       style="fill:none;stroke:#ebe3dd;stroke-width:0.26458332;stroke-opacity:1" />
     <text
        transform="scale(0.96937888,1.0315884)"
        id="text825"
        y="63.071278"
        x="24.25445"
-       style="font-style:normal;font-weight:normal;font-size:6.82935047px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.17073375"
+       style="font-style:normal;font-weight:normal;font-size:6.82935047px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#f2f2f2;fill-opacity:0.89803922;stroke:none;stroke-width:0.17073375;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="stroke-width:0.17073375"
+         style="fill:#deaa87;fill-opacity:0.89803922;stroke:none;stroke-width:0.17073375;stroke-opacity:1"
          y="63.071278"
          x="24.25445"
          id="tspan823"
-         sodipodi:role="line">Seccion 1</tspan></text>
-  </g>
-  <g
-     id="g846"
-     onclick="window.location.href='/TicketsOnline/Accion/Layout?location=1&amp;section=2'"
-     transform="translate(1.246732,14.582731)">
-    <rect
-       style="fill:none;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1"
-       id="rect832"
-       width="49.444862"
-       height="39.288624"
-       x="79.913589"
-       y="43.093948" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:6.82935047px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.17073375"
-       x="90.701073"
-       y="63.330364"
-       id="text836"
-       transform="scale(0.96937888,1.0315884)"><tspan
          sodipodi:role="line"
-         id="tspan834"
-         x="90.701073"
-         y="63.330364"
-         style="stroke-width:0.17073375">Seccion 2</tspan></text>
+         dx="0 0 0 0 0 0 0.39551285"
+         dy="0 0 0 0 0 0 0.39551285">Seccion 1</tspan></text>
   </g>
   <rect
-     style="fill:#000000;fill-opacity:0.89869277;stroke:#000000;stroke-width:0.30104768;stroke-opacity:1"
+     style="fill:#deaa87;fill-opacity:0.89803922;stroke:#dfaa87;stroke-width:0.42364946;stroke-opacity:0.89803922"
      id="rect48"
-     width="244.13406"
-     height="22.432854"
-     x="-17.042915"
-     y="24.717918" />
+     width="486.0051"
+     height="22.315922"
+     x="0.97329235"
+     y="9.9263878" />
   <text
      xml:space="preserve"
      style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#fcfcfc;fill-opacity:1;stroke:none;stroke-width:0.26458332"
-     x="78.844589"
-     y="39.356476"
+     x="215.5014"
+     y="24.799374"
      id="text52"><tspan
        sodipodi:role="line"
        id="tspan50"
-       x="78.844589"
-       y="39.356476"
+       x="215.5014"
+       y="24.799374"
        style="fill:#fcfcfc;fill-opacity:1;stroke-width:0.26458332">Escenario</tspan></text>
   <g
-     transform="translate(86.705427,14.582731)"
-     onclick="window.location.href='/TicketsOnline/Accion/Layout?location=1&amp;section=2'"
-     id="g1103">
-    <rect
-       y="43.093948"
-       x="79.913589"
-       height="39.288624"
-       width="49.444862"
-       id="rect1097"
-       style="fill:none;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1" />
+     id="g830-8"
+     onclick="window.location.href='/TicketsOnline/Accion/Layout?location=1&amp;section=1';"
+     transform="matrix(2.0481405,0,0,1.6736973,96.28478,-20.118627)"
+     style="fill:none;stroke:#ebe3dd;stroke-opacity:1">
     <text
        transform="scale(0.96937888,1.0315884)"
-       id="text1101"
-       y="63.330364"
-       x="90.701073"
-       style="font-style:normal;font-weight:normal;font-size:6.82935047px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.17073375"
-       xml:space="preserve"><tspan
-         style="stroke-width:0.17073375"
-         y="63.330364"
-         x="90.701073"
-         id="tspan1099"
-         sodipodi:role="line">Seccion 3</tspan></text>
-    <rect
-       style="fill:none;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1"
-       id="rect1143"
-       width="49.444862"
-       height="39.288624"
-       x="80.413612"
-       y="95.096603" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:6.82935047px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.17073375"
-       x="91.216896"
-       y="113.74064"
-       id="text1147"
-       transform="scale(0.96937888,1.0315884)"><tspan
-         sodipodi:role="line"
-         id="tspan1145"
-         x="91.216896"
-         y="113.74064"
-         style="stroke-width:0.17073375">Seccion 6</tspan></text>
-  </g>
-  <g
-     transform="translate(-19.299974,66.852653)"
-     onclick="window.location.href='/TicketsOnline/Accion/Layout?location=1&amp;section=1';"
-     id="g1133">
-    <rect
-       style="fill:none;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1"
-       id="rect1127"
-       width="49.444862"
-       height="39.288624"
-       x="15.501633"
-       y="42.826679" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:6.82935047px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.17073375"
-       x="24.25445"
+       id="text825-9"
        y="63.071278"
-       id="text1131"
-       transform="scale(0.96937888,1.0315884)"><tspan
-         sodipodi:role="line"
-         id="tspan1129"
-         x="24.25445"
-         y="63.071278"
-         style="stroke-width:0.17073375">Seccion 4</tspan></text>
-  </g>
-  <g
-     transform="translate(1.7467575,66.585384)"
-     onclick="window.location.href='/TicketsOnline/Accion/Layout?location=1&amp;section=2'"
-     id="g1141">
-    <rect
-       y="43.093948"
-       x="79.913589"
-       height="39.288624"
-       width="49.444862"
-       id="rect1135"
-       style="fill:none;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1" />
-    <text
-       transform="scale(0.96937888,1.0315884)"
-       id="text1139"
-       y="63.330364"
-       x="90.701073"
-       style="font-style:normal;font-weight:normal;font-size:6.82935047px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.17073375"
+       x="24.25445"
+       style="font-style:normal;font-weight:normal;font-size:6.82935047px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#f2f2f2;fill-opacity:0.89803922;stroke:none;stroke-width:0.17073375;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="stroke-width:0.17073375"
-         y="63.330364"
-         x="90.701073"
-         id="tspan1137"
-         sodipodi:role="line">Seccion 5</tspan></text>
-  </g>
-  <g
-     id="g1155"
-     onclick="window.location.href='/TicketsOnline/Accion/Layout?location=1&amp;section=1';"
-     transform="matrix(4.4223755,0,0,0.99262471,-71.207448,120.81612)">
+         style="fill:#deaa87;fill-opacity:0.89803922;stroke:none;stroke-width:0.17073375;stroke-opacity:1"
+         y="63.071278"
+         x="24.25445"
+         id="tspan823-9"
+         sodipodi:role="line"
+         dx="0 0 0 0 0 0 0.39551285"
+         dy="0 0 0 0 0 0 0.39551285">Seccion 2</tspan></text>
     <rect
        y="42.826679"
        x="15.501633"
        height="39.288624"
        width="49.444862"
-       id="rect1149"
-       style="fill:none;stroke:#000000;stroke-width:0.26458332;stroke-opacity:1" />
+       id="rect821-6"
+       style="fill:none;stroke:#ebe3dd;stroke-width:0.26458332;stroke-opacity:1" />
+    <g
+       id="g830-6"
+       onclick="window.location.href='/TicketsOnline/Accion/Layout?location=1&amp;section=1';"
+       transform="translate(-61.107335,48.030397)"
+       style="fill:none;stroke:#ebe3dd;stroke-opacity:1">
+      <rect
+         y="42.826679"
+         x="15.501633"
+         height="39.288624"
+         width="49.444862"
+         id="rect821-69"
+         style="fill:none;stroke:#ebe3dd;stroke-width:0.26458332;stroke-opacity:1" />
+      <text
+         transform="scale(0.96937888,1.0315884)"
+         id="text825-1"
+         y="63.071278"
+         x="24.25445"
+         style="font-style:normal;font-weight:normal;font-size:6.82935047px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#f2f2f2;fill-opacity:0.89803922;stroke:none;stroke-width:0.17073375;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="fill:#deaa87;fill-opacity:0.89803922;stroke:none;stroke-width:0.17073375;stroke-opacity:1"
+           y="63.071278"
+           x="24.25445"
+           id="tspan823-7"
+           sodipodi:role="line"
+           dx="0 0 0 0 0 0 0.39551285"
+           dy="0 0 0 0 0 0 0.39551285">Seccion 5</tspan></text>
+    </g>
     <text
-       transform="scale(0.42683516,2.3428248)"
-       id="text1153"
-       y="28.390621"
-       x="83.604378"
-       style="font-style:normal;font-weight:normal;font-size:4.71497059px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.11787426"
+       transform="scale(0.96937888,1.0315884)"
+       id="text825-9-0"
+       y="110.05463"
+       x="24.83371"
+       style="font-style:normal;font-weight:normal;font-size:6.82935095px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#f2f2f2;fill-opacity:0.89803922;stroke:none;stroke-width:0.17073375;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="stroke-width:0.11787426"
-         y="28.390621"
-         x="83.604378"
-         id="tspan1151"
-         sodipodi:role="line">Seccion 7</tspan></text>
-    <ellipse
-       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.23625709;stroke-opacity:1"
-       id="path1157"
-       cx="22.546675"
-       cy="130.89693"
-       rx="6.1621609"
-       ry="26.446388" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:4.01467705px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.10036694"
-       x="53.833229"
-       y="47.578796"
-       id="text1966"
-       transform="scale(0.35423493,2.8229853)"><tspan
+         style="fill:#deaa87;fill-opacity:0.89803922;stroke:none;stroke-width:0.17073375;stroke-opacity:1"
+         y="110.05463"
+         x="24.83371"
+         id="tspan823-9-5"
          sodipodi:role="line"
-         id="tspan1964"
-         x="53.833229"
-         y="47.578796"
-         style="stroke-width:0.10036694">Seccion 8</tspan></text>
-    <ellipse
-       ry="26.446388"
-       rx="6.1621609"
-       cy="129.88945"
-       cx="58.275902"
-       id="ellipse1968"
-       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.23625709;stroke-opacity:1" />
+         dx="0 0 0 0 0 0 0.39551285"
+         dy="0 0 0 0 0 0 0.39551285">Seccion 6</tspan></text>
+    <rect
+       y="91.294159"
+       x="16.063158"
+       height="39.288624"
+       width="49.444862"
+       id="rect821-6-0"
+       style="fill:none;stroke:#ebe3dd;stroke-width:0.26458332;stroke-opacity:1" />
+    <g
+       id="g830-3-8"
+       onclick="window.location.href='/TicketsOnline/Accion/Layout?location=1&amp;section=1';"
+       transform="translate(61.839746,48.766238)"
+       style="fill:none;stroke:#ebe3dd;stroke-opacity:1">
+      <rect
+         y="42.826679"
+         x="15.501633"
+         height="39.288624"
+         width="49.444862"
+         id="rect821-1-5"
+         style="fill:none;stroke:#ebe3dd;stroke-width:0.26458332;stroke-opacity:1" />
+      <text
+         transform="scale(0.96937888,1.0315884)"
+         id="text825-0-9"
+         y="63.071278"
+         x="24.25445"
+         style="font-style:normal;font-weight:normal;font-size:6.82935047px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#f2f2f2;fill-opacity:0.89803922;stroke:none;stroke-width:0.17073375;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="fill:#deaa87;fill-opacity:0.89803922;stroke:none;stroke-width:0.17073375;stroke-opacity:1"
+           y="63.071278"
+           x="24.25445"
+           id="tspan823-2-6"
+           sodipodi:role="line"
+           dx="0 0 0 0 0 0 0.39551285"
+           dy="0 0 0 0 0 0 0.39551285">Seccion 7</tspan></text>
+    </g>
+    <g
+       id="g830-5-4"
+       onclick="window.location.href='/TicketsOnline/Accion/Layout?location=1&amp;section=1';"
+       transform="translate(125.07106,48.168726)"
+       style="fill:none;stroke:#ebe3dd;stroke-opacity:1">
+      <rect
+         y="42.826679"
+         x="15.501633"
+         height="39.288624"
+         width="49.444862"
+         id="rect821-12-7"
+         style="fill:none;stroke:#ebe3dd;stroke-width:0.26458332;stroke-opacity:1" />
+      <text
+         transform="scale(0.96937888,1.0315884)"
+         id="text825-5-2"
+         y="63.071278"
+         x="24.25445"
+         style="font-style:normal;font-weight:normal;font-size:6.82935047px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#f2f2f2;fill-opacity:0.89803922;stroke:none;stroke-width:0.17073375;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="fill:#deaa87;fill-opacity:0.89803922;stroke:none;stroke-width:0.17073375;stroke-opacity:1"
+           y="63.071278"
+           x="24.25445"
+           id="tspan823-8-7"
+           sodipodi:role="line"
+           dx="0 0 0 0 0 0 0.39551285"
+           dy="0 0 0 0 0 0 0.39551285">Seccion 8</tspan></text>
+    </g>
+    <g
+       id="g830-4"
+       onclick="window.location.href='/TicketsOnline/Accion/Layout?location=1&amp;section=1';"
+       transform="translate(-61.595603,95.831204)"
+       style="fill:none;stroke:#ebe3dd;stroke-opacity:1">
+      <rect
+         y="42.826679"
+         x="15.501633"
+         height="39.288624"
+         width="49.444862"
+         id="rect821-2"
+         style="fill:none;stroke:#ebe3dd;stroke-width:0.26458332;stroke-opacity:1" />
+      <text
+         transform="scale(0.96937888,1.0315884)"
+         id="text825-4"
+         y="63.071278"
+         x="24.25445"
+         style="font-style:normal;font-weight:normal;font-size:6.82935047px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#f2f2f2;fill-opacity:0.89803922;stroke:none;stroke-width:0.17073375;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="fill:#deaa87;fill-opacity:0.89803922;stroke:none;stroke-width:0.17073375;stroke-opacity:1"
+           y="63.071278"
+           x="24.25445"
+           id="tspan823-87"
+           sodipodi:role="line"
+           dx="0 0 0 0 0 0 0.39551285"
+           dy="0 0 0 0 0 0 0.39551285">Seccion 9</tspan></text>
+    </g>
     <text
-       transform="scale(0.35423493,2.8229853)"
-       id="text1972"
-       y="47.221912"
-       x="154.69632"
-       style="font-style:normal;font-weight:normal;font-size:4.01467705px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.10036694"
+       transform="scale(0.96937888,1.0315884)"
+       id="text825-9-1"
+       y="156.39172"
+       x="24.330017"
+       style="font-style:normal;font-weight:normal;font-size:6.82935095px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#f2f2f2;fill-opacity:0.89803922;stroke:none;stroke-width:0.17073375;stroke-opacity:1"
        xml:space="preserve"><tspan
-         style="stroke-width:0.10036694"
-         y="47.221912"
-         x="154.69632"
-         id="tspan1970"
-         sodipodi:role="line">Seccion 9</tspan></text>
+         style="fill:#deaa87;fill-opacity:0.89803922;stroke:none;stroke-width:0.17073375;stroke-opacity:1"
+         y="156.39172"
+         x="24.330017"
+         id="tspan823-9-6"
+         sodipodi:role="line"
+         dx="0 0 0 0 0 0 0.39551285"
+         dy="0 0 0 0 0 0 0.39551285">Seccion 10</tspan></text>
+    <rect
+       y="139.09497"
+       x="15.574884"
+       height="39.288624"
+       width="49.444862"
+       id="rect821-6-2"
+       style="fill:none;stroke:#ebe3dd;stroke-width:0.26458332;stroke-opacity:1" />
+    <g
+       id="g830-3-6"
+       onclick="window.location.href='/TicketsOnline/Accion/Layout?location=1&amp;section=1';"
+       transform="translate(61.351469,96.567044)"
+       style="fill:none;stroke:#ebe3dd;stroke-opacity:1">
+      <rect
+         y="42.826679"
+         x="15.501633"
+         height="39.288624"
+         width="49.444862"
+         id="rect821-1-4"
+         style="fill:none;stroke:#ebe3dd;stroke-width:0.26458332;stroke-opacity:1" />
+      <text
+         transform="scale(0.96937888,1.0315884)"
+         id="text825-0-8"
+         y="63.071278"
+         x="24.25445"
+         style="font-style:normal;font-weight:normal;font-size:6.82935047px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#f2f2f2;fill-opacity:0.89803922;stroke:none;stroke-width:0.17073375;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="fill:#deaa87;fill-opacity:0.89803922;stroke:none;stroke-width:0.17073375;stroke-opacity:1"
+           y="63.071278"
+           x="24.25445"
+           id="tspan823-2-61"
+           sodipodi:role="line"
+           dx="0 0 0 0 0 0 0.39551285"
+           dy="0 0 0 0 0 0 0.39551285">Seccion 11</tspan></text>
+    </g>
+    <g
+       id="g830-5-2"
+       onclick="window.location.href='/TicketsOnline/Accion/Layout?location=1&amp;section=1';"
+       transform="translate(124.58278,95.969534)"
+       style="fill:none;stroke:#ebe3dd;stroke-opacity:1">
+      <rect
+         y="42.826679"
+         x="15.501633"
+         height="39.288624"
+         width="49.444862"
+         id="rect821-12-6"
+         style="fill:none;stroke:#ebe3dd;stroke-width:0.26458332;stroke-opacity:1" />
+      <text
+         transform="scale(0.96937888,1.0315884)"
+         id="text825-5-6"
+         y="63.071278"
+         x="24.25445"
+         style="font-style:normal;font-weight:normal;font-size:6.82935047px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#f2f2f2;fill-opacity:0.89803922;stroke:none;stroke-width:0.17073375;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="fill:#deaa87;fill-opacity:0.89803922;stroke:none;stroke-width:0.17073375;stroke-opacity:1"
+           y="63.071278"
+           x="24.25445"
+           id="tspan823-8-1"
+           sodipodi:role="line"
+           dx="0 0 0 0 0 0 0.39551285"
+           dy="0 0 0 0 0 0 0.39551285">Seccion 12</tspan></text>
+    </g>
+  </g>
+  <g
+     id="g830-3"
+     onclick="window.location.href='/TicketsOnline/Accion/Layout?location=1&amp;section=1';"
+     transform="matrix(2.0481405,0,0,1.6736973,221.79118,-19.618602)"
+     style="fill:none;stroke:#ebe3dd;stroke-opacity:1">
+    <rect
+       y="42.826679"
+       x="15.501633"
+       height="39.288624"
+       width="49.444862"
+       id="rect821-1"
+       style="fill:none;stroke:#ebe3dd;stroke-width:0.26458332;stroke-opacity:1" />
+    <text
+       transform="scale(0.96937888,1.0315884)"
+       id="text825-0"
+       y="63.071278"
+       x="24.25445"
+       style="font-style:normal;font-weight:normal;font-size:6.82935047px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#f2f2f2;fill-opacity:0.89803922;stroke:none;stroke-width:0.17073375;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="fill:#deaa87;fill-opacity:0.89803922;stroke:none;stroke-width:0.17073375;stroke-opacity:1"
+         y="63.071278"
+         x="24.25445"
+         id="tspan823-2"
+         sodipodi:role="line"
+         dx="0 0 0 0 0 0 0.39551285"
+         dy="0 0 0 0 0 0 0.39551285">Seccion 3</tspan></text>
+  </g>
+  <g
+     id="g830-5"
+     onclick="window.location.href='/TicketsOnline/Accion/Layout?location=1&amp;section=1';"
+     transform="matrix(2.0481405,0,0,1.6736973,351.29779,-20.618653)"
+     style="fill:none;stroke:#ebe3dd;stroke-opacity:1">
+    <rect
+       y="42.826679"
+       x="15.501633"
+       height="39.288624"
+       width="49.444862"
+       id="rect821-12"
+       style="fill:none;stroke:#ebe3dd;stroke-width:0.26458332;stroke-opacity:1" />
+    <text
+       transform="scale(0.96937888,1.0315884)"
+       id="text825-5"
+       y="63.071278"
+       x="24.25445"
+       style="font-style:normal;font-weight:normal;font-size:6.82935047px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#f2f2f2;fill-opacity:0.89803922;stroke:none;stroke-width:0.17073375;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="fill:#deaa87;fill-opacity:0.89803922;stroke:none;stroke-width:0.17073375;stroke-opacity:1"
+         y="63.071278"
+         x="24.25445"
+         id="tspan823-8"
+         sodipodi:role="line"
+         dx="0 0 0 0 0 0 0.39551285"
+         dy="0 0 0 0 0 0 0.39551285">Seccion 4</tspan></text>
   </g>
 </svg>

@@ -6,9 +6,12 @@
 <struts>
     <package name="default" namespace="/Accion" extends="json-default">
     
-       <action name="*Layout" class="acciones.Layout" method="get"> 
+       <action name="Layout" class="acciones.Layout" method="get"> 
        		<result name="success">/jsp/Json.jsp</result>
-       </action>
+       </action> 
+       <action name="SeatValidation" class="acciones.Layout" method="seatValidation"> 
+       		<result name="success">/jsp/Json.jsp</result>
+       </action> 
 	         
    	</package>
 </struts>
