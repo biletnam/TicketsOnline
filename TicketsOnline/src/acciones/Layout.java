@@ -31,11 +31,11 @@ public class Layout extends ActionSupport{
 
 	private void getLayout() {
 		ArrayList<Seat> seats = new ArrayList<Seat>();
-		seats.add(new Seat("1_A_1", 451.99, 10, 461.99, false));
-		seats.add(new Seat("1_A_2", 452.99, 10, 462.99, false));
-		seats.add(new Seat("1_A_3", 453.99, 10, 463.99, false));
-		seats.add(new Seat("1_A_4", 454.99, 10, 464.99, false));
-		seats.add(new Seat("1_A_5", 456.99, 10, 466.99, false));
+		seats.add(new Seat("1_A_1", 451.99, 10, 461.99, false,"LOC1", "1_A_1", "0"));
+		seats.add(new Seat("1_A_2", 452.99, 10, 462.99, false,"LOC1", "1_A_1", "0"));
+		seats.add(new Seat("1_A_3", 453.99, 10, 463.99, false,"LOC1", "1_A_1", "0"));
+		seats.add(new Seat("1_A_4", 454.99, 10, 464.99, false,"LOC1", "1_A_1", "0"));
+		seats.add(new Seat("1_A_5", 456.99, 10, 466.99, false,"LOC1", "1_A_1", "0"));
 		
 		try {
 			writer = response.getWriter();

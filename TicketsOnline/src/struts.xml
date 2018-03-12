@@ -4,14 +4,20 @@
 	"http://struts.apache.org/dtds/struts-2.3.dtd">
 
 <struts>
-    <package name="default" namespace="/Accion" extends="json-default">
+   	
+   	<package name="default2" namespace="/Accion2" extends="struts-default">
+		<action name="getReceipt" class="acciones.Receipt"> 
+       		<result name="success">/jsp/Receipt.jsp</result>
+       	</action> 
+    </package>
     
+    <package name="default" namespace="/Accion" extends="json-default">
        <action name="Layout" class="acciones.Layout" method="get"> 
        		<result name="success">/jsp/Json.jsp</result>
        </action> 
        <action name="SeatValidation" class="acciones.Layout" method="seatValidation"> 
        		<result name="success">/jsp/Json.jsp</result>
        </action> 
-	         
    	</package>
+
 </struts>

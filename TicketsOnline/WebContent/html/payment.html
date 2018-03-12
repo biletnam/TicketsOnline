@@ -53,7 +53,14 @@
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Pago completado con exito');
+        	console.log(data);
+        	console.log(actions);
+                window.open('../Accion2/getReceipt?paymentID='+data.paymentID);
+            });
+        },
+        onCancel: function(data, actions) {
+            return actions.payment.execute().then(function() {
+            	alert('No paso la tarjeta');
             });
         }
 
