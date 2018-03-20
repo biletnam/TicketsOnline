@@ -62,45 +62,68 @@ Ext.define('app.controller.Seats', {
     	var totalCost = 0.00;
     	var totalTax = 0.00;
     	var grandTotal = 0.00;
-    	//Asiento
     	var id = seat_.id;
     	var cost = parseFloat(seat_.getAttribute('cost'));
     	var commision = parseFloat(seat_.getAttribute('commision'));
     	var subTotal = parseFloat(seat_.getAttribute('subTotal'));
     	
-    	if (seat_){
-    		if (seat_.style.fill=='rgb(38, 151, 229)'){
-    			store.add({seat: id, cost: cost, commision: commision, subTotal: subTotal});
-         		seat_.style.fill='#ffff66'; 
-         	}else if (seat_.style.fill=='rgb(255, 255, 102)'){
- 				store.removeAt(store.find('seat', id));
- 				seat_.style.fill='#2697e5';
-         	}
-    		
-    		totalCost = store.sum('subTotal');
-	    	totalTax = totalCost * .16;
-	    	grandTotal = totalCost + totalTax;
-	    	
-	    	try{
-	    		top.payment.amount = grandTotal.toFixed(2);
-	    		console.log(top.payment.amount );
-	    	}catch(e){
-	    		console.error('Error en calculo de total');
-	    		top.payment.amount = 0;
-	    	}
-	    	
-	    	form.query('textfield[name=subTotal]')[0].setValue(totalCost);
-	    	form.query('textfield[name=tax]')[0].setValue(totalTax);
-	    	form.query('textfield[name=total]')[0].setValue(grandTotal);
-    	}
-    	window.parent.resizeIframe(window.parent.document.getElementById('frame'));
-    	window.top.document.getElementById('minute-counter').contentWindow.update(grandTotal);
+    	//Validate seat status
+    	var dialogo = Ext.MessageBox.wait('Espere por favor, validando asiento', 'Informacion');
+    	
+    	Ext.Ajax.request({
+    		url: 'Accion/confirmSeat' + '?seatId=' + id,
+    		method: 'POST',
+   	        success: function(response, opts) {
+   	        	dialogo.hide();
+   				result = JSON.parse(response.responseText);
+   				mensaje = result.msg;
+   				res = result.success;
+   				if (!res){
+   					Ext.MessageBox.alert('Informacion','Estimado cliente, este asiento se encuentra en proceso de compra, por lo cual no es posible seleccionarlo');
+   				}else{
+   					if (seat_){
+   						console.log(seat_);
+   			    		if (seat_.style.fill=='rgb(38, 151, 229)'){
+   			    			store.add({seat: id, cost: cost, commision: commision, subTotal: subTotal});
+   			         		seat_.style.fill='#ffff66'; 
+   			         	}else if (seat_.style.fill=='rgb(255, 255, 102)'){
+   			 				store.removeAt(store.find('seat', id));
+   			 				seat_.style.fill='#2697e5';
+   			         	}
+   			    		
+//   			    		totalCost = store.sum('subTotal');
+//   				    	totalTax = totalCost * .16;
+   				    	grandTotal = store.sum('subTotal');
+   				    	
+   				    	try{
+   				    		top.payment.amount = grandTotal.toFixed(2);
+   				    	}catch(e){
+   				    		console.error('Error en calculo de total');
+   				    		top.payment.amount = 0;
+   				    	}
+   				    	
+//   				    	form.query('textfield[name=subTotal]')[0].setValue(totalCost);
+//   				    	form.query('textfield[name=tax]')[0].setValue(totalTax);
+   				    	form.query('textfield[name=total]')[0].setValue(grandTotal);
+   			    	}
+   			    	window.parent.resizeIframe(window.parent.document.getElementById('frame'));
+   			    	window.top.document.getElementById('minute-counter').contentWindow.update(grandTotal);
+   				}
+	         },
+	         failure: function(response, opts){
+	        	dialogo.hide();
+				result = JSON.parse(response.responseText);
+   				console.log(mensaje);
+				mensaje = result.msg;
+				Ext.MessageBox.alert('Informacion','Estimado cliente, este asiento se encuentra en proceso de compra, por lo cual no es posible seleccionarlo');
+			 }
+   	     })
     },
     
     onLayoutBack: function(){
     	Ext.data.StoreManager.lookup('Grid').removeAll();
-    	Ext.getCmp('subTotal').setValue(0);
-    	Ext.getCmp('tax').setValue(0);
+//    	Ext.getCmp('subTotal').setValue(0);
+//    	Ext.getCmp('tax').setValue(0);
     	Ext.getCmp('total').setValue(0);
     	top.payment.amount = 0;
     	window.top.document.getElementById('minute-counter').contentWindow.update(0);
@@ -110,6 +133,10 @@ Ext.define('app.controller.Seats', {
     	this.onLayoutBack();
     	window.history.back();
     	window.parent.resizeIframe(window.parent.document.getElementById('frame'));
+    	Ext.Ajax.request({
+    		url: 'Accion/releaseAllSeat',
+    		method: 'POST'
+   	     })
     },
     
     onseatsLayoutLoad: function(obj){

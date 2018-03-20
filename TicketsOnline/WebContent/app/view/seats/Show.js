@@ -23,13 +23,15 @@ Ext.define('app.view.seats.Show' ,{
     			xtype: 'image',
     			name: 'seatsLayout',
     			id: 'seatsLayout',
-//    			border: true,
     			width: '100%',
+    			height: '1000px',
     			autoEl: {
                     tag: 'iframe',
                     id: 'location',
                     name: 'location',
-                    src: 'Accion/Layout?location=1'
+                    //src: 'test.html',
+                    //src: 'http://72.52.250.106:9090/TicketsOnline/Accion/Layout?location=1&section=1'
+                    src: 'Accion/Layout?location=1&section=1'
                 },
     			listeners:{
     				load:{
@@ -140,38 +142,38 @@ Ext.define('app.view.seats.Show' ,{
     	    					},
     	    					margins: {top:25, left:0, right: 0, bottom:0},
     	    					items: [
-    	    						{
-    	    							fieldLabel:	'Subtotal',
-    	    							name:	'subTotal',
-    	    							id:	'subTotal',
-    	    							maskRe: /[0-9\$\.]/,
-    	    							value: '0.00',
-    	    							readOnly:	true,
-    	    							fieldStyle: 'text-align: right;',
-//    	    							fieldCls:'size18',
-    	    							listeners: {
-    	    								change: function(object, newValue, oldValue){
-    	    									newValue = Ext.util.Format.usMoney(newValue.replace(/[^0-9\.]/g, ''));
-    	    									if(newValue == '$NaN.00') object.setValue(oldValue); else object.setValue(newValue);
-    	    								}
-    	    							}
-    	    						},
-    	    						{
-    	    							fieldLabel:	'Impuestos',
-    	    							name:	'tax',
-    	    							id:	'tax',
-    	    							maskRe: /[0-9\$\.]/,
-    	    							value: '0.00',
-    	    							readOnly:	true,
-    	    							fieldStyle: 'text-align: right;',
-//    	    							fieldCls:'size18',
-    	    							listeners: {
-    	    								change: function(object, newValue, oldValue){
-    	    									newValue = Ext.util.Format.usMoney(newValue.replace(/[^0-9\.]/g, ''));
-    	    									if(newValue == '$NaN.00') object.setValue(oldValue); else object.setValue(newValue);
-    	    								}
-    	    							}
-    	    						},
+//    	    						{
+//    	    							fieldLabel:	'Subtotal',
+//    	    							name:	'subTotal',
+//    	    							id:	'subTotal',
+//    	    							maskRe: /[0-9\$\.]/,
+//    	    							value: '0.00',
+//    	    							readOnly:	true,
+//    	    							fieldStyle: 'text-align: right;',
+////    	    							fieldCls:'size18',
+//    	    							listeners: {
+//    	    								change: function(object, newValue, oldValue){
+//    	    									newValue = Ext.util.Format.usMoney(newValue.replace(/[^0-9\.]/g, ''));
+//    	    									if(newValue == '$NaN.00') object.setValue(oldValue); else object.setValue(newValue);
+//    	    								}
+//    	    							}
+//    	    						},
+//    	    						{
+//    	    							fieldLabel:	'Impuestos',
+//    	    							name:	'tax',
+//    	    							id:	'tax',
+//    	    							maskRe: /[0-9\$\.]/,
+//    	    							value: '0.00',
+//    	    							readOnly:	true,
+//    	    							fieldStyle: 'text-align: right;',
+////    	    							fieldCls:'size18',
+//    	    							listeners: {
+//    	    								change: function(object, newValue, oldValue){
+//    	    									newValue = Ext.util.Format.usMoney(newValue.replace(/[^0-9\.]/g, ''));
+//    	    									if(newValue == '$NaN.00') object.setValue(oldValue); else object.setValue(newValue);
+//    	    								}
+//    	    							}
+//    	    						},
     	    						{
     	    							fieldLabel:	'Total',
     	    							name:	'total',

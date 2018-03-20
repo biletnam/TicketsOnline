@@ -61,7 +61,7 @@ public class Xml {
 					System.err.print("Buscando config.xml en C:\\Program Files\\Apache Software Foundation\\Tomcat 8.0\\conf\\config.xml..");
 					archivo = new File("C:\\Program Files\\Apache Software Foundation\\Tomcat 8.0\\conf\\config.xml");
 					constructor = fabrica.newDocumentBuilder();
-					documento = constructor.parse(archivo);
+					documento = constructor.parse(archivo); 
 					System.err.println("Encontrado en " + archivo.getAbsolutePath());
 				} catch (Exception e2) {
 					System.err.println(e.getMessage());

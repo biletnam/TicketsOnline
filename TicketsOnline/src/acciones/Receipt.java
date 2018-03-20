@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.apache.struts2.ServletActionContext;
 
+import clases.Correo;
 import clases.Seat;
 
 public class Receipt extends Json{
@@ -22,21 +23,24 @@ public class Receipt extends Json{
 	private String email = null;
 	private String phone = null;
 	private String eventDescription = null;
+	private boolean sendMail = false;
+	
      
 	public String execute(){
 		String paymentID = request.getParameter("paymentID");
 		Seat seat = null;
+		StringBuffer sb = new StringBuffer();
 		
 		//Consulta DB
 		
-		eventDescription = "Jesse & Joy - Un besito mas Tour";
+		eventDescription = "INTOCABLE - En Concierto";
 		customerName = "Carlos Santana";
 		email = "huosantana@hotmail.com";
 		phone = "664 315 7108";
-		dateTime = "Jul 15, 2018 21:00 hrs.";
-		place = "Audiorama, El Trompo";
-		city = "Tijuana";
-		state = "Baja California";
+		dateTime = "May 25, 2018 20:00 hrs.";
+		place = "Acropolis";
+		city = "Puebla";
+		state = "Puebla";
 		
 		seats = new ArrayList<Seat>();
 		seat = new Seat("1", 100.99, 6, 106, true, "BARRERA SOL.", "F3-33", "990001");
@@ -47,6 +51,14 @@ public class Receipt extends Json{
 		seats.add(seat);
 		seat = new Seat("4", 100.00, 6, 106, true, "BARRERA SOL.", "F3-36", "990004");
 		seats.add(seat);
+		
+		if (sendMail) {
+			sb.append("Estimado cliente:");
+			sb.append("<br><br>Se genero el pago exitosamente con el folio ").append(paymentID).append(", se adjunta link para ver documento:");
+			sb.append("<br><br><a href=\"http://localhost:8080/TicketsOnline/Accion2/getReceipt?paymentID=").append(paymentID).append("\">Link</a>");
+			sb.append("<br><br>Saludos.");
+			new Correo().enviar(email, "Comprobante de pago " + paymentID, sb.toString());
+		}
 		
 		return SUCCESS;
  	}
@@ -130,7 +142,13 @@ public class Receipt extends Json{
 	public void setEventDescription(String eventDescription) {
 		this.eventDescription = eventDescription;
 	}
-	
-	
+
+	public boolean isSendMail() {
+		return sendMail;
+	}
+
+	public void setSendMail(boolean sendMail) {
+		this.sendMail = sendMail;
+	}
 
 }

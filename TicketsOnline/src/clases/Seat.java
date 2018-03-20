@@ -85,7 +85,5 @@ public class Seat {
 	public void setIdPayment(String idPayment) {
 		this.idPayment = idPayment;
 	}
-	
-	
-	
+
 }
