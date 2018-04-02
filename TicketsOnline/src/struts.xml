@@ -6,9 +6,12 @@
 <struts>
    	
    	<package name="default2" namespace="/Accion2" extends="struts-default">
-		<action name="getReceipt" class="acciones.Receipt"> 
+		<action name="*Receipt" class="acciones.Receipt" method="{1}"> 
        		<result name="success">/jsp/Receipt.jsp</result>
-       	</action> 
+       	</action>
+       	<action name="Layout" class="acciones.Layout2"> 
+       		<result name="success">/jsp/Layout.jsp</result>
+       </action> 
     </package>
     
     <package name="default" namespace="/Accion" extends="json-default">
@@ -19,6 +22,9 @@
        		<result name="success">/jsp/Json.jsp</result>
        </action>
        <action name="*Seat" class="acciones.Seat" method="{1}"> 
+       		<result name="success">/jsp/Json.jsp</result>
+       </action> 
+       <action name="*User" class="acciones.User" method="{1}"> 
        		<result name="success">/jsp/Json.jsp</result>
        </action> 
    	</package>

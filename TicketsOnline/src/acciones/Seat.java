@@ -4,24 +4,37 @@ import javax.servlet.http.HttpSession;
 
 import org.apache.struts2.ServletActionContext;
 
+import clases.SQLServerConnection;
+
 public class Seat extends Json{
 	private static final long serialVersionUID = 1L;
 	private String seatId = null;
+	private String eventId = null;
+	private String sectionId = null;
+	private String index = null;
+	private String number = null;
     
 	public String confirm(){
-		System.out.println("confirming.." + seatId);
+		HttpSession session = ServletActionContext.getRequest().getSession();
 		
-		//preguntar si esta en proceso o reservado
-		
-		//poner en proceso
-		
-		//liberar
-		if (Math.random() < 0.5) {
-			setMsg("Libre");
-			setSuccess(true);
-		}else {
-			setMsg("Ocupado");
-			setSuccess(false);
+		try {
+			if (new SQLServerConnection().contar("select count(*) from tbButacasEnProceso where EventoPkId = "+eventId+" and Seccion = "+sectionId+" and Butaca = "+index+" and NumeroButaca = '" + number + "' and idSesion != '" + session.getId() + "'") > 0) {
+				setMsg("Ocupado");
+				setSuccess(false);
+			}else if (new SQLServerConnection().actualizar("delete from tbButacasEnProceso where EventoPkId = "+eventId+" and Seccion = "+sectionId+" and Butaca = "+index+" and NumeroButaca = '" + number + "' and idSesion = '" + session.getId() + "' ") > 0) {
+				setMsg("Se borraron");
+				setSuccess(true);
+			}else {
+				try {
+					new SQLServerConnection().actualizar("insert into tbButacasEnProceso values ("+eventId+", "+sectionId+", "+index+", '"+number+"', 0, getDate(), 1, 1, '"+session.getId()+"') ");
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+				setMsg("Libre");
+				setSuccess(true);
+			}
+		}catch(Exception e) {
+			e.printStackTrace();
 		}
 		
 		return SUCCESS;
@@ -30,14 +43,10 @@ public class Seat extends Json{
 	public String releaseAll(){
 		HttpSession session = ServletActionContext.getRequest().getSession();
 		
-		System.out.println("releasing.." + session.getId());
-		
-		if (Math.random() < 0.5) {
-			setMsg("Libre");
-			setSuccess(true);
-		}else {
-			setMsg("Ocupado");
-			setSuccess(false);
+		try {
+			new SQLServerConnection().actualizar("delete from tbButacasEnProceso where idSesion = '" + session.getId() + "' ");
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 		
 		return SUCCESS;
@@ -49,6 +58,38 @@ public class Seat extends Json{
 
 	public void setSeatId(String seatId) {
 		this.seatId = seatId;
+	}
+
+	public String getEventId() {
+		return eventId;
+	}
+
+	public void setEventId(String eventId) {
+		this.eventId = eventId;
+	}
+
+	public String getIndex() {
+		return index;
+	}
+
+	public void setIndex(String index) {
+		this.index = index;
+	}
+
+	public String getNumber() {
+		return number;
+	}
+
+	public void setNumber(String number) {
+		this.number = number;
+	}
+
+	public String getSectionId() {
+		return sectionId;
+	}
+
+	public void setSectionId(String sectionId) {
+		this.sectionId = sectionId;
 	}
 
 }

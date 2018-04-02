@@ -65,13 +65,26 @@ Ext.define('app.controller.Seats', {
     	var id = seat_.id;
     	var cost = parseFloat(seat_.getAttribute('cost'));
     	var commision = parseFloat(seat_.getAttribute('commision'));
-    	var subTotal = parseFloat(seat_.getAttribute('subTotal'));
+    	var subTotal = parseFloat(seat_.getAttribute('subtotal'));
+    	var sectionId = seat_.getAttribute('sectionid');
+    	var index = parseInt(seat_.getAttribute('index'));
+    	var number = seat_.getAttribute('number');
+    	var eventId = seat_.getAttribute('eventid');
+    	var location = seat_.getAttribute('location');
+    	var totalMasComision = 0;
     	
     	//Validate seat status
     	var dialogo = Ext.MessageBox.wait('Espere por favor, validando asiento', 'Informacion');
     	
     	Ext.Ajax.request({
-    		url: 'Accion/confirmSeat' + '?seatId=' + id,
+    		url: 'Accion/confirmSeat',
+    		params:{
+    			seatId: id,
+    			eventId: eventId,
+    			sectionId: sectionId,
+    			index: index,
+    			number: number
+    		},
     		method: 'POST',
    	        success: function(response, opts) {
    	        	dialogo.hide();
@@ -82,28 +95,24 @@ Ext.define('app.controller.Seats', {
    					Ext.MessageBox.alert('Informacion','Estimado cliente, este asiento se encuentra en proceso de compra, por lo cual no es posible seleccionarlo');
    				}else{
    					if (seat_){
-   						console.log(seat_);
    			    		if (seat_.style.fill=='rgb(38, 151, 229)'){
-   			    			store.add({seat: id, cost: cost, commision: commision, subTotal: subTotal});
+   			    			store.add({seat: location + ' ' + number, cost: cost, commision: commision, subTotal: subTotal});
    			         		seat_.style.fill='#ffff66'; 
    			         	}else if (seat_.style.fill=='rgb(255, 255, 102)'){
-   			 				store.removeAt(store.find('seat', id));
+   			 				store.removeAt(store.find('seat', location + ' ' + number));
    			 				seat_.style.fill='#2697e5';
    			         	}
    			    		
-//   			    		totalCost = store.sum('subTotal');
-//   				    	totalTax = totalCost * .16;
    				    	grandTotal = store.sum('subTotal');
    				    	
    				    	try{
-   				    		top.payment.amount = grandTotal.toFixed(2);
+   				    		totalMasComision = grandTotal * 1.08;
+   				    		top.payment.amount = totalMasComision.toFixed(2);
    				    	}catch(e){
    				    		console.error('Error en calculo de total');
    				    		top.payment.amount = 0;
    				    	}
    				    	
-//   				    	form.query('textfield[name=subTotal]')[0].setValue(totalCost);
-//   				    	form.query('textfield[name=tax]')[0].setValue(totalTax);
    				    	form.query('textfield[name=total]')[0].setValue(grandTotal);
    			    	}
    			    	window.parent.resizeIframe(window.parent.document.getElementById('frame'));
@@ -122,8 +131,6 @@ Ext.define('app.controller.Seats', {
     
     onLayoutBack: function(){
     	Ext.data.StoreManager.lookup('Grid').removeAll();
-//    	Ext.getCmp('subTotal').setValue(0);
-//    	Ext.getCmp('tax').setValue(0);
     	Ext.getCmp('total').setValue(0);
     	top.payment.amount = 0;
     	window.top.document.getElementById('minute-counter').contentWindow.update(0);
@@ -131,7 +138,7 @@ Ext.define('app.controller.Seats', {
     
     onLayoutBack2: function(){
     	this.onLayoutBack();
-    	window.history.back();
+    	window.parent.location.href = 'index.html';
     	window.parent.resizeIframe(window.parent.document.getElementById('frame'));
     	Ext.Ajax.request({
     		url: 'Accion/releaseAllSeat',

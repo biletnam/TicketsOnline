@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conexiones>
+	<ipApp>localhost</ipApp>
+	<ipBD>localhost</ipBD>
+	<ptoBD>1433</ptoBD>
+	<nomBD>DataBase</nomBD>
+	<usrBD>sa</usrBD>
+	<pswBD>Solrac7609</pswBD>
+	<ipLic>localhost</ipLic>
+	<usrSAP>manager</usrSAP>
+	<pswSAP>1234</pswSAP>
+	<numSQL>8</numSQL>
+	<bd1>DataBase</bd1>
+	<!--ProcesoGerencia-->
+	<rutaBase>C:\\Compartida\\Archivos Gerencia\\Deposito</rutaBase>
+	<leyendaAjuste>GERENCIA - PROCESO</leyendaAjuste>
+	<idAjuste>3</idAjuste>
+	<escribir>true</escribir>
+	<idEmpleado>1</idEmpleado>
+	<!--Correo-->
+	<para>csantana@nexusfuel.com, mreyes@grupooctano.com.mx, aruiz@grupooctano.com.mx</para>
+	<msg>Correo enviado por un proceso automatico correspondiente al procesamiento de archivos de gerencia. No responder. Saludos.</msg>
+	<host>grupooctano.com.mx</host>
+	<puertoFactory>465</puertoFactory>
+	<clase>javax.net.ssl.SSLSocketFactory</clase>
+	<autenticacion>true</autenticacion>
+	<puerto>26</puerto>
+	<usuario>notificaciones@grupooctano.com.mx</usuario>
+	<contrasena>Lak0etx7hIiC</contrasena>
+	<debug>true</debug>
+	<nombreArchivo>Informe Proceso Gerencia.log</nombreArchivo>
+	
+	<!--Envio de OC a proveedores-->
+	<cc>huosantana@hotmail.com</cc>
+</conexiones>

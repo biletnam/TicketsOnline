@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conexiones>
+	<ipApp>localhost</ipApp>
+	<ipBD>servidorxptickets.database.windows.net</ipBD>
+	<ptoBD>1433</ptoBD>
+	<nomBD>xptickets</nomBD>
+	<usrBD>Administrador@servidorxptickets</usrBD>
+	<pswBD>Xptickets1!</pswBD>
+	<ipLic>localhost</ipLic>
+	<usrSAP>manager</usrSAP>
+	<pswSAP>1234</pswSAP>
+	<numSQL>8</numSQL>
+	<bd1>xptickets</bd1>
+	<!--ProcesoGerencia-->
+	<rutaBase>C:\\Compartida\\Archivos Gerencia\\Deposito</rutaBase>
+	<leyendaAjuste>GERENCIA - PROCESO</leyendaAjuste>
+	<idAjuste>3</idAjuste>
+	<escribir>true</escribir>
+	<idEmpleado>1</idEmpleado>
+	<!--Correo-->
+	<para>huosantana@hotmail.com</para>
+	<msg>Correo enviado por un proceso automatico correspondiente al procesamiento de archivos de gerencia. No responder. Saludos.</msg>
+	<host>smtp.gmail.com</host>
+	<puertoFactory>465</puertoFactory>
+	<clase>javax.net.ssl.SSLSocketFactory</clase>
+	<autenticacion>true</autenticacion>
+	<puerto>587</puerto>
+	<usuario>contacto@xptix.com</usuario>
+	<contrasena>Solrac77070806</contrasena>
+	<debug>true</debug>
+	<nombreArchivo>Informe Proceso Gerencia.log</nombreArchivo>
+	
+	<!--Envio de OC a proveedores-->
+	<cc>huosantana@hotmail.com</cc>
+</conexiones>

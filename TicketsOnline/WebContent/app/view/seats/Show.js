@@ -20,28 +20,40 @@ Ext.define('app.view.seats.Show' ,{
     	console.log('Inicializando vista seats...');
     	this.items = [
     		{
+	            xtype: 'toolbar',
+	            dock: 'bottom',
+	            ui: 'footer',
+	            layout: {
+	                type: 'hbox',
+	                pack: 'end'
+	            },
+	            items: [
+	                {
+	                    xtype: 'button',
+	                    name: 'returnBtn',
+	                    id: 'returnBtn',
+	                    text: 'Regresar',
+	                }
+	            ]
+	        },
+    		{
     			xtype: 'image',
     			name: 'seatsLayout',
     			id: 'seatsLayout',
-    			width: '100%',
-    			height: '1000px',
     			autoEl: {
                     tag: 'iframe',
                     id: 'location',
                     name: 'location',
-                    //src: 'test.html',
-                    //src: 'http://72.52.250.106:9090/TicketsOnline/Accion/Layout?location=1&section=1'
-                    src: 'Accion/Layout?location=1&section=1'
+                    src: 'Accion2/Layout?location=1&section=1'
                 },
     			listeners:{
     				load:{
     					element: 'el',
     					fn: function(element, frame){
+    						var altura = element.target.contentWindow.document.getElementsByTagName('svg')[0].height.baseVal.value + 50; 
     						//Seat frame adjust
-    						element.target.style.height = element.target.contentWindow.document.getElementsByTagName('svg')[0].height.baseVal.value + 'px';
+    						element.target.style.height = altura + 'px';
     						Ext.getCmp('seatsshow').doLayout();
-    						//Main frame adjust
-    						window.parent.resizeIframe(window.parent.document.getElementById('frame'));
     					}
     				},
     	            'onclick':function (comp) {
@@ -54,7 +66,7 @@ Ext.define('app.view.seats.Show' ,{
     		{
     			xtype: 'panel',
     		    border: false,
-    		    margins: {top:50, left:0, right: 0, bottom:0},
+    		    margins: {top:10, left:0, right: 0, bottom:0},
     		    items:[
     		    	{
     		    		xtype: 'panel',
@@ -67,13 +79,13 @@ Ext.define('app.view.seats.Show' ,{
     	    		    	{
     	    		    		xtype: 'panel',
     	    		    		border: false,
-    	    		    		flex: 2
+    	    		    		flex: 1
     	    		    	},
     	    		    	{
 		    		    		xtype: 'grid',
 		    	    			name: 'seatsGrid',
 		    	    			id: 'seatsGrid',
-		    	    			 cls: 'custom-grid', 
+		    	    			cls: 'custom-grid', 
 		    	    			border : true,
 		    	    			store: Ext.data.StoreManager.lookup('Grid'),
 		    	    			flex: 3,
@@ -81,7 +93,7 @@ Ext.define('app.view.seats.Show' ,{
 		    	    	        	{
 		    	    	        		text: 'Asiento',
 		    	    	        		dataIndex: 'seat',
-		    	    	        		flex: 1
+		    	    	        		flex: 2
 		    	    	        	},
 		    	    	        	{
 		    	    	        		xtype: 'numbercolumn',
@@ -115,7 +127,7 @@ Ext.define('app.view.seats.Show' ,{
     	    		    	{
     	    		    		xtype: 'panel',
     	    		    		border: false,
-    	    		    		flex: 2
+    	    		    		flex: 1
     	    		    	},
     	    		    ]
     	    		},
@@ -129,7 +141,7 @@ Ext.define('app.view.seats.Show' ,{
     	    		    [
     	    		    	{
     	    		    		xtype: 'panel',
-    	    		    		flex: 2,
+    	    		    		flex: 1,
     	    		    		border: false,
     	    		    	},
     	    		    	{
@@ -194,28 +206,11 @@ Ext.define('app.view.seats.Show' ,{
     	    		    	},
     	    		    	{
     	    		    		xtype: 'panel',
-    	    		    		flex: 2,
+    	    		    		flex: 1,
     	    		    		border: false,
     	    		    	},
     	    		    ]
-    	    		},
-    	    		{
-			            xtype: 'toolbar',
-			            dock: 'bottom',
-			            ui: 'footer',
-			            layout: {
-			                type: 'hbox',
-			                pack: 'end'
-			            },
-			            items: [
-			                {
-			                    xtype: 'button',
-			                    name: 'returnBtn',
-			                    id: 'returnBtn',
-			                    text: 'Regresar',
-			                }
-			            ]
-			        }
+    	    		}
     		    ],
     		}
     	],

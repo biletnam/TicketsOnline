@@ -77,34 +77,30 @@ public class SVG {
 		try {
 			circles = doc.getElementsByTagName("ellipse");
 			
-			for (int i = 0; i < circles.getLength(); i++) {
-				circle = circles.item(i);
+			for (int j = 0; j < seats.size(); j++) {
+				seat = seats.get(j);
+				circle = circles.item(j);
 				attr = circle.getAttributes();
-				id = attr.getNamedItem("id").getTextContent();
 				
-				for (int j = 0; j < seats.size(); j++) {
-					seat = seats.get(j);
-					
-					if (id.equals(seat.getId())) {
-						
-						if (seat.isReserved()) {
-							((Element) circle).setAttribute("style", "fill:#999999ff;stroke:#000000;stroke-width:0.4445;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1");
-						}else {
-							((Element) circle).setAttribute("style", "fill:#2697e5;stroke:#000000;stroke-width:0.4445;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1");
-							((Element) circle).setAttribute("cost", Double.toString(seat.getCost()));
-							((Element) circle).setAttribute("commision", Double.toString(seat.getCommision()));
-							((Element) circle).setAttribute("subTotal", Double.toString(seat.getSubTotal()));
-							((Element) circle).setAttribute("onclick", "window.parent.actionSeat(this);");
-							title = doc.createElement("title");
-							title.appendChild(doc.createTextNode("Seccion " + id.substring(0, id.indexOf("_")) + ", Asiento " + id.substring(id.indexOf("_") + 1, id.length() ) + ", Precio: $" + seat.getCost()));
-							circle.appendChild(title);
-						}
-						break;
-						
-					}else {
-						((Element) circle).setAttribute("style", "fill:#999999ff;stroke:#000000;stroke-width:0.4445;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1");
-					}
-					
+				if (!seat.getStatus().equals("0")) {
+					((Element) circle).setAttribute("style", "fill:#999999ff;stroke:#000000;stroke-width:0.4445;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1");
+				}else {
+					((Element) circle).setAttribute("id", seat.getId());
+					((Element) circle).setAttribute("code", seat.getNumber());
+					((Element) circle).setAttribute("style", "fill:#2697e5;stroke:#000000;stroke-width:0.4445;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1");
+					((Element) circle).setAttribute("cost", Double.toString(seat.getCost()));
+					((Element) circle).setAttribute("commision", Double.toString(seat.getCommision()));
+					((Element) circle).setAttribute("subTotal", Double.toString(seat.getSubTotal()));
+					((Element) circle).setAttribute("row", seat.getRow());
+					((Element) circle).setAttribute("number", seat.getNumber());
+					((Element) circle).setAttribute("index", seat.getIndex());
+					((Element) circle).setAttribute("sectionId", seat.getSection());
+					((Element) circle).setAttribute("eventId", seat.getEventId());
+					((Element) circle).setAttribute("location", seat.getLocation());
+					((Element) circle).setAttribute("onclick", "window.parent.actionSeat(this);");
+					title = doc.createElement("title");
+					title.appendChild(doc.createTextNode("Seccion: " + seat.getSection() + "\nLocalidad: " + seat.getLocation() + "\nAsiento: " + seat.getNumber() + "\nPrecio: $" + seat.getCost() + "\nIndex: " + seat.getIndex()));
+					circle.appendChild(title);
 				}
 				
 			}

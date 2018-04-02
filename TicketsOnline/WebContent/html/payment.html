@@ -13,8 +13,8 @@
 
         style: {
             layout: 'vertical',  // horizontal | vertical
-            size:   'medium',    // medium | large | responsive
-            shape:  'rect',      // pill | rect
+            size:   'large',    // medium | large | responsive
+            shape:  'pill',      // pill | rect
             color:  'gold'       // gold | blue | silver | black
         },
 
@@ -50,14 +50,15 @@
                 }
             });
         },
+        
+        commit: true,
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-	        	window.parent.frame.back();
-                window.open('../Accion2/getReceipt?paymentID='+data.paymentID+'&sendMail=true'); 
+            	window.parent.location.href = '../index.html';
+                window.open('../Accion2/getReceipt?paymentID='+data.paymentID+'&sendMail=true');
             });
         }
-
     }, '#paypal-button-container');
 
 </script>

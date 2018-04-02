@@ -75,7 +75,6 @@ public class Correo {
 			message.setFrom(new InternetAddress(Xml.getUsuario()));
 			message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(para_));
 			message.setSubject(asunto_);
-//			message.setText(cuerpo_);
 			message.setContent(cuerpo_, "text/html; charset=utf-8");
 			Transport.send(message);
 		} catch (MessagingException e) {
@@ -87,6 +86,6 @@ public class Correo {
 	
 	
 	public static void main(String[] args) {
-		new Correo().enviar("csantana@nexusfuel.com, huosantana@hotmail.com", "Test", "Cuerpo Test", "C:\\Users\\Carlos Santana Ayala\\Desktop\\config.xml"); 
+		new Correo().enviar("csantana@nexusfuel.com, huosantana@hotmail.com", "Test", "Cuerpo Test"); 
 	}
 }

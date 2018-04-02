@@ -1,37 +1,32 @@
 package clases;
 
+import java.sql.CallableStatement;
 import java.sql.Connection;
-import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.sql.Types;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.sql.DataSource;
+
 public class SQLServerConnection{
-	private String stringConexion = null;
-	private String user = null;
-	private String password = null;
 	private Connection con = null;
 	private Statement st = null;
 	private ResultSet rs = null;
+	private PreparedStatement ps = null;
+	private CallableStatement sp = null;
 	
-	public SQLServerConnection(){
-		stringConexion = "jdbc:sqlserver://"+Xml.getIpBD()+";databaseName="+Xml.getBd1();
-		user = Xml.getUsrBD();
-		password = Xml.getPswBD();
-	}
-	
-	public SQLServerConnection(final String nomDB_){
-		stringConexion = "jdbc:sqlserver://"+Xml.getIpBD()+";databaseName="+nomDB_;
-		user = Xml.getUsrBD();
-		password = Xml.getPswBD();
-	}
-
 	private void abrir(){
 	   try{
-		   Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-		   con = DriverManager.getConnection(stringConexion, user, password);
+		   Context ctx = new InitialContext();
+		   Context envContext = (Context) ctx.lookup("java:/comp/env");
+		   DataSource ds = (DataSource)envContext.lookup("jdbc/xptickets");
+		   con = ds.getConnection();
 	   }catch (Exception e){
 		   e.printStackTrace();
 	   }
@@ -39,6 +34,10 @@ public class SQLServerConnection{
 	
 	private void cerrar(){
 		try{
+			if (sp != null)
+				sp.close();
+			if (ps != null)
+				ps.close();
 			if (rs != null) 
 				rs.close();
 			if (st != null)
@@ -70,8 +69,6 @@ public class SQLServerConnection{
 	        }
 		}
 		cerrar();
-		
-//		System.out.println(matriz);
 
 		return (ArrayList<ArrayList<String>>) matriz.clone();
    }
@@ -93,8 +90,10 @@ public class SQLServerConnection{
 			if (con != null){
 				st = con.createStatement();
 				rs = st.executeQuery(_query);
-		        while (rs.next()){
-		        	renglon.add(rs.getString(1));
+		        if (rs.next()){
+		        	for (int i = 1; i <= rs.getMetaData().getColumnCount(); i++) {
+		        		renglon.add(rs.getString(i));
+					}
 		        }
 			}
 		}catch (SQLException e) {
@@ -108,8 +107,8 @@ public class SQLServerConnection{
 	
 	
 	public int contar(final String _query){
-		
 		int retorno = 0;
+		
 		abrir();
 		try{
 			if (con != null){
@@ -177,14 +176,9 @@ public class SQLServerConnection{
 //		System.out.println(_actualizacion);
 		
 		abrir();
-		try {
-			st = con.createStatement();
-			n = st.executeUpdate(_actualizacion);
-		}catch(Exception e) {
-			e.printStackTrace();
-		}finally {
-			cerrar();
-		}
+		st = con.createStatement();
+		n = st.executeUpdate(_actualizacion);
+		cerrar();
 		
         return n;
    }
@@ -213,6 +207,96 @@ public class SQLServerConnection{
 	
 	public String[] consultarStringArray(final String query_){
 		return consultarVector(query_).toArray(new String[0]);
+	}
+	
+	@SuppressWarnings("unchecked")
+	public ArrayList<ArrayList<String>> ejecutarSP(final String nombre_, String[] valoresParametros_){
+		ArrayList<String> renglon = new ArrayList<String>();
+		ArrayList<ArrayList<String>> matriz = new ArrayList<ArrayList<String>>();
+		StringBuffer storedProcedure = new StringBuffer();
+		int n = 0;
+		
+		try {
+			storedProcedure.append("exec ").append(nombre_);
+			
+			for (int i = 0; i < valoresParametros_.length; i++) {
+				
+				if (i < valoresParametros_.length - 1){
+					storedProcedure.append(" ?, ");
+				}else{
+					storedProcedure.append(" ? ");
+				}
+				
+			}
+
+			abrir();
+			ps = con.prepareStatement(storedProcedure.toString());
+			ps.setEscapeProcessing(true);
+			ps.setQueryTimeout(20000);
+		
+			for (int i = 0; i < valoresParametros_.length; i++) {
+				ps.setString(i + 1, valoresParametros_[i]);
+			}
+			
+			rs = ps.executeQuery();
+			n = rs.getMetaData().getColumnCount();
+			
+			while (rs.next()){
+				
+	        	 for (int i = 1; i <= n; i++){
+	        		 renglon.add(noNulo(rs.getString(i)).trim());
+	        	 }
+	        	 
+	        	 matriz.add((ArrayList<String>)renglon.clone());
+	        	 renglon.clear();
+	        }
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally{
+			cerrar();
+		}
+		
+		return (ArrayList<ArrayList<String>>) matriz.clone();
+		
+	}
+	
+	public String ejecutarSPUnRetorno(final String nombre_, final String[] valoresParametros_){
+		StringBuffer storedProcedure = new StringBuffer();
+		String valor = "";
+		
+		try {
+			storedProcedure.append("{ call ").append(nombre_).append(" (");
+			
+			for (int i = 0; i < valoresParametros_.length; i++) {
+				
+				if (i < valoresParametros_.length - 1){
+					storedProcedure.append(" ?, ");
+				}else{
+					storedProcedure.append(" ? ");
+				}
+				
+			}
+			
+			storedProcedure.append(") }");
+			
+			abrir();
+			sp = con.prepareCall(storedProcedure.toString());
+		
+			for (int i = 0; i < valoresParametros_.length - 1; i++) {
+				sp.setString(i + 1, valoresParametros_[i]);
+			}
+			
+			sp.registerOutParameter(valoresParametros_.length, Types.VARCHAR);
+			sp.execute();
+			valor = sp.getString(valoresParametros_.length);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally{
+			cerrar();
+		}
+		
+		return valor;
 	}
 	
 }

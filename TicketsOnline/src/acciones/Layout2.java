@@ -1,11 +1,9 @@
 package acciones;
 
 import java.io.File;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 import org.apache.struts2.ServletActionContext;
 
@@ -15,19 +13,18 @@ import clases.SQLServerConnection;
 import clases.SVG;
 import clases.Seat;
 
-public class Layout extends ActionSupport{
+public class Layout2 extends ActionSupport{
 	private static final long serialVersionUID = 1L;
-	private HttpServletResponse response = ServletActionContext.getResponse();
 	private HttpServletRequest request = ServletActionContext.getRequest();
-	private PrintWriter writer = null;
 	private String location = null; 
 	private String section = null;
 	private StringBuffer path = new StringBuffer();
-	private String seats = null;
+	private String svg = null;
      
-	public void get(){
+	public String execute(){
 		getParameters();
 		getLayout();
+		return SUCCESS;
  	}
 
 	private void getLayout() {
@@ -48,11 +45,10 @@ public class Layout extends ActionSupport{
 		}
 		
 		try {
-			writer = response.getWriter();
-			writer.println(new SVG(path.toString(), seats).getXML());
+			svg = new SVG(path.toString(), seats).getXML();
 		}catch(Exception e) {
 			e.printStackTrace();
-			writer.println(e.getMessage());
+			svg = e.getMessage();
 		}
 	}
 	
@@ -81,12 +77,11 @@ public class Layout extends ActionSupport{
 		this.section = section;
 	}
 
-	public String getSeats() {
-		return seats;
+	public String getSvg() {
+		return svg;
 	}
 
-	public void setSeats(String seats) {
-		this.seats = seats;
+	public void setSvg(String svg) {
+		this.svg = svg;
 	}
-	
 }

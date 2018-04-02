@@ -35,7 +35,7 @@
 <td style="text-align:center;padding:30px 0px 30px 0px" class="">
 <center class=""><b style="" class=""><s:property value="eventDescription"/><br class="">
 <s:property value="dateTime"/><br class="">
-<s:property value="place"/>, <s:property value="city"/>, <s:property value="state"/></b></center>
+<s:property value="place"/></b></center>
 </td>
 </tr>
 <tr class="">
@@ -47,7 +47,7 @@
 	<td style="padding: 5px 0px 5px 0px; border:1px solid #50ADE5; " class="">
 	<center class=""><img src="http://www.autoboleto.com/barcodes/img/387001" alt="387001" width="200" height="50" id="1511472342778" class="">
 	<div style="padding:5px" class=""><b style="color:red" class=""><s:property value="idPayment"/></b></div>
-	<b style="" class=""><s:property value="code"/> <s:property value="location"/> $<s:property value="cost"/></b> </center>
+	<b style="" class=""><s:property value="location"/> <s:property value="number"/> $<s:property value="cost"/></b> </center>
 	</td>
 	</tr>
 </s:iterator>
@@ -55,7 +55,7 @@
 </table>
 </div>
 <p style="color:#999" class=""><br class="">
-MD5: <b class="">1RG91400MM146060L</b> </p>
+PayPal Id: <b class=""> <s:property value="paymentID"/></b> </p>
 </div>
 </div>
 </div>
