@@ -49,7 +49,6 @@ public class Layout extends ActionSupport{
 		
 		try {
 			writer = response.getWriter();
-			writer.println(new SVG(path.toString(), seats).getXML());
 		}catch(Exception e) {
 			e.printStackTrace();
 			writer.println(e.getMessage());

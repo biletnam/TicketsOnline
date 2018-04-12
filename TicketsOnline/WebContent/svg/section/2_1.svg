@@ -71,16 +71,16 @@
      id="RUEDO_PLATINO"
      inkscape:connector-curvature="0"
      inkscape:label=""
-     onclick="window.open('Layout?location=1&amp;section=RUEDO_PLATINO','location')" />
+     onclick="window.open('Layout?location=2&amp;section=RUEDO_PLATINO','location')" />
   <path
      style="fill:#01c000;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
      d="m 380.65867,307.54074 c 119.90444,0 120.51155,0 120.51155,0 v 65.568 h -7.58889 v 18.21333 H 458.976 v 25.19511 H 379.44444 V 307.84429"
      id="RUEDO_VIP_DER."
      inkscape:connector-curvature="0"
      inkscape:label=""
-     onclick="window.open('Layout?location=1&amp;section=RUEDO_VIP_DER.','location')" />
+     onclick="window.open('Layout?location=2&amp;section=RUEDO_VIP_DER.','location')" />
   <path
-     onclick="window.open('Layout?location=1&amp;section=RUEDO_VIP_IZQ.','location')"
+     onclick="window.open('Layout?location=2&amp;section=RUEDO_VIP_IZQ.','location')"
      inkscape:label=""
      inkscape:connector-curvature="0"
      id="path829"

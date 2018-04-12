@@ -9,6 +9,7 @@ import org.apache.struts2.ServletActionContext;
 
 import com.opensymphony.xwork2.ActionSupport;
 
+import clases.NonNumbered;
 import clases.SQLServerConnection;
 import clases.SVG;
 import clases.Seat;
@@ -29,11 +30,16 @@ public class Layout2 extends ActionSupport{
 
 	private void getLayout() {
 		ArrayList<Seat> seats = new ArrayList<Seat>();
+		ArrayList<NonNumbered> nonNumbereds = new ArrayList<NonNumbered>();
 		ArrayList<ArrayList<String>> arrSeats = null;
+		ArrayList<ArrayList<String>> arrNonNumbered = null;
 		ArrayList<String> arrRow = null;
 		
+		//Seats
 		try {
-			arrSeats = new SQLServerConnection().consultarMatriz("select PrecioDescuentoPkId, seccion, descripcion, precio, butaca, fila, case mesa when '0' then concat(Fila,'-',NumeroButaca) else concat(Fila,'/',NumeroMesa,'-',NumeroButaca) end, status, cargoPorServicio, EventoPkId from tbPreciosDescuentos where EventoPkId = 1 and Activo = 1 ");
+			section = section.replace('_', ' ');
+			//arrSeats = new SQLServerConnection().consultarMatriz("select PrecioDescuentoPkId, seccion, descripcion, precio, butaca, fila, NumeroButaca, status, cargoPorServicio, EventoPkId from tbPreciosDescuentos where EventoPkId = "+location+" and Activo = 1 and Seccion != '0' order by Seccion, Descripcion, Butaca ");
+			arrSeats = new SQLServerConnection().consultarMatriz("select PrecioDescuentoPkId, seccion, descripcion, precio, butaca, fila, NumeroButaca, status, cargoPorServicio, EventoPkId from tbPreciosDescuentos where EventoPkId = "+location+" and Seccion = '"+section+"' order by Butaca ");
 		} catch (Exception e1) {
 			arrSeats = new ArrayList<ArrayList<String>>();
 			e1.printStackTrace();
@@ -41,11 +47,26 @@ public class Layout2 extends ActionSupport{
 		
 		for (int i = 0; i < arrSeats.size(); i++) {
 			arrRow = arrSeats.get(i);
-			seats.add(new Seat(arrRow.get(0).toString(), arrRow.get(1).toString(), arrRow.get(2).toString(), arrRow.get(3).toString(), arrRow.get(4).toString(), arrRow.get(5).toString(), arrRow.get(6).toString(), arrRow.get(7).toString(), arrRow.get(8).toString(), arrRow.get(9).toString())); 
+			seats.add(new Seat(arrRow.get(0).toString(), arrRow.get(1).toString(), arrRow.get(2).toString(), arrRow.get(3).toString(), arrRow.get(4).toString(), arrRow.get(5).toString(), arrRow.get(6).toString(), arrRow.get(7).toString(), arrRow.get(8).toString(), arrRow.get(9).toString()));
+			arrRow.clear();
+		}
+		
+		//Non Numbered
+		try {
+			arrNonNumbered = new SQLServerConnection().consultarMatriz("select PrecioDescuentoPkId, seccion, descripcion, precio, butaca, fila, NumeroButaca, status, cargoPorServicio, EventoPkId from tbPreciosDescuentos where EventoPkId = "+location+" and Activo = 1 and Seccion = '0' order by Seccion, Descripcion, Butaca ");
+		} catch (Exception e1) {
+			arrNonNumbered = new ArrayList<ArrayList<String>>();
+			e1.printStackTrace();
+		}
+		
+		for (int i = 0; i < arrNonNumbered.size(); i++) {
+			arrRow = arrNonNumbered.get(i);
+			nonNumbereds.add(new NonNumbered(arrRow.get(0).toString(), arrRow.get(1).toString(), arrRow.get(2).toString(), arrRow.get(3).toString(), arrRow.get(4).toString(), arrRow.get(5).toString(), arrRow.get(6).toString(), arrRow.get(7).toString(), arrRow.get(8).toString(), arrRow.get(9).toString()));
+			arrRow.clear();
 		}
 		
 		try {
-			svg = new SVG(path.toString(), seats).getXML();
+			svg = new SVG(path.toString(), seats, nonNumbereds).getXML();
 		}catch(Exception e) {
 			e.printStackTrace();
 			svg = e.getMessage();

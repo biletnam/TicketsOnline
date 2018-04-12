@@ -1,3 +1,8 @@
+Ext.require([
+    'Ext.window.MessageBox',
+    'Ext.tip.*'
+]);
+
 function showRegister(){
 	var fL = Ext.getCmp('formPanelLogin');
 	var fR = Ext.getCmp('formPanelRegister');
@@ -107,7 +112,7 @@ Ext.onReady(function() {
             inputType: 'password',
             style: 'margin-top:15px',
             allowBlank: false,
-            minLength: 8
+            minLength: 1
         }, {
             xtype: 'textfield',
             name: 'password2',
@@ -266,12 +271,12 @@ Ext.onReady(function() {
                     	form.submit({
                     		clientValidation: true,
                     		url: 'Accion/addUser',
-                    		success: function(form, action) {
-                    			Ext.MessageBox.alert('Informaci&oacute;n','Usuario dado de alta exitosamente, ahora puede iniciar sesi&oacute;n');
+                    		success: function(response, opts) {
+                    			Ext.MessageBox.alert('Informaci&oacute;n', 'Usuario dado de alta satisfactoriamente, ya puede iniciar sesi&oacute;n.');
                     			showLogin();
                     		},
                     		failure: function(form, action) {
-                    			Ext.MessageBox.alert('Informaci&oacute;n','Usuario no se pudo dar de alta');
+                    			Ext.MessageBox.alert('Informaci&oacute;n', 'No se pudo dar de alta el usuario, ya existe uno con ese correo.');
                     		}
                     	});
                     }
@@ -340,7 +345,7 @@ Ext.onReady(function() {
 	            inputType: 'password',
 	            style: 'margin-top:15px',
 	            allowBlank: false,
-	            minLength: 8
+	            minLength: 1
 	        },{
 		        xtype: 'label',
 	            name: 'texto',
@@ -420,10 +425,10 @@ Ext.onReady(function() {
                     		clientValidation: true,
                     		url: 'Accion/rememberUser',
                     		success: function(form, action) {
-                    			Ext.MessageBox.alert('Informaci&oacute;n','Se acaba de enviar la contrase&ntilde;a al correo indicado, con exito');
+                    			Ext.MessageBox.alert('Informaci&oacute;n','Se acaba de enviar la contrase&ntilde;a al correo indicado de manera exitosa.');
                     		},
                     		failure: function(form, action) {
-                    			Ext.MessageBox.alert('Informaci&oacute;n','Correo o contrase&ntilde;a incorrecta');
+                    			Ext.MessageBox.alert('Informaci&oacute;n','Correo o contrase&ntilde;a incorrecta.');
                     		}
                     	});
                     }
@@ -443,8 +448,20 @@ Ext.onReady(function() {
                     	form.submit({
                     		clientValidation: true,
                     		url: 'Accion/loginUser',
-                    		success: function(form, action) {
+                    		success: function(form, response) {
+                   				usrType = response.result.usrType;
                     			win.close();
+                    			
+                    			if (usrType == '1'){
+                    				 var ul = document.getElementById("menu");
+                    				 var li = document.createElement("li");
+                    				 var a = document.createElement("a");
+                    				 
+                    				 a.textContent = "Reportes";
+                    				 a.setAttribute('href', "Reportes.jsp");
+                    				 li.appendChild(a);
+                    				 ul.appendChild(li);
+                    			}
                     		},
                     		failure: function(form, action) {
                     			Ext.MessageBox.alert('Informacion','Correo o contrase&ntilde;a incorrecta');
@@ -473,9 +490,30 @@ Ext.onReady(function() {
 			var result = JSON.parse(response.responseText);
 			var mensaje = result.msg;
 			var res = result.success;
+			var usrType = result.usrType;
 			
 			if (!res){
 				window.show();
+			}else{
+    			window.close();
+    			
+    			if (usrType == '1'){
+    				 var ul = document.getElementById("menu");
+    				 var li = document.createElement("li");
+    				 var a = document.createElement("a");
+    				 
+    				 a.textContent = "Reportes";
+    				 a.setAttribute('href', "Reportes.jsp");
+    				 li.appendChild(a);
+    				 ul.appendChild(li);
+    			}
+    			
+				dialog = Ext.MessageBox.show({
+		           msg: 'Consultando asientos...',
+		           width:300,
+		           wait:true,
+		           waitConfig: {interval:100}
+		        });
 			}
 		},
 		failure: function(response, opts) {

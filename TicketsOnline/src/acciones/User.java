@@ -1,8 +1,13 @@
 package acciones;
 
+import java.util.ArrayList;
+
 import javax.servlet.http.HttpSession;
 
 import org.apache.struts2.ServletActionContext;
+
+import clases.Correo;
+import clases.SQLServerConnection;
 
 public class User extends Json{
 	private static final long serialVersionUID = 1L;
@@ -14,52 +19,58 @@ public class User extends Json{
 	private String password2 = null;
     
 	public String add(){
-		HttpSession session = ServletActionContext.getRequest().getSession();
+		int n = 0;
 
-		System.out.println(name);
-		System.out.println(email);
-		System.out.println(address);
-		System.out.println(phone);
-		System.out.println(password1);
-		System.out.println(password2);
-		session.setAttribute("name", name);
-		session.setAttribute("email", email);
-		session.setAttribute("address", address);
-		session.setAttribute("phone", phone);
-		session.setAttribute("password", password1);
-		
-		setMsg("Alta de usuario con exito, ahora puede iniciar sesion");
-		setSuccess(true);
+		try {
+			n = new SQLServerConnection().consultar1ValorNumerico("select count(*) from tbUsuarios where Email = '" + email + "' ");
+			
+			if (n > 0) {
+				setSuccess(false);
+			}else {
+				n = new SQLServerConnection().actualizar("insert into tbUsuarios (Email, Contrasena, Nombre, Direccion, Telefono) values ('"+email+"', '"+password1+"', '"+name+"', '"+address+"', '"+phone+"') ");
+				if (n > 0) {
+					setSuccess(true);
+				}else {
+					setSuccess(false);
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		
 		return SUCCESS;
  	}
 	
 	public String login(){
 		HttpSession session = ServletActionContext.getRequest().getSession();
+		ArrayList<String> arrRow = null;
+		String eventId = session.getAttribute("eventId").toString();
+		
+		arrRow = new SQLServerConnection().consultarVector("select Nombre, Direccion, Telefono, Type from tbUsuarios where Email = '"+email+"' and Contrasena = '"+password1+"' ");
 
-		//validar si es valido el pssw
-		//subir a sesion
-		session.setAttribute("email", email);
-		session.setAttribute("password", password1);
-		session.setAttribute("name", "NOMBRE DESDE BD");
-		session.setAttribute("address", "DIRECCION DESDE BD");
-		session.setAttribute("phone", "TELEBD");
-		System.out.println(email);
-		System.out.println(password1);
-		
-		setMsg("Auntenticacion exitosa, puede ingresar");
-		setSuccess(true);
-		
+		if (arrRow.size() > 0) {
+			session.setAttribute("email", email);
+			session.setAttribute("password", password1);
+			session.setAttribute("name", arrRow.get(0).toString());
+			session.setAttribute("address", arrRow.get(1).toString());
+			session.setAttribute("phone", arrRow.get(2).toString());
+			setUsrType(arrRow.get(3).toString());
+			session.setAttribute("eventDesc", new SQLServerConnection().consultar1Valor("select Titulo from tbEventos where eventoPkId = " + eventId));
+			session.setAttribute("eventDate", new SQLServerConnection().consultar1Valor("select CONVERT(varchar, FechaHora, 102) from tbEventos where eventoPkId = " + eventId));
+			
+			setSuccess(true);
+		}else {
+			setSuccess(false);
+		}
+
 		return SUCCESS;
  	}
 	
 	public String remember(){
-		HttpSession session = ServletActionContext.getRequest().getSession();
+		String password = null;
 
-		System.out.println(email);
-		System.out.println(password1);
-		
-		setMsg("Se acaba de enviar la contrasena al correo indicado, con exito");
+		password = new SQLServerConnection().consultar1Valor("select Contrasena from tbUsuarios where Email = '"+email+"' ");
+		new Correo().enviar(email, "XPTickets - Recordatorio de contraseña", "Este es un mensaje enviado desde el sitio de XPTickets para recordar su contraseña, es la siguiente:<br><br><b>" + password + "</b><br><br>Saludos.");
 		setSuccess(true);
 		
 		return SUCCESS;
@@ -67,16 +78,29 @@ public class User extends Json{
 	
 	public String isLogued(){
 		HttpSession session = ServletActionContext.getRequest().getSession();
-
-		System.out.println(session.getAttribute("email"));
+		ArrayList<String> arrRow = null;
+		String eventId = session.getAttribute("eventId").toString();
 		
-		if (session.getAttribute("email") != null) {
-			session.setAttribute("name", "NOMBRE DESDE BD");
-			session.setAttribute("address", "DIRECCION DESDE BD");
-			session.setAttribute("phone", "TELEBD");
-			setSuccess(true);
+		if (session.getAttribute("email") != null && session.getAttribute("password") != null ) {
+			email = session.getAttribute("email").toString();
+			password1 = session.getAttribute("password").toString();
+			arrRow = new SQLServerConnection().consultarVector("select Nombre, Direccion, Telefono, type from tbUsuarios where Email = '"+email+"' and Contrasena = '"+password1+"' ");
+
+			if (arrRow.size() > 0) {
+				session.setAttribute("email", email);
+				session.setAttribute("password", password1);
+				session.setAttribute("name", arrRow.get(0).toString());
+				session.setAttribute("address", arrRow.get(1).toString());
+				session.setAttribute("phone", arrRow.get(2).toString());
+				setUsrType(arrRow.get(3).toString());
+				session.setAttribute("eventDesc", new SQLServerConnection().consultar1Valor("select Titulo from tbEventos where eventoPkId = " + eventId));
+				session.setAttribute("eventDate", new SQLServerConnection().consultar1Valor("select CONVERT(varchar, FechaHora, 102) from tbEventos where eventoPkId = " + eventId));
+				
+				setSuccess(true);
+			}else {
+				setSuccess(false);
+			}
 		}else {
-			setMsg("Usuario no logueado");
 			setSuccess(false);
 		}
 		

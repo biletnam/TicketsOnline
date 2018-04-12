@@ -1,3 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-15" pageEncoding="ISO-8859-15"%>
+<%
+	response.setHeader("Cache-Control", "no-Cache");
+	response.setHeader("Pragma", "No-cache");
+%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
+<%
+	session.setAttribute("eventId", request.getParameter("eventId"));	
+%>
 <!DOCTYPE html>
 <!--[if lt IE 10]> <html  lang="en" class="iex"> <![endif]-->
 <!--[if (gt IE 10)|!(IE)]><!-->
@@ -127,7 +136,7 @@
                     <div class="scroll-hide">
                         <div class="container">
                             <a class="navbar-brand center" href="#">
-                                <img src="images/logo.png" alt="logo" />
+                                <img src="img/logo.png" alt="logo" />
                             </a>
                         </div>
                     </div>

@@ -1,3 +1,5 @@
+var i = 0;
+
 Ext.define('app.controller.Seats', {
     extend: 'Ext.app.Controller',
 
@@ -8,14 +10,24 @@ Ext.define('app.controller.Seats', {
     init: function() {
         console.log('Inicializando controlador seats...');
         this.control({
+        	'image[name=seatsLayout]':{
+        		resize: function(){
+        			i++;
+        			
+        			if (i > 1 && window.parent.dialog){
+        				window.parent.dialog.hide();
+        			}
+        		}
+        	},
         	'button[name=returnBtn]':{
         		click: this.onLayoutBack2
         	},
         	'image':{
         		onseatsLayoutClick: this.selectSeat,
+        		onseatsLayoutClick2: this.selectSeat2,
         		onLayoutBack: this.onLayoutBack,
         		onseatsLayoutLoad: this.onseatsLayoutLoad
-        	}
+        	},
         });
     },
     
@@ -83,7 +95,8 @@ Ext.define('app.controller.Seats', {
     			eventId: eventId,
     			sectionId: sectionId,
     			index: index,
-    			number: number
+    			number: number,
+    			location: location
     		},
     		method: 'POST',
    	        success: function(response, opts) {
@@ -103,6 +116,75 @@ Ext.define('app.controller.Seats', {
    			 				seat_.style.fill='#2697e5';
    			         	}
    			    		
+   				    	grandTotal = store.sum('subTotal');
+   				    	
+   				    	try{
+   				    		totalMasComision = grandTotal * 1.08;
+   				    		top.payment.amount = totalMasComision.toFixed(2);
+   				    	}catch(e){
+   				    		console.error('Error en calculo de total');
+   				    		top.payment.amount = 0;
+   				    	}
+   				    	
+   				    	form.query('textfield[name=total]')[0].setValue(grandTotal);
+   			    	}
+   			    	window.parent.resizeIframe(window.parent.document.getElementById('frame'));
+   			    	window.top.document.getElementById('minute-counter').contentWindow.update(grandTotal);
+   				}
+	         },
+	         failure: function(response, opts){
+	        	dialogo.hide();
+				result = JSON.parse(response.responseText);
+   				console.log(mensaje);
+				mensaje = result.msg;
+				Ext.MessageBox.alert('Informacion','Estimado cliente, este asiento se encuentra en proceso de compra, por lo cual no es posible seleccionarlo');
+			 }
+   	     })
+    },
+    
+    selectSeat2: function(image, seat_){
+    	var grid = image.getBubbleTarget().query('grid')[0];
+    	var form = grid.getBubbleTarget().getBubbleTarget().query('form')[0];
+    	var store = grid.getStore();
+    	var n = store.getCount();
+    	var totalCost = 0.00;
+    	var totalTax = 0.00;
+    	var grandTotal = 0.00;
+    	var id = seat_.id;
+    	var cost = parseFloat(seat_.getAttribute('cost'));
+    	var commision = parseFloat(seat_.getAttribute('commision'));
+    	var subTotal = parseFloat(seat_.getAttribute('subtotal'));
+    	var sectionId = seat_.getAttribute('sectionid');
+    	var index = parseInt(seat_.getAttribute('index'));
+    	var number = seat_.getAttribute('number');
+    	var eventId = seat_.getAttribute('eventid');
+    	var location = seat_.getAttribute('location');
+    	var totalMasComision = 0;
+    	
+    	//Validate seat status
+    	var dialogo = Ext.MessageBox.wait('Espere por favor, validando asiento', 'Informacion');
+    	
+    	Ext.Ajax.request({
+    		url: 'Accion/confirmSeat',
+    		params:{
+    			seatId: id,
+    			eventId: eventId,
+    			sectionId: sectionId,
+    			index: index,
+    			number: number,
+    			location: location
+    		},
+    		method: 'POST',
+   	        success: function(response, opts) {
+   	        	dialogo.hide();
+   				result = JSON.parse(response.responseText);
+   				mensaje = result.msg;
+   				res = result.success;
+   				if (!res){
+   					Ext.MessageBox.alert('Informacion','Estimado cliente, este asiento se encuentra en proceso de compra, por lo cual no es posible seleccionarlo');
+   				}else{
+   					if (seat_){
+  			    		store.add({seat: location + ' ' + number, cost: cost, commision: commision, subTotal: subTotal});
    				    	grandTotal = store.sum('subTotal');
    				    	
    				    	try{

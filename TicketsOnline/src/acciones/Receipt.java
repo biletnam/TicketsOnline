@@ -67,10 +67,7 @@ public class Receipt extends Json{
 		sb.append("0, ");
 		sb.append("'PaypalId', ");
 		sb.append("a.Butaca, ");
-		sb.append("case b.mesa ");
-		sb.append("when '0' then concat(b.Fila,'-',b.NumeroButaca) "); 
-		sb.append("else concat(b.Fila,'/',b.NumeroMesa,'-',b.NumeroButaca) ");	
-		sb.append("end, ");
+		sb.append("b.NumeroButaca, ");	
 		sb.append("1, ");
 		sb.append("0, ");
 		sb.append("b.Precio * 0.10, ");
@@ -88,7 +85,7 @@ public class Receipt extends Json{
 		sb.append("from  ");
 		sb.append("tbButacasEnProceso a  ");
 		sb.append("join tbPreciosDescuentos b  ");
-		sb.append("on a.EventoPkId = b.EventoPkId and a.Seccion = b.Seccion and a.Butaca = b.Butaca ");
+		sb.append("on a.EventoPkId = b.EventoPkId and a.Seccion = b.Seccion and a.Butaca = b.Butaca and a.Descripcion = b.Descripcion ");
 		sb.append("where  ");
 		sb.append("a.idSesion = '").append(sessionId).append("' ");
 		
@@ -141,6 +138,10 @@ public class Receipt extends Json{
 					System.out.println(params[22]);
 					seat = new Seat(boletoPkId, params[3], arrRow.get(35).toString(), params[18], params[21], arrRow.get(36).toString(), params[22], params[23], params[25], params[2]);
 					seats.add(seat);
+					
+					if (arrRow.get(3).toString().equals("0")) {
+						new SQLServerConnection().actualizar("update tbPreciosDescuentos set boletos = boletos - 1 where descripcion = '"+arrRow.get(35).toString()+"' and seccion = '0' ");
+					}
 				}
 				
 				arrRow.clear();
@@ -154,7 +155,7 @@ public class Receipt extends Json{
 		}
 		
 		sb.setLength(0);
-		sb.append("select a.Titulo, a.FechaHora, b.Descripcion from tbEventos a left join tbEspaciosLugares b on a.ClaveLugar = b.Clave where a.EventoPkId = 1 ");
+		sb.append("select a.Titulo, a.FechaHora, b.Descripcion from tbEventos a left join tbEspaciosLugares b on a.ClaveLugar = b.Clave where a.EventoPkId = 2 ");	//CSAXXX
 		ArrayList<String> arrRenglon = new SQLServerConnection().consultarVector(sb.toString()); 
 		sb.setLength(0);
 		
@@ -169,7 +170,7 @@ public class Receipt extends Json{
 			sb.setLength(0);
 			sb.append("Estimado cliente:");
 			sb.append("<br><br>Se genero el pago exitosamente con el folio ").append(paymentID).append(", se adjunta link para ver documento:");
-			sb.append("<br><br><a href=\"http://192.168.1.67:8080/TicketsOnline/Accion2/viewReceipt?paymentID=").append(paymentID).append("\">Link</a>");
+			sb.append("<br><br><a href=\"http://"+request.getServerName()+":"+request.getServerPort()+"/TicketsOnline/Accion2/viewReceipt?paymentID=").append(paymentID).append("\">Link</a>");
 			sb.append("<br><br>Saludos.");
 			new Correo().enviar(email, "Comprobante de pago " + paymentID + " " + eventDescription + " en " + place + " a las " + dateTime, sb.toString());
 		}
@@ -224,7 +225,7 @@ public class Receipt extends Json{
 		}
 		
 		sb.setLength(0);
-		sb.append("select a.Titulo, a.FechaHora, b.Descripcion from tbEventos a left join tbEspaciosLugares b on a.ClaveLugar = b.Clave where a.EventoPkId = 1 ");
+		sb.append("select a.Titulo, a.FechaHora, b.Descripcion from tbEventos a left join tbEspaciosLugares b on a.ClaveLugar = b.Clave where a.EventoPkId = 2 ");	//CSAXXX
 		ArrayList<String> arrRenglon = new SQLServerConnection().consultarVector(sb.toString()); 
 		sb.setLength(0);
 		

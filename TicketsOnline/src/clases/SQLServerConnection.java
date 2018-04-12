@@ -2,11 +2,13 @@ package clases;
 
 import java.sql.CallableStatement;
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.Types;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -55,6 +57,8 @@ public class SQLServerConnection{
 		ArrayList<ArrayList<String>> matriz = new ArrayList<ArrayList<String>>();
 		int n = 0;
 		
+		System.out.println(_query);
+		
 		abrir();
 		if (con != null){
 			st = con.createStatement();
@@ -84,6 +88,8 @@ public class SQLServerConnection{
 	@SuppressWarnings("unchecked")
 	public ArrayList<String> consultarVector(final String _query){
 		ArrayList<String> renglon = new ArrayList<String>();
+		
+		System.out.println(_query);
 		
 		abrir();
 		try{
@@ -154,6 +160,8 @@ public class SQLServerConnection{
 	public String consultar1Valor(final String _query){
 		String resultado = "";
 		
+		System.out.println(_query);
+		
 		abrir();
 		try{
 			st = con.createStatement();
@@ -190,6 +198,8 @@ public class SQLServerConnection{
 	public int consultar1ValorNumerico(final String _query) {
 		int resultado = 0;
 		
+		System.out.println(_query);
+		
 		abrir();
 		try{
 			st = con.createStatement();
@@ -217,23 +227,31 @@ public class SQLServerConnection{
 		int n = 0;
 		
 		try {
-			storedProcedure.append("exec ").append(nombre_);
+			storedProcedure.append("{ call ").append(nombre_).append(" (");
 			
 			for (int i = 0; i < valoresParametros_.length; i++) {
 				
 				if (i < valoresParametros_.length - 1){
 					storedProcedure.append(" ?, ");
 				}else{
-					storedProcedure.append(" ? ");
+					storedProcedure.append(" ? "); 
 				}
 				
 			}
-
+			
+			storedProcedure.append(") }");
+			
 			abrir();
 			ps = con.prepareStatement(storedProcedure.toString());
 			ps.setEscapeProcessing(true);
 			ps.setQueryTimeout(20000);
 		
+//			ps.setInt(1, 2);
+//			ps.setString(2, "2018-01-01");
+//			ps.setString(3, "2018-04-08");
+//			ps.setBoolean(4, true);
+//			ps.setInt(5, 2);
+			
 			for (int i = 0; i < valoresParametros_.length; i++) {
 				ps.setString(i + 1, valoresParametros_[i]);
 			}
@@ -273,7 +291,7 @@ public class SQLServerConnection{
 				if (i < valoresParametros_.length - 1){
 					storedProcedure.append(" ?, ");
 				}else{
-					storedProcedure.append(" ? ");
+					storedProcedure.append(" ? "); 
 				}
 				
 			}

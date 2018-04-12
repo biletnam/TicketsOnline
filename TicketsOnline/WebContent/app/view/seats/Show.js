@@ -3,6 +3,11 @@ function actionSeat(seat_){
  	img.fireEvent('onseatsLayoutClick', img, seat_);
 }
 
+function actionSeat2(seat_){
+	var img = Ext.getCmp('seatsLayout');
+ 	img.fireEvent('onseatsLayoutClick2', img, seat_);
+}
+
 function back(layout_){
 	window.history.back();
 	Ext.getCmp('seatsLayout').fireEvent('onLayoutBack');
@@ -44,7 +49,7 @@ Ext.define('app.view.seats.Show' ,{
                     tag: 'iframe',
                     id: 'location',
                     name: 'location',
-                    src: 'Accion2/Layout?location=1&section=1'
+                    src: 'Accion2/Layout?location=2&section=1'
                 },
     			listeners:{
     				load:{
