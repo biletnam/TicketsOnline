@@ -65,7 +65,6 @@ public class Json extends ActionSupport {
 			jsonData.put("data", getData());
 			jsonData.put("estado", estado);
 			jsonData.put("msg", msg);
-			//System.out.println("json ..."+jsonData.toString());
 			return JSONUtil.serialize(jsonData);
 		} catch (Exception e) {
 			LOG.equals(e);

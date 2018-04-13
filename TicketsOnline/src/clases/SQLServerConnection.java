@@ -57,8 +57,6 @@ public class SQLServerConnection{
 		ArrayList<ArrayList<String>> matriz = new ArrayList<ArrayList<String>>();
 		int n = 0;
 		
-		System.out.println(_query);
-		
 		abrir();
 		if (con != null){
 			st = con.createStatement();
@@ -88,8 +86,6 @@ public class SQLServerConnection{
 	@SuppressWarnings("unchecked")
 	public ArrayList<String> consultarVector(final String _query){
 		ArrayList<String> renglon = new ArrayList<String>();
-		
-		System.out.println(_query);
 		
 		abrir();
 		try{
@@ -160,8 +156,6 @@ public class SQLServerConnection{
 	public String consultar1Valor(final String _query){
 		String resultado = "";
 		
-		System.out.println(_query);
-		
 		abrir();
 		try{
 			st = con.createStatement();
@@ -181,8 +175,6 @@ public class SQLServerConnection{
 	public int actualizar(final String _actualizacion) throws Exception{
 		int n = 0;
 		
-//		System.out.println(_actualizacion);
-		
 		abrir();
 		st = con.createStatement();
 		n = st.executeUpdate(_actualizacion);
@@ -197,8 +189,6 @@ public class SQLServerConnection{
 
 	public int consultar1ValorNumerico(final String _query) {
 		int resultado = 0;
-		
-		System.out.println(_query);
 		
 		abrir();
 		try{

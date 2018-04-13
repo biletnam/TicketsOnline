@@ -135,7 +135,6 @@ public class Receipt extends Json{
 				boletoPkId = new SQLServerConnection().ejecutarSPUnRetorno("pc_tbboletosV2_save", params);
 				
 				if (boletoPkId.compareTo("0") > 0) {
-					System.out.println(params[22]);
 					seat = new Seat(boletoPkId, params[3], arrRow.get(35).toString(), params[18], params[21], arrRow.get(36).toString(), params[22], params[23], params[25], params[2]);
 					seats.add(seat);
 					

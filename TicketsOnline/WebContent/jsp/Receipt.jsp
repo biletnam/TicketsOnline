@@ -5,6 +5,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Comprobante de pago</title>
+<script src="../js/JsBarcode.all.min.js"></script>
+<script src="../js/qrcode.js"></script>
 </head>
 <body style="word-wrap: break-word; -webkit-nbsp-mode: space; line-break: after-white-space;" class="">
 <div style="width:320px;padding:5px;font-size:12px;font-family:tahoma,arial,sans-serif;" class="">
@@ -45,7 +47,16 @@
 <s:iterator status="stat" value="seats">
 	<tr class="">
 	<td style="padding: 5px 0px 5px 0px; border:1px solid #50ADE5; " class="">
-	<center class=""><img src="http://www.autoboleto.com/barcodes/img/387001" alt="387001" width="200" height="50" id="1511472342778" class="">
+	<center class="">
+	<svg class="barcode"
+	  jsbarcode-format="auto"
+	  jsbarcode-value="<s:property value="id"/>"
+	  jsbarcode-textmargin="0"
+	  jsbarcode-fontoptions="bold">
+	</svg>
+	<script type="text/javascript">
+		JsBarcode(".barcode").init();
+	</script>
 	<div style="padding:5px" class=""><b style="color:red" class=""><s:property value="idPayment"/></b></div>
 	<b style="" class=""><s:property value="location"/> <s:property value="number"/> $<s:property value="cost"/></b> </center>
 	</td>
@@ -55,14 +66,22 @@
 </table>
 </div>
 <p style="color:#999" class=""><br class="">
-PayPal Id: <b class=""> <s:property value="paymentID"/></b> </p>
+PayPal Id:
+<div data-role="content">
+	<form>
+		<textarea name="msg" rows="1" cols="40"><s:property value="paymentID"/></textarea> 
+	</form>
+<center>
+<div id="qr"></div>
+</center>
+<script type="text/javascript">
+	update_qrcode();
+</script>
 </div>
 </div>
 </div>
 </blockquote>
 </div>
 <br class="">
-
-
 </body>
 </html>

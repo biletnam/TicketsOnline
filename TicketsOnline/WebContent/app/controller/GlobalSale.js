@@ -26,10 +26,10 @@ Ext.define('app.controller.GlobalSale', {
 	},
 	
 	pdfMovements: function(btn){
-		window.open('Reporte?nombre=GlobalSale&@EventoPkId=2&@FechaInicial=2018-01-01&@FechaFinal=2018-04-08&@Todo=false&@CajeroPkId=2&tipo=pdf');
+		window.open('Reporte?nombre=GlobalSale&@EventoPkId=2&@FechaInicial=2018-01-01&@FechaFinal=2020-04-08&@Todo=false&@CajeroPkId=2&tipo=pdf');
 	},
 	
 	xlsMovements: function(btn){
-		window.open('Reporte?nombre=GlobalSale&@EventoPkId=2&@FechaInicial=2018-01-01&@FechaFinal=2018-04-08&@Todo=false&@CajeroPkId=2&tipo=vnd.ms-excel');
+		window.open('Reporte?nombre=GlobalSale&@EventoPkId=2&@FechaInicial=2018-01-01&@FechaFinal=2020-04-08&@Todo=false&@CajeroPkId=2&tipo=vnd.ms-excel');
 	}
 });

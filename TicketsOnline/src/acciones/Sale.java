@@ -14,8 +14,7 @@ public class Sale extends Json{
 		String eventId = session.getAttribute("eventId").toString();
 
 		try {
-			//setData(new SQLServerConnection().ejecutarSP("fn_rptReporteVentasPorEventoGlobalTotalizado", new String[]{"2","2018-01-01","2018-04-08", "true", "2"}));
-			setData(new SQLServerConnection().ejecutarSP("fn_rptReporteVentasPorEventoGlobalTotalizado", new String[]{"1", null, null, "false", "2"}));
+			setData(new SQLServerConnection().ejecutarSP("fn_rptReporteVentasPorEventoGlobalTotalizado", new String[]{eventId, null, null, "false", "2"}));
 			setSuccess(true);
 		}catch(Exception e) {
 			e.printStackTrace();

@@ -34,6 +34,7 @@ public class Reporte extends HttpServlet {
 	private String nombreReporte = null; 
 	private String tipo = null;
 	private String msgError = null;
+	private String eventId = null;
 	
     /**
      * @see HttpServlet#HttpServlet()
@@ -63,6 +64,7 @@ public class Reporte extends HttpServlet {
 		req = request;
 		res = response;
 		
+		eventId = request.getSession().getAttribute("eventId").toString();
 		contexto = req.getSession().getServletContext().getRealPath("/rpt");
 		
 		if (req.getParameter("nombre") != null){

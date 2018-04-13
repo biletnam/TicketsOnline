@@ -123,10 +123,7 @@ public class SVG {
 				for (int k = 0; k < rects.getLength(); k++) {
 					rect = rects.item(k);
 					
-					System.out.println(((Element) rect).getAttribute("id") + " = " + nonNumbered.getLocation());
-					
 					if (((Element) rect).getAttribute("id").equalsIgnoreCase(nonNumbered.getLocation())) {
-						System.out.println("Si entra");
 						((Element) rect).setAttribute("id", nonNumbered.getId());
 						((Element) rect).setAttribute("code", nonNumbered.getNumber());
 						((Element) rect).setAttribute("style", "fill:#2697e5;stroke:#000000;stroke-width:0.4445;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1");
