@@ -273,7 +273,7 @@
                             <span>Copyright © 2018</span>
                             <span>xptix.com</span>
                             <span>664 315 7108</span>
-                            <span>contacto@xptix.com</span>
+                            <span>sistemas@xptix.com</span>
                         </div>
                     </div>
                 </div>
