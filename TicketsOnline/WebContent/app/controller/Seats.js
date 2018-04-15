@@ -74,6 +74,7 @@ Ext.define('app.controller.Seats', {
     	var totalCost = 0.00;
     	var totalTax = 0.00;
     	var grandTotal = 0.00;
+    	var comissionTotal = 0.00;
     	var id = seat_.id;
     	var cost = parseFloat(seat_.getAttribute('cost'));
     	var commision = parseFloat(seat_.getAttribute('commision'));
@@ -117,9 +118,10 @@ Ext.define('app.controller.Seats', {
    			         	}
    			    		
    				    	grandTotal = store.sum('subTotal');
+   				    	comissionTotal = store.sum('commision');
    				    	
    				    	try{
-   				    		totalMasComision = grandTotal * 1.08;
+   				    		totalMasComision = (grandTotal + comissionTotal) * 1.06;
    				    		top.payment.amount = totalMasComision.toFixed(2);
    				    	}catch(e){
    				    		console.error('Error en calculo de total');
@@ -150,6 +152,7 @@ Ext.define('app.controller.Seats', {
     	var totalCost = 0.00;
     	var totalTax = 0.00;
     	var grandTotal = 0.00;
+    	var comissionTotal = 0.00;
     	var id = seat_.id;
     	var cost = parseFloat(seat_.getAttribute('cost'));
     	var commision = parseFloat(seat_.getAttribute('commision'));
@@ -186,9 +189,10 @@ Ext.define('app.controller.Seats', {
    					if (seat_){
   			    		store.add({seat: location + ' ' + number, cost: cost, commision: commision, subTotal: subTotal});
    				    	grandTotal = store.sum('subTotal');
+   				    	comissionTotal = store.sum('commision');
    				    	
    				    	try{
-   				    		totalMasComision = grandTotal * 1.08;
+   				    		totalMasComision = (grandTotal + comissionTotal) * 1.06;
    				    		top.payment.amount = totalMasComision.toFixed(2);
    				    	}catch(e){
    				    		console.error('Error en calculo de total');

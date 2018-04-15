@@ -59,6 +59,7 @@ Ext.define('app.view.seats.Show' ,{
     						//Seat frame adjust
     						element.target.style.height = altura + 'px';
     						Ext.getCmp('seatsshow').doLayout();
+    				        window.top.resizeIframe(window.top.document.getElementById('frame'));
     					}
     				},
     	            'onclick':function (comp) {

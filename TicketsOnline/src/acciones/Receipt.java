@@ -171,7 +171,11 @@ public class Receipt extends Json{
 			sb.append("<br><br>Se genero el pago exitosamente con el folio ").append(paymentID).append(", se adjunta link para ver documento:");
 			sb.append("<br><br><a href=\"http://"+request.getServerName()+":"+request.getServerPort()+"/TicketsOnline/Accion2/viewReceipt?paymentID=").append(paymentID).append("\">Link</a>");
 			sb.append("<br><br>Saludos.");
-			new Correo().enviar(email, "Comprobante de pago " + paymentID + " " + eventDescription + " en " + place + " a las " + dateTime, sb.toString());
+			try {
+				new Correo().enviar(email, "Comprobante de pago " + paymentID + " " + eventDescription + " en " + place + " a las " + dateTime, sb.toString());
+			}catch (Exception e) {
+				e.printStackTrace();
+			}
 		}
 		
 		return SUCCESS;

@@ -16,8 +16,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Single event | Nightlife demo | Framework Y</title>
-    <meta name="description" content="Single one event and calendar HTML template dark black design and style.">
+    <title>XPTickets - P&aacute;gina del evento</title>
+    <meta name="description" content="Detalles del evento">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <link rel="stylesheet" href="scripts/bootstrap/css/bootstrap.css">
     <script src="scripts/script.js"></script>
@@ -141,7 +141,7 @@
                         </div>
                     </div>
                     <div class="navbar-header">
-                        <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo" /></a>
+                        <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo" /></a>
                         <button type="button" class="navbar-toggle">
                             <i class="fa fa-bars"></i>
                         </button>
