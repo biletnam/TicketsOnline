@@ -10,7 +10,7 @@
        		<result name="success">/jsp/Receipt.jsp</result>
        	</action>
        	<action name="Layout" class="acciones.Layout2"> 
-       		<result name="success">/jsp/Layout.jsp</result>
+       		<result name="success">/jsp/Layout.jsp</result> 
        </action> 
     </package>
     

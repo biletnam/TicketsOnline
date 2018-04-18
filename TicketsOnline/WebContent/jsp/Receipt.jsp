@@ -58,7 +58,7 @@
 		JsBarcode(".barcode").init();
 	</script>
 	<div style="padding:5px" class=""><b style="color:red" class=""><s:property value="idPayment"/></b></div>
-	<b style="" class=""><s:property value="location"/> <s:property value="number"/> $<s:property value="cost"/></b> </center>
+	<b style="" class="">Secci&oacute;n <s:property value="section"/>, <s:property value="location"/>, <s:property value="number"/>, Costo: $<s:property value="cost"/></b> </center>
 	</td>
 	</tr>
 </s:iterator>

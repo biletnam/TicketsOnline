@@ -20,7 +20,7 @@ public class Receipt extends Json{
 	private String dateTime = null;
 	private String place = null;
 	private String city = null;
-	private String state = null;
+	private String state = null; 
 	private String name = null;
 	private String email = null;
 	private String phone = null;
@@ -133,6 +133,12 @@ public class Receipt extends Json{
 				params[i++] = "0";							//RetVal
 				
 				boletoPkId = new SQLServerConnection().ejecutarSPUnRetorno("pc_tbboletosV2_save", params);
+				
+				for (int j2 = 0; j2 < params.length; j2++) {
+					System.out.println(params[j2]);
+				}
+				
+				System.out.println("ID = "+boletoPkId);
 				
 				if (boletoPkId.compareTo("0") > 0) {
 					seat = new Seat(boletoPkId, params[3], arrRow.get(35).toString(), params[18], params[21], arrRow.get(36).toString(), params[22], params[23], params[25], params[2]);
