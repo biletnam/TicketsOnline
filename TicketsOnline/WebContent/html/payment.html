@@ -2,6 +2,7 @@
 <div id="paypal-button-container" style="width: 50%; margin: 30 auto; text-align: center"></div>
 <script>
 	var amount = 0; 
+	var seats = [];
     // Render the PayPal button
 
     paypal.Button.render({
@@ -29,7 +30,7 @@
             allowed: [ paypal.FUNDING.CARD, paypal.FUNDING.CREDIT ],
             disallowed: [ ]
         },
-
+        
         // PayPal Client IDs - replace with your own
         // Create a PayPal app: https://developer.paypal.com/developer/applications/create
 
@@ -43,10 +44,14 @@
         payment: function(data, actions) {
         	window.top.document.getElementById('minute-counter').contentWindow.stop();
         	return actions.payment.create({
-                payment: {
-                    transactions: [
+                "payment": {
+                    "transactions": [
                         {
-                            amount: { total: amount, currency: 'MXN' }
+                            "amount": { 
+                            	"total": amount, 
+                            	"currency": 'MXN' 
+                            },
+                            "description": seats.toString()
                         }
                     ]
                 }
@@ -57,8 +62,8 @@
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-            	window.parent.location.href = '../index.html';
                 window.open('../Accion2/getReceipt?paymentID='+data.paymentID+'&sendMail=true');
+                window.parent.location.href = '../index.html';
             });
         }
     }, '#paypal-button-container');

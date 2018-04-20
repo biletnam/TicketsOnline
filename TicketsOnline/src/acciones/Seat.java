@@ -18,6 +18,7 @@ public class Seat extends Json{
 	public String confirm(){
 		HttpSession session = ServletActionContext.getRequest().getSession();
 		eventId = session.getAttribute("eventId").toString();
+		String user = session.getAttribute("userId").toString();
 		
 		try {
 			if (new SQLServerConnection().contar("select count(*) from tbButacasEnProceso where EventoPkId = "+eventId+" and Seccion = '"+sectionId+"' and Butaca = "+index+" and NumeroButaca = '" + number + "' and idSesion != '" + session.getId() + "'") > 0) {
@@ -28,7 +29,7 @@ public class Seat extends Json{
 				setSuccess(true);
 			}else {
 				try {
-					new SQLServerConnection().actualizar("insert into tbButacasEnProceso values ("+eventId+", '"+sectionId+"', "+index+", '"+number+"', 0, getDate(), 1, 1, '"+session.getId()+"', '"+location+"') ");
+					new SQLServerConnection().actualizar("insert into tbButacasEnProceso values ("+eventId+", '"+sectionId+"', "+index+", '"+number+"', 2, getDate(), 1, 1, '"+session.getId()+"', '"+location+"') ");
 				} catch (Exception e) {
 					e.printStackTrace();
 				}

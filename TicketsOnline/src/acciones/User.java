@@ -46,9 +46,10 @@ public class User extends Json{
 		ArrayList<String> arrRow = null;
 		String eventId = session.getAttribute("eventId").toString();
 		
-		arrRow = new SQLServerConnection().consultarVector("select Nombre, Direccion, Telefono, Type from tbUsuarios where Email = '"+email+"' and Contrasena = '"+password1+"' ");
+		arrRow = new SQLServerConnection().consultarVector("select Nombre, Direccion, Telefono, Type, UsuarioPkId from tbUsuarios where Email = '"+email+"' and Contrasena = '"+password1+"' ");
 
 		if (arrRow.size() > 0) {
+			session.setAttribute("userId", arrRow.get(4).toString());
 			session.setAttribute("email", email);
 			session.setAttribute("password", password1);
 			session.setAttribute("name", arrRow.get(0).toString());
@@ -84,9 +85,10 @@ public class User extends Json{
 		if (session.getAttribute("email") != null && session.getAttribute("password") != null ) {
 			email = session.getAttribute("email").toString();
 			password1 = session.getAttribute("password").toString();
-			arrRow = new SQLServerConnection().consultarVector("select Nombre, Direccion, Telefono, type from tbUsuarios where Email = '"+email+"' and Contrasena = '"+password1+"' ");
+			arrRow = new SQLServerConnection().consultarVector("select Nombre, Direccion, Telefono, type, UsuarioPkId from tbUsuarios where Email = '"+email+"' and Contrasena = '"+password1+"' ");
 
 			if (arrRow.size() > 0) {
+				session.setAttribute("userId", arrRow.get(4).toString());
 				session.setAttribute("email", email);
 				session.setAttribute("password", password1);
 				session.setAttribute("name", arrRow.get(0).toString());

@@ -6,8 +6,6 @@
 <%@ taglib prefix="s" uri="/struts-tags"%>
 
 <!DOCTYPE html>
-<!--[if lt IE 10]> <html  lang="en" class="iex"> <![endif]-->
-<!--[if (gt IE 10)|!(IE)]><!-->
 <html lang="en">
 <!--<![endif]-->
 <head>
@@ -59,15 +57,15 @@
         <div class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="navbar-main navbar-middle">
                 <div class="container">
-                    <div class="scroll-hide">
+                     <div class="scroll-hide">
                         <div class="container">
                             <a class="navbar-brand center" href="#">
-                                <img src="images/logo.png" alt="logo" />
+                                <img src="img/logo.png" alt="logo" />
                             </a>
                         </div>
                     </div>
                     <div class="navbar-header">
-                        <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo" /></a>
+                        <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo" /></a>
                         <button type="button" class="navbar-toggle">
                             <i class="fa fa-bars"></i>
                         </button>
@@ -90,7 +88,7 @@
         <div class="container content">
             <div class="row">
                 <div class="col-md-15">
-                    <iframe src="Reportes.html" id="frame" name="frame" width="100%" height=800 frameborder="0" scrolling="no"></iframe>
+                    <iframe src="Reportes.html" id="frame" name="frame" width="100%" height="400" frameborder="0"></iframe>
                 </div>
             </div>
             <div class="row">

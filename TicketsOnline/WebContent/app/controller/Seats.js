@@ -85,6 +85,7 @@ Ext.define('app.controller.Seats', {
     	var eventId = seat_.getAttribute('eventid');
     	var location = seat_.getAttribute('location');
     	var totalMasComision = 0;
+    	var cadena = '';
     	
     	//Validate seat status
     	var dialogo = Ext.MessageBox.wait('Espere por favor, validando asiento', 'Informacion');
@@ -111,10 +112,18 @@ Ext.define('app.controller.Seats', {
    					if (seat_){
    			    		if (seat_.style.fill=='rgb(38, 151, 229)'){
    			    			store.add({seat: location + ' ' + number, cost: cost, commision: commision, subTotal: subTotal});
-   			         		seat_.style.fill='#ffff66'; 
+   			         		seat_.style.fill='#ffff66';
+   			         		cadena = ' |Seccion ' + sectionId + ', Butaca ' + number + "| ";
+				    		top.payment.seats[top.payment.seats.length] = cadena;
    			         	}else if (seat_.style.fill=='rgb(255, 255, 102)'){
    			 				store.removeAt(store.find('seat', location + ' ' + number));
    			 				seat_.style.fill='#2697e5';
+   			 				cadena = sectionId + ':' + number;
+   			 				var index = top.payment.seats.indexOf(' |Seccion ' + sectionId + ', Butaca ' + number + '| ');
+   			 				if (index > -1){
+   			 					top.payment.seats.splice(index, 1);
+   			 				}
+   			 				console.log(top.payment.seats);
    			         	}
    			    		
    				    	grandTotal = store.sum('subTotal');
@@ -124,6 +133,7 @@ Ext.define('app.controller.Seats', {
    				    		totalMasComision = (grandTotal + comissionTotal) * 1.06;
    				    		top.payment.amount = totalMasComision.toFixed(2);
    				    	}catch(e){
+   				    		console.error(e);
    				    		console.error('Error en calculo de total');
    				    		top.payment.amount = 0;
    				    	}
