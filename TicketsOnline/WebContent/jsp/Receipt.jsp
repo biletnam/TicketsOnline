@@ -14,8 +14,8 @@
 <table cellpadding="2" cellspacing="0" border="1" style="border-color:#50ADE5;font-family:arial,sans-serif;; font-size:12px;border-collapse:collapse;" class="">
 <tbody class="">
 <tr class="">
-<td style="padding:15px 0 15px 0; background:#000;" class="">
-<center class=""><img src="../images/logo-small.png" alt="" id="1511472342776" class=""></center>
+<td>
+<center class=""><img src="../images/system/logo.png"></center>
 </td>
 </tr>
 <tr class="">
@@ -24,7 +24,7 @@
 </tr>
 <tr class="">
 <td class="">
-<center class=""><b style="" class=""><s:property value="customerName"/><br class="">
+<center class=""><b style="" class=""><s:property value="name"/><br class="">
 <a href="mailto:<s:property value="email"/>" class=""><s:property value="email"/></a> <br class="">
 <s:property value="phone"/></b></center>
 </td>

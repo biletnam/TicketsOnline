@@ -7,7 +7,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
   <head>
-    <script src="../a.js"></script>
+    <script src="../js/Zoom.js"></script>
   </head>
   <body>
     <div id="container" style="width: 100%; frameborder="0">

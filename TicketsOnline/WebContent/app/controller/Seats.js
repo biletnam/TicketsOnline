@@ -123,7 +123,6 @@ Ext.define('app.controller.Seats', {
    			 				if (index > -1){
    			 					top.payment.seats.splice(index, 1);
    			 				}
-   			 				console.log(top.payment.seats);
    			         	}
    			    		
    				    	grandTotal = store.sum('subTotal');
@@ -234,7 +233,7 @@ Ext.define('app.controller.Seats', {
     
     onLayoutBack2: function(){
     	this.onLayoutBack();
-    	window.parent.location.href = 'index.html';
+    	window.parent.location.href = 'index.jsp';
     	window.parent.resizeIframe(window.parent.document.getElementById('frame'));
     	Ext.Ajax.request({
     		url: 'Accion/releaseAllSeat',

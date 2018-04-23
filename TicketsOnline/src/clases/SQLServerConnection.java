@@ -55,6 +55,8 @@ public class SQLServerConnection{
 		ArrayList<ArrayList<String>> matriz = new ArrayList<ArrayList<String>>();
 		int n = 0;
 		
+		System.err.println(_query);
+		
 		abrir();
 		if (con != null){
 			st = con.createStatement();
@@ -85,6 +87,8 @@ public class SQLServerConnection{
 	public ArrayList<String> consultarVector(final String _query){
 		ArrayList<String> renglon = new ArrayList<String>();
 		
+		System.err.println(_query);
+		
 		abrir();
 		try{
 			if (con != null){
@@ -92,7 +96,7 @@ public class SQLServerConnection{
 				rs = st.executeQuery(_query);
 		        if (rs.next()){
 		        	for (int i = 1; i <= rs.getMetaData().getColumnCount(); i++) {
-		        		renglon.add(rs.getString(i));
+		        		renglon.add(noNulo(rs.getString(i)));
 					}
 		        }
 			}
@@ -153,6 +157,8 @@ public class SQLServerConnection{
 	 */
 	public String consultar1Valor(final String _query){
 		String resultado = "";
+		
+		System.err.println(_query);
 		
 		abrir();
 		try{

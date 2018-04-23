@@ -1,22 +1,21 @@
 package acciones;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.apache.struts2.ServletActionContext;
 
+import com.opensymphony.xwork2.ActionSupport;
+
 import clases.Correo;
 import clases.SQLServerConnection;
 import clases.Seat;
 
-public class Receipt extends Json{
+public class Receipt extends ActionSupport{
 	private static final long serialVersionUID = 1L;
-	private HttpServletRequest request = ServletActionContext.getRequest();
-	private List<Seat> seats = null;
-	private String customerName = null;
+	
 	private String dateTime = null;
 	private String place = null;
 	private String city = null;
@@ -27,34 +26,70 @@ public class Receipt extends Json{
 	private String eventDescription = null;
 	private boolean sendMail = false;
 	private String paymentID = null;
+	private ArrayList<Seat> seats = new ArrayList<Seat>();
 	
      
 	public String get(){
-		paymentID = request.getParameter("paymentID");
-		
-		System.out.println(1);
-		
+		HttpServletRequest request = null;
+		HttpSession s = null;
 		Seat seat = null;
 		StringBuffer sb = new StringBuffer();
-		System.out.println(2);
-		HttpSession session = ServletActionContext.getRequest().getSession();
-		System.out.println(3);
-		String sessionId = session.getId();
-		System.out.println(4);
+		String userId = null;
+		String eventId = null;
 		ArrayList<ArrayList<String>> arrSeats = null;
 		ArrayList<String> arrRow = null;
 		String[] params = new String[35];
 		String boletoPkId = "0";
-		int i = 0;
-		System.out.println(5);
-		String name = session.getAttribute("name").toString();
-		System.out.println(6);
-		String email = session.getAttribute("email").toString();
-		System.out.println(7);
-		String phone = session.getAttribute("phone").toString();
-		
+		ArrayList<String> arrRenglon = null;
+		String description = null;
+		String row = null;
+
 		try {
-			System.out.println(8);
+			request = ServletActionContext.getRequest();
+			s = request.getSession();
+			paymentID = request.getParameter("paymentID");
+			
+			//Validation
+			System.err.println("evento = " + s.getAttribute("eventId"));
+			if (s.getAttribute("eventId") != null && s.getAttribute("eventId").toString().compareTo("") > 0) {
+				eventId = s.getAttribute("eventId").toString();
+			}else {
+				System.err.println("**************** No hay id de evento ****************");
+			}
+			
+			System.err.println("***************user = " + s.getAttribute("userId"));
+			if (s.getAttribute("userId") != null && s.getAttribute("userId").toString().compareTo("") > 0) {
+				userId = s.getAttribute("userId").toString();
+			}else {
+				System.err.println("**************** No hay id de user ****************");
+			}
+			
+			System.err.println("name = " + s.getAttribute("name"));
+			if (s.getAttribute("name") != null && s.getAttribute("name").toString().compareTo("") > 0) {
+				name = s.getAttribute("name").toString();
+			}else {
+				s.setAttribute("name", new SQLServerConnection().consultar1Valor("select Nombre from tbusuarios where UsuarioPkId = '"+userId+"' "));
+				name = s.getAttribute("name").toString();
+			}
+			
+			System.err.println("email = " + s.getAttribute("email"));
+			if (s.getAttribute("email") != null && s.getAttribute("email").toString().compareTo("") > 0) {
+				email = s.getAttribute("email").toString();
+			}else {
+				s.setAttribute("email", new SQLServerConnection().consultar1Valor("select email from tbusuarios where UsuarioPkId = '"+userId+"' "));
+				email = s.getAttribute("email").toString();
+			}
+			
+			System.err.println("phone = " + s.getAttribute("phone"));
+			
+			if (s.getAttribute("phone") != null && s.getAttribute("phone").toString().compareTo("") > 0) {
+				phone = s.getAttribute("phone").toString();
+			}else {
+				s.setAttribute("phone", new SQLServerConnection().consultar1Valor("select phone from tbusuarios where UsuarioPkId = '"+userId+"' "));
+				phone = s.getAttribute("phone").toString();
+			}
+			
+			//Query
 			sb.append("select ");
 			sb.append("1, ");
 			sb.append("2, ");  
@@ -81,8 +116,8 @@ public class Receipt extends Json{
 			sb.append("b.NumeroButaca, ");	
 			sb.append("1, ");
 			sb.append("0, ");
-			sb.append("b.Precio * 0.10, ");
-			sb.append("b.Precio * 0.06, ");
+			sb.append("b.CargoPorServicio, ");
+			sb.append("(b.Precio + b.CargoPorServicio) * 0.06, ");
 			sb.append("1, ");
 			sb.append("'").append(name).append("', ");
 			sb.append("'").append(email).append("', ");
@@ -98,87 +133,63 @@ public class Receipt extends Json{
 			sb.append("join tbPreciosDescuentos b  ");
 			sb.append("on a.EventoPkId = b.EventoPkId and a.Seccion = b.Seccion and a.Butaca = b.Butaca ");
 			sb.append("where  ");
-			sb.append("a.idSesion = '").append(sessionId).append("' ");
-		
-			System.out.println(9);
-			
+			sb.append("a.idSesion = '").append(userId).append("' ");
 			arrSeats = new SQLServerConnection().consultarMatriz(sb.toString());
-			
-			System.out.println(10);
-			seats = new ArrayList<Seat>();
-			
-			System.out.println("arreglo = "+arrSeats);
+			sb.setLength(0);
+			System.err.println("****************Butacas en proceso = "+arrSeats);
 			
 			for (int j = 0; j < arrSeats.size(); j++) {
-				System.out.println(11);
 				arrRow = (ArrayList<String>) arrSeats.get(j);
-				System.out.println(12);
-				i = 0;
-				params[i++] = arrRow.get(0).toString();		//BoletoPkId
-				System.out.println(13);
-				params[i++] = arrRow.get(1).toString();		//CajeroPkId
-				System.out.println(14);
-				params[i++] = arrRow.get(2).toString();		//EventoPkId
-				System.out.println(15);
-				params[i++] = arrRow.get(3).toString();		//Seccion
-				System.out.println(16);
-				params[i++] = arrRow.get(4).toString();		//FechaHora
-				System.out.println(17);
-				params[i++] = arrRow.get(5).toString();		//TipoPublico
-				System.out.println(18);
-				params[i++] = arrRow.get(6).toString();		//Adulto
-				System.out.println(19);
-				params[i++] = arrRow.get(7).toString();		//PrecioDescuentoPkId
-				System.out.println(20);
-				params[i++] = arrRow.get(8).toString();		//TipoCambio
-				System.out.println(21);
-				params[i++] = arrRow.get(9).toString();		//Precio
-				System.out.println(22);
-				params[i++] = arrRow.get(10).toString();	//Descuento
-				System.out.println(23);
-				params[i++] = arrRow.get(11).toString();	//Importe
-				System.out.println(24);
-				params[i++] = arrRow.get(12).toString();	//Cancelado
-				System.out.println(25);
-				params[i++] = arrRow.get(13).toString();	//Impreso
-				System.out.println(26);
-				params[i++] = arrRow.get(14).toString();	//Usado
-				params[i++] = arrRow.get(15).toString();	//Reportado
-				params[i++] = arrRow.get(16).toString();	//Personas
-				params[i++] = arrRow.get(17).toString();	//PagoEfectivo
-				params[i++] = arrRow.get(18).toString();	//PagoTarjetaCredito (Precio mas cargo por servicio)
-				params[i++] = arrRow.get(19).toString();	//PagoRecibo
-				params[i++] = paymentID;					//FolioRecibo
-				params[i++] = arrRow.get(21).toString();	//ControlButaca
-				params[i++] = arrRow.get(22).toString();	//NumeroButaca
-				params[i++] = arrRow.get(23).toString();	//Status
-				params[i++] = arrRow.get(24).toString();	//Abono
-				params[i++] = arrRow.get(25).toString();	//CargoPorServicio
-				params[i++] = arrRow.get(26).toString();	//CargoPorTarjeta
-				params[i++] = arrRow.get(27).toString();	//PagadoConTarjeta
-				params[i++] = arrRow.get(28).toString();	//Nombre
-				params[i++] = arrRow.get(29).toString();	//eMail
-				params[i++] = arrRow.get(30).toString();	//Telefono
-				params[i++] = arrRow.get(31).toString();	//Observaciones
-				params[i++] = arrRow.get(32).toString();	//BoletoDuro
-				params[i++] = arrRow.get(33).toString();	//TransaccionPkId
-				params[i++] = "0";							//RetVal
-				System.out.println(27);
+				System.err.println("Butaca = " + arrRow);
+				params[0] = arrRow.get(0).toString();		//BoletoPkId
+				params[1] = arrRow.get(1).toString();		//CajeroPkId
+				params[2] = arrRow.get(2).toString();		//EventoPkId
+				params[3] = arrRow.get(3).toString();		//Seccion
+				params[4] = arrRow.get(4).toString();		//FechaHora
+				params[5] = arrRow.get(5).toString();		//TipoPublico
+				params[6] = arrRow.get(6).toString();		//Adulto
+				params[7] = arrRow.get(7).toString();		//PrecioDescuentoPkId
+				params[8] = arrRow.get(8).toString();		//TipoCambio
+				params[9] = arrRow.get(9).toString();		//Precio
+				params[10] = arrRow.get(10).toString();	//Descuento
+				params[11] = arrRow.get(11).toString();	//Importe
+				params[12] = arrRow.get(12).toString();	//Cancelado
+				params[13] = arrRow.get(13).toString();	//Impreso
+				params[14] = arrRow.get(14).toString();	//Usado
+				params[15] = arrRow.get(15).toString();	//Reportado
+				params[16] = arrRow.get(16).toString();	//Personas
+				params[17] = arrRow.get(17).toString();	//PagoEfectivo
+				params[18] = arrRow.get(18).toString();	//PagoTarjetaCredito (Precio mas cargo por servicio)
+				params[19] = arrRow.get(19).toString();	//PagoRecibo
+				params[20] = paymentID;					//FolioRecibo
+				params[21] = arrRow.get(21).toString();	//ControlButaca
+				params[22] = arrRow.get(22).toString();	//NumeroButaca
+				params[23] = arrRow.get(23).toString();	//Status
+				params[24] = arrRow.get(24).toString();	//Abono
+				params[25] = arrRow.get(25).toString();	//CargoPorServicio
+				params[26] = arrRow.get(26).toString();	//CargoPorTarjeta
+				params[27] = arrRow.get(27).toString();	//PagadoConTarjeta
+				params[28] = arrRow.get(28).toString();	//Nombre
+				params[29] = arrRow.get(29).toString();	//eMail
+				params[30] = arrRow.get(30).toString();	//Telefono
+				params[31] = arrRow.get(31).toString();	//Observaciones
+				params[32] = arrRow.get(32).toString();	//BoletoDuro
+				params[33] = arrRow.get(33).toString();	//TransaccionPkId
+				params[34] = arrRow.get(34).toString(); //RetVal
 				
-				boletoPkId = new SQLServerConnection().ejecutarSPUnRetorno("pc_tbboletosV2_save", params);
+//				boletoPkId = new SQLServerConnection().ejecutarSPUnRetorno("pc_tbboletosV2_save", params); 
+				boletoPkId = "1000";		//CSAXXX
+				description = arrRow.get(35).toString();	//Descripcion
+				row = arrRow.get(36).toString();	//Fila
 				
-				for (int j2 = 0; j2 < params.length; j2++) {
-					System.out.println(params[j2]);
-				}
-				
-				System.out.println("ID = "+boletoPkId);
+				System.err.println("ID Boleto = "+boletoPkId);
 				
 				if (boletoPkId.compareTo("0") > 0) {
-					seat = new Seat(boletoPkId, params[3], arrRow.get(35).toString(), params[18], params[21], arrRow.get(36).toString(), params[22], params[23], params[25], params[2]);
+					seat = new Seat(boletoPkId, params[3], description, params[18], params[21], row, params[22], params[23], params[25], params[2]);
 					seats.add(seat);
 					
-					if (arrRow.get(3).toString().equals("0")) {
-						new SQLServerConnection().actualizar("update tbPreciosDescuentos set boletos = boletos - 1 where descripcion = '"+arrRow.get(35).toString()+"' and seccion = '0' ");
+					if (params[3].equals("0")) {
+						new SQLServerConnection().actualizar("update tbPreciosDescuentos set boletos = boletos - 1 where descripcion = '"+description+"' and seccion = '0' ");
 					}
 				}
 				
@@ -186,122 +197,104 @@ public class Receipt extends Json{
 				
 			}
 		
+			sb.append("select a.Titulo, a.FechaHora, b.Descripcion from tbEventos a left join tbEspaciosLugares b on a.ClaveLugar = b.Clave where a.EventoPkId = '"+eventId+"' ");
+			arrRenglon = new SQLServerConnection().consultarVector(sb.toString()); 
+			sb.setLength(0);
+			eventDescription = arrRenglon.get(0).toString();
+			dateTime = arrRenglon.get(1).toString();
+			place = arrRenglon.get(2).toString();
+			
+			if (sendMail) {
+				sb.append("Estimado cliente:");
+				sb.append("<br><br>Se genero el pago exitosamente con el folio ").append(paymentID).append(", se adjunta link para ver documento:");
+				sb.append("<br><br><a href=\"http://"+request.getServerName()+":"+request.getServerPort()+"/Accion2/viewReceipt?paymentID=").append(paymentID).append("\">Link</a>");
+				sb.append("<br><br>Saludos.");
+
+				try {
+					new Correo().enviar(email, "Comprobante de pago " + paymentID + " " + eventDescription + " en " + place + " a las " + dateTime, sb.toString());
+				}catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
 		} catch (Exception e) {
 			e.printStackTrace(); 
 		} finally {
 			new acciones.Seat().releaseAll();
-		}
-		
-		sb.setLength(0);
-		sb.append("select a.Titulo, a.FechaHora, b.Descripcion from tbEventos a left join tbEspaciosLugares b on a.ClaveLugar = b.Clave where a.EventoPkId = 2 ");	//CSAXXX
-		ArrayList<String> arrRenglon = new SQLServerConnection().consultarVector(sb.toString()); 
-		sb.setLength(0);
-		
-		System.out.println(28);
-		eventDescription = arrRenglon.get(0).toString();
-		customerName = session.getAttribute("name").toString();
-		System.out.println(29);
-		email = session.getAttribute("email").toString();
-		phone = session.getAttribute("phone").toString();
-		System.out.println(30);
-		dateTime = arrRenglon.get(1).toString();
-		place = arrRenglon.get(2).toString();
-		System.out.println(31);
-		if (sendMail) {
-			System.out.println(31);
-			sb.setLength(0);
-			sb.append("Estimado cliente:");
-			sb.append("<br><br>Se genero el pago exitosamente con el folio ").append(paymentID).append(", se adjunta link para ver documento:");
-			sb.append("<br><br><a href=\"http://"+request.getServerName()+":"+request.getServerPort()+"/TicketsOnline/Accion2/viewReceipt?paymentID=").append(paymentID).append("\">Link</a>");
-			sb.append("<br><br>Saludos.");
-			System.out.println(33);
-			try {
-				System.out.println(34);
-				new Correo().enviar(email, "Comprobante de pago " + paymentID + " " + eventDescription + " en " + place + " a las " + dateTime, sb.toString());
-				System.out.println(35);
-			}catch (Exception e) {
-				e.printStackTrace();
-			}
 		}
 		
 		return SUCCESS;
  	}
 	
 	public String view(){
-		HttpSession session = ServletActionContext.getRequest().getSession();
-		paymentID = request.getParameter("paymentID");
+		HttpServletRequest request = null;
 		Seat seat = null;
 		StringBuffer sb = new StringBuffer();
 		ArrayList<ArrayList<String>> arrSeats = null;
 		ArrayList<String> arrRow = null;
-		int i = 0;
-		
-		sb.append("select "); 
-		sb.append("a.BoletoPkId, "); 
-		sb.append("a.Seccion, ");
-		sb.append("b.Descripcion, "); 
-		sb.append("a.PagoTarjetaCredito + a.CargoPorServicio + a.CargoPorTarjeta, "); 
-		sb.append("a.ControlButaca, ");
-		sb.append("b.Fila, ");
-		sb.append("a.NumeroButaca, "); 
-		sb.append("a.Status, ");
-		sb.append("a.CargoPorServicio, "); 
-		sb.append("a.EventoPkId, ");
-		sb.append("a.Nombre, ");
-		sb.append("a.Email, ");
-		sb.append("a.Telefono ");
-		sb.append("from ");
-		sb.append("tbBoletos a "); 
-		sb.append("join tbPreciosDescuentos b on a.PrecioDescuentoPkId = b.PrecioDescuentoPkId "); 
-		sb.append("where ");
-		sb.append("FolioRecibo = '"+paymentID+"'");
-		
+		String eventId = null;
+
 		try {
+			request = ServletActionContext.getRequest();
+			paymentID = request.getParameter("paymentID");
+			sb.append("select "); 
+			sb.append("a.BoletoPkId, "); 
+			sb.append("a.Seccion, ");
+			sb.append("b.Descripcion, "); 
+			sb.append("a.PagoTarjetaCredito + a.CargoPorServicio + a.CargoPorTarjeta, "); 
+			sb.append("a.ControlButaca, ");
+			sb.append("b.Fila, ");
+			sb.append("a.NumeroButaca, "); 
+			sb.append("a.Status, ");
+			sb.append("a.CargoPorServicio, "); 
+			sb.append("a.EventoPkId, ");
+			sb.append("a.Nombre, ");
+			sb.append("a.Email, ");
+			sb.append("a.Telefono ");
+			sb.append("from ");
+			sb.append("tbBoletos a "); 
+			sb.append("join tbPreciosDescuentos b on a.PrecioDescuentoPkId = b.PrecioDescuentoPkId "); 
+			sb.append("where ");
+			sb.append("FolioRecibo = '"+paymentID+"'");
+		
 			arrSeats = new SQLServerConnection().consultarMatriz(sb.toString());
+			sb.setLength(0);
+			
 			seats = new ArrayList<Seat>();
+			
+			System.err.println(arrSeats);
 			
 			for (int j = 0; j < arrSeats.size(); j++) {
 				arrRow = (ArrayList<String>) arrSeats.get(j);
 				seat = new Seat(arrRow.get(0).toString(), arrRow.get(1).toString(), arrRow.get(2).toString(), arrRow.get(3).toString(), arrRow.get(4).toString()
-						,arrRow.get(5).toString(), arrRow.get(6).toString(), arrRow.get(7).toString(), arrRow.get(8).toString(), arrRow.get(9).toString()); 
+						,arrRow.get(5).toString(), arrRow.get(6).toString(), arrRow.get(7).toString(), arrRow.get(8).toString(), arrRow.get(9).toString());
+				eventId = seat.getEventId();
+				name = arrRow.get(10).toString();
+				email = arrRow.get(11).toString();
+				phone = arrRow.get(12).toString();
 				seats.add(seat);
 			}
-		
+	
+			sb.append("select a.Titulo, a.FechaHora, b.Descripcion from tbEventos a left join tbEspaciosLugares b on a.ClaveLugar = b.Clave where a.EventoPkId = "+eventId);
+			ArrayList<String> arrRenglon = new SQLServerConnection().consultarVector(sb.toString()); 
+			sb.setLength(0);
+			eventDescription = arrRenglon.get(0).toString();
+			dateTime = arrRenglon.get(1).toString();
+			place = arrRenglon.get(2).toString();
 		} catch (Exception e) {
 			e.printStackTrace(); 
 		} finally {
 			new acciones.Seat().releaseAll();
 		}
 		
-		sb.setLength(0);
-		sb.append("select a.Titulo, a.FechaHora, b.Descripcion from tbEventos a left join tbEspaciosLugares b on a.ClaveLugar = b.Clave where a.EventoPkId = 2 ");	//CSAXXX
-		ArrayList<String> arrRenglon = new SQLServerConnection().consultarVector(sb.toString()); 
-		sb.setLength(0);
-		
-		eventDescription = arrRenglon.get(0).toString();
-		customerName = arrRow.get(10).toString();
-		email = arrRow.get(11).toString();
-		phone = arrRow.get(12).toString();
-		dateTime = arrRenglon.get(1).toString();
-		place = arrRenglon.get(2).toString();
-		
 		return SUCCESS;
  	}
 
-	public List<Seat> getSeats() {
+	public ArrayList<Seat> getSeats() {
 		return seats;
 	}
 
-	public void setSeats(List<Seat> seats) {
+	public void setSeats(ArrayList<Seat> seats) {
 		this.seats = seats;
-	}
-
-	public String getCustomerName() {
-		return customerName;
-	}
-
-	public void setCustomerName(String customerName) {
-		this.customerName = customerName;
 	}
 
 	public String getDateTime() {

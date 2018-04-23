@@ -181,7 +181,7 @@ public class SQLServerConnectionJDBC{
 	public int actualizar(final String _actualizacion) throws Exception{
 		int n = 0;
 		
-		System.out.println(_actualizacion);
+		System.err.println(_actualizacion);
 		
 		abrir();
 		st = con.createStatement();

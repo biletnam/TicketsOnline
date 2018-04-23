@@ -11,9 +11,12 @@ public class Sale extends Json{
     
 	public String getGlobal(){
 		HttpSession session = ServletActionContext.getRequest().getSession();
-		String eventId = session.getAttribute("eventId").toString();
-
+		
 		try {
+
+			System.err.println("eventId = " + session.getAttribute("eventId"));
+			String eventId = session.getAttribute("eventId").toString();
+			
 			setData(new SQLServerConnection().ejecutarSP("fn_rptReporteVentasPorEventoGlobalTotalizado", new String[]{eventId, null, null, "false", "2"}));
 			setSuccess(true);
 		}catch(Exception e) {

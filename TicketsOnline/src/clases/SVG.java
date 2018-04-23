@@ -124,7 +124,7 @@ public class SVG {
 				for (int k = 0; k < rects.getLength(); k++) {
 					rect = rects.item(k);
 					
-//					System.out.println(((Element) rect).getAttribute("id").replace('_', ' ') + " = " + nonNumbered.getLocation());
+//					System.err.println(((Element) rect).getAttribute("id").replace('_', ' ') + " = " + nonNumbered.getLocation());
 					
 					if (((Element) rect).getAttribute("id").replace('_', ' ').equalsIgnoreCase(nonNumbered.getLocation())) {
 						((Element) rect).setAttribute("id", nonNumbered.getId());

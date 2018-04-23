@@ -12,6 +12,9 @@
        	<action name="Layout" class="acciones.Layout2"> 
        		<result name="success">/jsp/Layout.jsp</result> 
        </action> 
+       <action name="*Event" class="acciones.Event" method="{1}"> 
+       		<result name="success">/jsp/single-event.jsp</result>
+       </action>
     </package>
     
     <package name="default" namespace="/Accion" extends="json-default">
@@ -29,7 +32,7 @@
        </action>
        <action name="*Sale" class="acciones.Sale" method="{1}"> 
        		<result name="success">/jsp/Json.jsp</result>
-       </action> 
+       </action>
    	</package>
 
 </struts>

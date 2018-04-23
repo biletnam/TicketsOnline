@@ -94,6 +94,6 @@ public class ArchivoTexto {
 	
 	//Falta meterle UI
 	public static void main(String[] args){
-//		System.out.println(new ArchivoTexto("C:\\Users\\Hp Pro\\Desktop\\Event1.svg").leer());
+//		System.err.println(new ArchivoTexto("C:\\Users\\Hp Pro\\Desktop\\Event1.svg").leer());
 	}
 }

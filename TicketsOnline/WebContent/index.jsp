@@ -1,6 +1,7 @@
-<%@page import="clases.Event"%>
-<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@page import="acciones.Event"%>
+<%@page import="java.util.ArrayList"%>
+
 <%
 	response.setHeader("Cache-Control", "no-Cache");
 	response.setHeader("Pragma", "No-cache");
@@ -38,19 +39,19 @@
                     <div class="scroll-hide">
                         <div class="container">
                             <a class="navbar-brand center" href="#">
-                                <img src="img/logo.png" />
+                                <img src="images/system/logo.png" />
                             </a>
                         </div>
                     </div>
                     <div class="navbar-header">
-                        <a class="navbar-brand" href="index.html"><img alt="" src="img/logo.png" /></a>
+                        <a class="navbar-brand" href="index.jsp"><img alt="" src="images/system/logo.png" /></a>
                         <button type="button" class="navbar-toggle">
                             <i class="fa fa-bars"></i>
                         </button>
                     </div>
                     <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav no-margins">
-                            <li><a href="index.html">Home</a></li>
+                            <li><a href="index.jsp">Home</a></li>
                         </ul>
                     </div>
                 </div>
@@ -61,7 +62,7 @@
         <div class="flexslider advanced-slider slider" data-options="animation:fade,slideshowSpeed:5000">
             <ul class="slides">
             	<%
-            		ArrayList<ArrayList<String>> arrEventos = new Event(request).get();
+            		ArrayList<ArrayList<String>> arrEventos = new Event().getCurrent();
             		ArrayList<String> arrEvento = null;
             		
             		for (int i = 0; i < arrEventos.size(); i++){
@@ -85,36 +86,6 @@
                 <%
             		}
                 %>
-                <li data-slider-anima="fade-top" data-timeline="asc" data-time="1000" data-timeline-time="500">
-                    <div class="section-slide">
-                        <div class="bg-cover" style="background-image:url('images/slide-bg.jpg')">
-                        </div>
-                        <div class="container">
-                            <hr class="space" />
-                            <img alt="" class="pos-slider pos-left pos-bottom anima anima-fade-bottom" style="z-index:0" width="530" src="images/events/4Slide.png" />
-                            <div class=" pos-slider pos-right text-right">
-                                <h1 class="text-bold text-xl anima" style="z-index:9">MIKE SALAZAR</h1>
-                                <p class="text-m anima" style="z-index:9"><b>20 de Mayo 2018, 07:00 P.M.</b></p>
-                                <p class="anima">Teatro de la ciudad, Coatzacoalcos, Veracruz<br/></p>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li data-slider-anima="fade-top" data-timeline="asc" data-time="1000" data-timeline-time="500">
-                    <div class="section-slide">
-                        <div class="bg-cover" style="background-image:url('images/slide-bg.jpg')">
-                        </div>
-                        <div class="container">
-                            <hr class="space" />
-                            <img alt="" class="pos-slider pos-left pos-bottom anima anima-fade-bottom" style="z-index:0" width="530" src="images/slider/Event00001_Slide.png" />
-                            <div class=" pos-slider pos-right text-right">
-                                <h1 class="text-bold text-xl anima" style="z-index:9">INTOCABLE</h1>
-                                <p class="text-m anima" style="z-index:9"><b>25 de Mayo 2018, 08:00 P.M.</b></p>
-                                <p class="anima">Acropolis, Puebla, Puebla<br/></p>
-                            </div>
-                        </div>
-                    </div>
-                </li>
             </ul>
         </div>
     </div>
@@ -126,36 +97,6 @@
             <p><b>TRAEMOS PARA TI</b> SOLO LOS MEJORES EVENTOS</p>
             <hr class="space xs" />
             <div class="row">
-                <div class="col-md-4">
-                    <div class="advs-box advs-box-multiple boxed" data-anima="scale-rotate" data-trigger="hover">
-                        <a class="img-box" ><img alt="" class="anima" src="images/events/3.jpg" /></a>
-                        <div class="circle anima-rotate-20 anima">12 <span>MAY, 18</span></div>
-                        <div class="advs-box-content">
-                            <h3>LUCHA LIBRE - OCTAGON JR.</h3>
-                            <p>DESDE EXATLON MEXICO</p>
-                            <p>
-                                Auditorio Bicentenario, Morelia
-                                06:00 P.M.
-                            </p>
-                            <a class="anima-button circle-button btn-sm" ><i class="fa fa-long-arrow-right"></i>Comprar Boletos </a>
-                        </div>
-                    </div>
-                </div>
-                 <div class="col-md-4">
-                    <div class="advs-box advs-box-multiple boxed" data-anima="scale-rotate" data-trigger="hover">
-                        <a class="img-box" ><img alt="" class="anima" src="images/events/4Art.jpg" /></a>
-                        <div class="circle anima-rotate-20 anima">20 <span>MAY, 18</span></div>
-                        <div class="advs-box-content">
-                            <h3>MIKE SALAZAR</h3>
-                            <p>SENSACIONAL</p>
-                            <p>
-                                Teatro de la ciudad, Coatzacoalcos
-                                07:00 P.M.
-                            </p>
-                            <a class="anima-button circle-button btn-sm" ><i class="fa fa-long-arrow-right"></i>Comprar Boletos </a>
-                        </div>
-                    </div>
-                </div>
                	<%
 	           		arrEvento = null;
 	           		
@@ -164,7 +105,7 @@
             	%>
                 <div class="col-md-4">
                     <div class="advs-box advs-box-multiple boxed" data-anima="scale-rotate" data-trigger="hover">
-                        <a class="img-box" href="single-event.jsp?eventId=<%=arrEvento.get(0).toString()%>"><img alt="" class="anima" src="images/arts/<%=arrEvento.get(0).toString()%>.jpeg" /></a>
+                        <a class="img-box" href="Accion2/getEvent?id=<%=arrEvento.get(0).toString()%>"><img alt="" class="anima" src="images/art/<%=arrEvento.get(0).toString()%>.jpg" /></a>
                         <div class="circle anima-rotate-20 anima"><%=arrEvento.get(10).toString()%> <span><%=arrEvento.get(11).toString()%>, <%=arrEvento.get(12).toString()%></span></div>
                         <div class="advs-box-content">
                             <h3><%=arrEvento.get(8).toString()%></h3>
@@ -173,7 +114,7 @@
                                 <%=arrEvento.get(5).toString()%>
                                 <%=arrEvento.get(14).toString()%>
                             </p>
-                            <a class="anima-button circle-button btn-sm" href="single-event.jsp?eventId=2"><i class="fa fa-long-arrow-right"></i>Comprar Boletos </a>
+                            <a class="anima-button circle-button btn-sm" href="Accion2/getEvent?id=2"><i class="fa fa-long-arrow-right"></i>Comprar Boletos </a>
                         </div>
                     </div>
                 </div>
@@ -277,13 +218,13 @@
 	           			arrEvento = arrEventos.get(i);
             	%>
                     <div class="grid-item col-md-3">
-                        <a class="img-box" href="images/gallery/<%=arrEvento.get(0).toString()%>_1.jpg">
-                            <img alt="" src="images/gallery/<%=arrEvento.get(0).toString()%>_1.jpg">
+                        <a class="img-box" href="images/gallery/bestMoments/<%=arrEvento.get(0).toString()%>_1.jpg">
+                            <img alt="" src="images/gallery/bestMoments/<%=arrEvento.get(0).toString()%>_1.jpg">
                         </a>
                     </div>
                     <div class="grid-item col-md-3">
-                        <a class="img-box" href="images/gallery/<%=arrEvento.get(0).toString()%>_2.jpg">
-                            <img alt="" src="images/gallery/<%=arrEvento.get(0).toString()%>_2.jpg">
+                        <a class="img-box" href="images/gallery/bestMoments/<%=arrEvento.get(0).toString()%>_2.jpg">
+                            <img alt="" src="images/gallery/bestMoments/<%=arrEvento.get(0).toString()%>_2.jpg">
                         </a>
                     </div>
                     	<%
@@ -294,6 +235,7 @@
             </div>
         </div>
     </div>
+    <!-- 
     <div class="section-bg-image" style="background-image:url(images/bg-social.png)">
         <div class="container content">
             <div class="row">
@@ -314,6 +256,7 @@
             </div>
         </div>
     </div>
+     -->
     <div class="footer-section section-bg-animation header-animation">
         <div id="anima-layer-a" class="anima-layer clouds-2"></div>
         <div id="anima-layer-b" class="anima-layer clouds-1"></div>

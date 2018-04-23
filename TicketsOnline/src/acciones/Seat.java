@@ -17,19 +17,21 @@ public class Seat extends Json{
     
 	public String confirm(){
 		HttpSession session = ServletActionContext.getRequest().getSession();
+		System.err.println("eventId = " + session.getAttribute("eventId"));
 		eventId = session.getAttribute("eventId").toString();
+		System.err.println("userId = " + session.getAttribute("userId"));
 		String user = session.getAttribute("userId").toString();
 		
 		try {
-			if (new SQLServerConnection().contar("select count(*) from tbButacasEnProceso where EventoPkId = "+eventId+" and Seccion = '"+sectionId+"' and Butaca = "+index+" and NumeroButaca = '" + number + "' and idSesion != '" + session.getId() + "'") > 0) {
+			if (new SQLServerConnection().contar("select count(*) from tbButacasEnProceso where EventoPkId = "+eventId+" and Seccion = '"+sectionId+"' and Butaca = "+index+" and idSesion != '" + user + "'") > 0) {
 				setMsg("Ocupado");
 				setSuccess(false);
-			}else if (new SQLServerConnection().actualizar("delete from tbButacasEnProceso where EventoPkId = "+eventId+" and Seccion = '"+sectionId+"' and Seccion != '0' and Butaca = "+index+" and NumeroButaca = '" + number + "' and idSesion = '" + session.getId() + "' ") > 0) {
+			}else if (new SQLServerConnection().actualizar("delete from tbButacasEnProceso where EventoPkId = "+eventId+" and Seccion = '"+sectionId+"' and Seccion != '0' and Butaca = "+index+" and idSesion = '" + user + "' ") > 0) {
 				setMsg("Se borraron");
 				setSuccess(true);
 			}else {
 				try {
-					new SQLServerConnection().actualizar("insert into tbButacasEnProceso values ("+eventId+", '"+sectionId+"', "+index+", '"+number+"', 2, getDate(), 1, 1, '"+session.getId()+"', '"+location+"') ");
+					new SQLServerConnection().actualizar("insert into tbButacasEnProceso values ("+eventId+", '"+sectionId+"', "+index+", '"+number+"', 2, getDate(), 1, 1, '"+user+"', '"+location+"') ");
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -45,9 +47,12 @@ public class Seat extends Json{
 	
 	public String releaseAll(){
 		HttpSession session = ServletActionContext.getRequest().getSession();
+		String user = null;
 		
 		try {
-			new SQLServerConnection().actualizar("delete from tbButacasEnProceso where idSesion = '" + session.getId() + "' ");
+			System.err.println("userId = " + session.getAttribute("userId"));
+			user = session.getAttribute("userId").toString();
+			new SQLServerConnection().actualizar("delete from tbButacasEnProceso where idSesion = '" + user + "' ");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
