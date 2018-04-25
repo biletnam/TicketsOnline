@@ -25,7 +25,8 @@ public class SQLServerConnection{
 	   try{
 		   Context ctx = new InitialContext();
 		   Context envContext = (Context) ctx.lookup("java:/comp/env");
-		   DataSource ds = (DataSource)envContext.lookup("jdbc/xptickets");
+//		   DataSource ds = (DataSource)envContext.lookup("jdbc/xptickets"); 	//CSAXXX
+		   DataSource ds = (DataSource)envContext.lookup("jdbc/autoboleto");
 		   con = ds.getConnection();
 	   }catch (Exception e){
 		   e.printStackTrace();
@@ -112,6 +113,8 @@ public class SQLServerConnection{
 	
 	public int contar(final String _query){
 		int retorno = 0;
+		
+		System.out.println(_query);
 		
 		abrir();
 		try{

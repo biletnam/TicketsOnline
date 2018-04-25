@@ -17,7 +17,7 @@
     paypal.Button.render({
 
         // Set your environment
-        env: 'sandbox', // sandbox | production
+        env: 'production', // sandbox | production
 
         // Specify the style of the button
 
@@ -71,8 +71,7 @@
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.open('../Accion2/getReceipt?paymentID='+data.paymentID+'&sendMail=true','receipWindow');
-                window.parent.location.href = '../index.jsp';
+            	window.parent.window.showTicketReceipt('getReceipt?paymentID='+data.paymentID+'&sendMail=true');
             });
         }
     }, '#paypal-button-container');

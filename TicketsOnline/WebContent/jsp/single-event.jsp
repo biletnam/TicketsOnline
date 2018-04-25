@@ -30,6 +30,7 @@
 	<link rel="stylesheet" type="text/css" href="/statics/extjs/resources/css/ext-all-access.css" />
     <script type="text/javascript" src="/statics/extjs/ext-debug.js"></script>
     <script type="text/javascript" src="../js/registration.js"></script>
+    <script type="text/javascript" src="../js/ticketReceipt.js"></script>
     <style type="text/css">
         /* Styling of global error indicator */
         .form-error-state {
@@ -234,6 +235,7 @@
                     <iframe src="../seats.html" id="frame" name="frame" width="100%" frameborder="0" scrolling="no" onload="resizeIframe(this)"></iframe>
 					<iframe src="../html/payment.jsp" id="payment" name="payment" width="100%" frameborder="0" scrolling="no"></iframe>                    
                 	<iframe src="../html/minute-counter.html" id="minute-counter" name="minute-counter" width="100%" frameborder="0" scrolling="no"></iframe>
+                	<iframe id="frameTicketReceipt" name="frameTicketReceipt" width="100%" frameborder="0" scrolling="no" onload="resizeIframe(this)"></iframe>
                 </div>
             </div>
             <div class="row">
@@ -265,7 +267,8 @@
                         <div class="tag-row">
                             <span>Copyright © 2018</span>
                             <span>xptix.com</span>
-                            <span>664 315 7108</span>
+                            <span>664 438 2762</span>
+                            <!--<span>664 315 71 08</span> CSAXXX-->
                             <span>sistemas@xptix.com</span>
                         </div>
                     </div>

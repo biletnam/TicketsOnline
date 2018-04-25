@@ -86,6 +86,7 @@ Ext.define('app.controller.Seats', {
     	var location = seat_.getAttribute('location');
     	var totalMasComision = 0;
     	var cadena = '';
+    	var state = 0;
     	
     	//Validate seat status
     	var dialogo = Ext.MessageBox.wait('Espere por favor, validando asiento', 'Informacion');
@@ -105,17 +106,20 @@ Ext.define('app.controller.Seats', {
    	        	dialogo.hide();
    				result = JSON.parse(response.responseText);
    				mensaje = result.msg;
+   				state = result.state;
    				res = result.success;
    				if (!res){
    					Ext.MessageBox.alert('Informacion','Estimado cliente, este asiento se encuentra en proceso de compra, por lo cual no es posible seleccionarlo');
    				}else{
    					if (seat_){
-   			    		if (seat_.style.fill=='rgb(38, 151, 229)'){
+//   			    		if (seat_.style.fill=='rgb(38, 151, 229)'){
+   						if (state == 2){
    			    			store.add({seat: location + ' ' + number, cost: cost, commision: commision, subTotal: subTotal});
    			         		seat_.style.fill='#ffff66';
    			         		cadena = ' |Seccion ' + sectionId + ', Butaca ' + number + "| ";
 				    		top.payment.seats[top.payment.seats.length] = cadena;
-   			         	}else if (seat_.style.fill=='rgb(255, 255, 102)'){
+//   			         	}else if (seat_.style.fill=='rgb(255, 255, 102)'){
+   						}else if (status == 0){
    			 				store.removeAt(store.find('seat', location + ' ' + number));
    			 				seat_.style.fill='#2697e5';
    			 				cadena = sectionId + ':' + number;

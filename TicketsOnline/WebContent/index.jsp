@@ -5,6 +5,11 @@
 <%
 	response.setHeader("Cache-Control", "no-Cache");
 	response.setHeader("Pragma", "No-cache");
+	
+	String companyId = null;
+	
+	companyId = request.getParameter("companyId") == null? "4" : request.getParameter("companyId").toString();  
+	request.getSession().setAttribute("companyId", companyId);
 %>
 <%@ taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html>

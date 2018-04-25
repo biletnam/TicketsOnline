@@ -27,6 +27,7 @@ public class Json extends ActionSupport {
 	private String eventoNombre = "";
 	private boolean success = true;
 	private String usrType = "0";
+	private int state = 0;
 	
 	
 	public String getActionName() {
@@ -71,6 +72,7 @@ public class Json extends ActionSupport {
 			jsonData.put("evento", evento);
 			jsonData.put("eventoNombre", eventoNombre);
 			jsonData.put("usrType", usrType);
+			jsonData.put("state", state);
 			return JSONUtil.serialize(jsonData);
 		} catch (Exception e) {
 			LOG.equals(e);
@@ -242,6 +244,14 @@ public class Json extends ActionSupport {
 
 	public void setUsrType(String usrType) {
 		this.usrType = usrType;
+	}
+
+	public int getState() {
+		return state;
+	}
+
+	public void setState(int state) {
+		this.state = state;
 	}
 	
 }

@@ -25,13 +25,16 @@ public class Seat extends Json{
 		try {
 			if (new SQLServerConnection().contar("select count(*) from tbButacasEnProceso where EventoPkId = "+eventId+" and Seccion = '"+sectionId+"' and Butaca = "+index+" and idSesion != '" + user + "'") > 0) {
 				setMsg("Ocupado");
+				setState(1);	//Ocupado
 				setSuccess(false);
 			}else if (new SQLServerConnection().actualizar("delete from tbButacasEnProceso where EventoPkId = "+eventId+" and Seccion = '"+sectionId+"' and Seccion != '0' and Butaca = "+index+" and idSesion = '" + user + "' ") > 0) {
 				setMsg("Se borraron");
+				setState(0);	//Libre
 				setSuccess(true);
 			}else {
 				try {
-					new SQLServerConnection().actualizar("insert into tbButacasEnProceso values ("+eventId+", '"+sectionId+"', "+index+", '"+number+"', 2, getDate(), 1, 1, '"+user+"', '"+location+"') ");
+					new SQLServerConnection().actualizar("insert into tbButacasEnProceso (EventoPkId, Seccion, Butaca, NumeroButaca, CajeroPkId, Fecha, UsuarioId, Status, idSesion, Descripcion) values ("+eventId+", '"+sectionId+"', "+index+", '"+number+"', 2, getDate(), 1, 1, '"+user+"', '"+location+"') ");
+					setState(2);		//Apartar
 				} catch (Exception e) {
 					e.printStackTrace();
 				}

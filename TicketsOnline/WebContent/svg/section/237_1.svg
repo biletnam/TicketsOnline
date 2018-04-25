@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="293.28122mm"
+   height="277.01035mm"
+   viewBox="0 0 293.28122 277.01035"
+   version="1.1"
+   id="svg"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+   sodipodi:docname="237_1.svg">
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient927">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop923" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0;"
+         offset="1"
+         id="stop925" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient927"
+       id="linearGradient929"
+       x1="202.40625"
+       y1="1005.2764"
+       x2="390.06641"
+       y2="1005.2764"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient927"
+       id="linearGradient935"
+       gradientUnits="userSpaceOnUse"
+       x1="202.40625"
+       y1="1005.2764"
+       x2="390.06641"
+       y2="1005.2764" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.70000001"
+     inkscape:cx="702.73096"
+     inkscape:cy="506.3782"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(28.133772,75.734386)">
+    <path
+       style="fill:#ff1500;fill-opacity:0.66331661;stroke:#000000;stroke-width:0.19889352px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 32.594867,178.13925 c 25.424302,-8.23907 52.131049,-9.42467 80.766933,0 l 14.66664,-15.06846 -13.46115,-8.03651 V 89.33579 L 30.183914,89.134884 v 66.703036 l -16.073024,7.83561 z"
+       id="path823"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccccc"
+       onclick="window.open('Layout?location=237&amp;section=LUNETA','location')" />
+    <path
+       style="fill:#f5e34f;fill-opacity:1;stroke:#000000;stroke-width:0.19889352px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 11.369789,157.02322 13.862983,-6.22829 V 73.644414 l -14.465721,4.219164 z"
+       id="path825"
+       inkscape:connector-curvature="0"
+       onclick="window.open('Layout?location=237&amp;section=PLATEA','location')" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path827"
+       d="m 133.22538,157.02322 -13.86299,-6.22829 V 73.644414 l 14.46573,4.219164 z"
+       style="fill:#f5e34f;fill-opacity:1;stroke:#000000;stroke-width:0.19889352px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       onclick="window.open('Layout?location=237&amp;section=PLATEA','location')" />
+    <path
+       style="fill:#0048ff;fill-opacity:0.66331661;stroke:#000000;stroke-width:0.19889352px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 15.51728,71.996749 c 36.406082,-7.823947 73.962281,-7.309572 112.51116,0.401826 V 42.462538 c -35.956652,-10.360689 -73.143073,-12.112969 -112.310247,0 z"
+       id="path829"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc"
+       onclick="window.open('Layout?location=237&amp;section=MEZZANINE','location')" />
+    <path
+       sodipodi:nodetypes="ccccc"
+       inkscape:connector-curvature="0"
+       id="path831"
+       d="m 15.51728,32.218036 c 36.406082,-7.823942 73.962281,-7.30957 112.51116,0.401823 V 2.6838314 c -35.956652,-10.3606894 -73.143073,-12.1129683 -112.310247,0 z"
+       style="fill:#1ea529;fill-opacity:0.66331661;stroke:#000000;stroke-width:0.19889352px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       onclick="" />
+    <path
+       style="fill:#701ea5;fill-opacity:0.66331661;stroke:#000000;stroke-width:0.19889352px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 15.51728,-7.9584582 c 36.406082,-7.8239408 73.962281,-7.3095688 112.51116,0.401824 L 127.22479,-65.419538 C 113.36855,-94.866941 53.880803,-52.820234 15.718193,-37.49266 Z"
+       id="path833"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc"
+       onclick="window.open('Layout?location=3&amp;section=SEGUNDO_NIVEL','location')" />
+    <rect
+       style="opacity:0.89899998;fill:#2cb5ee;fill-opacity:1;stroke:#000000;stroke-width:0.35312361;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect837"
+       width="16.073023"
+       height="27.599831"
+       x="-100.38694"
+       y="162.8277"
+       transform="matrix(1,0,0.44530751,0.8953777,0,0)"
+       onclick="window.open('Layout?location=3&amp;section=PALCO','location')" />
+    <rect
+       transform="matrix(1,0,0.44530751,0.8953777,0,0)"
+       y="127.28626"
+       x="-84.560104"
+       height="27.599831"
+       width="16.073023"
+       id="rect839"
+       style="opacity:0.89899998;fill:#2cb5ee;fill-opacity:1;stroke:#000000;stroke-width:0.35312361;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       onclick="window.open('Layout?location=3&amp;section=PALCO','location')" />
+    <rect
+       style="opacity:0.89899998;fill:#2cb5ee;fill-opacity:1;stroke:#000000;stroke-width:0.35312361;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect841"
+       width="16.073023"
+       height="27.599831"
+       x="-70.711609"
+       y="96.187515"
+       transform="matrix(1,0,0.44530751,0.8953777,0,0)"
+       onclick="window.open('Layout?location=3&amp;section=PALCO','location')" />
+    <rect
+       transform="matrix(1,0,0.68708705,0.7265751,0,0)"
+       y="96.334938"
+       x="-94.069084"
+       height="17.887707"
+       width="16.073023"
+       id="rect843"
+       style="opacity:0.89899998;fill:#2cb5ee;fill-opacity:1;stroke:#000000;stroke-width:0.28428298;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       onclick="window.open('Layout?location=3&amp;section=PALCO','location')" />
+    <rect
+       style="opacity:0.89899998;fill:#e183cf;fill-opacity:0.63819095;stroke:#000000;stroke-width:0.35312361;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect845"
+       width="16.073023"
+       height="27.599831"
+       x="-46.377834"
+       y="41.542648"
+       transform="matrix(1,0,0.44530751,0.8953777,0,0)"
+       onclick="window.open('Layout?location=3&amp;section=PALCO','location')" />
+    <rect
+       transform="matrix(1,0,0.44530751,0.8953777,0,0)"
+       y="9.1111412"
+       x="-31.935841"
+       height="27.599831"
+       width="16.073023"
+       id="rect847"
+       style="opacity:0.89899998;fill:#e183cf;fill-opacity:0.63819095;stroke:#000000;stroke-width:0.35312361;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       onclick="window.open('Layout?location=3&amp;section=PALCO','location')" />
+    <rect
+       style="opacity:0.89899998;fill:#e183cf;fill-opacity:0.63819095;stroke:#000000;stroke-width:0.35312361;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect849"
+       width="16.073023"
+       height="27.599831"
+       x="-18.087349"
+       y="-21.987564"
+       transform="matrix(1,0,0.44530751,0.8953777,0,0)"
+       onclick="window.open('Layout?location=3&amp;section=PALCO','location')" />
+    <rect
+       transform="matrix(-1,0,-0.44530751,0.8953777,0,0)"
+       y="162.8277"
+       x="-246.42844"
+       height="27.599831"
+       width="16.073023"
+       id="rect851"
+       style="opacity:0.89899998;fill:#2cb5ee;fill-opacity:1;stroke:#000000;stroke-width:0.35312361;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       onclick="window.open('Layout?location=3&amp;section=PALCO','location')" />
+    <rect
+       style="opacity:0.89899998;fill:#2cb5ee;fill-opacity:1;stroke:#000000;stroke-width:0.35312361;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect853"
+       width="16.073023"
+       height="27.599831"
+       x="-230.60161"
+       y="127.28626"
+       transform="matrix(-1,0,-0.44530751,0.8953777,0,0)"
+       onclick="window.open('Layout?location=3&amp;section=PALCO','location')" />
+    <rect
+       transform="matrix(-1,0,-0.44530751,0.8953777,0,0)"
+       y="96.187515"
+       x="-216.75311"
+       height="27.599831"
+       width="16.073023"
+       id="rect855"
+       style="opacity:0.89899998;fill:#2cb5ee;fill-opacity:1;stroke:#000000;stroke-width:0.35312361;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       onclick="window.open('Layout?location=3&amp;section=PALCO','location')" />
+    <rect
+       style="opacity:0.89899998;fill:#2cb5ee;fill-opacity:1;stroke:#000000;stroke-width:0.28428298;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect857"
+       width="16.073023"
+       height="17.887707"
+       x="-240.11057"
+       y="96.334938"
+       transform="matrix(-1,0,-0.68708705,0.7265751,0,0)"
+       onclick="window.open('Layout?location=3&amp;section=PALCO','location')" />
+    <rect
+       transform="matrix(-1,0,-0.44530751,0.8953777,0,0)"
+       y="41.542648"
+       x="-192.41928"
+       height="27.599831"
+       width="16.073023"
+       id="rect859"
+       style="opacity:0.89899998;fill:#e183cf;fill-opacity:0.63819095;stroke:#000000;stroke-width:0.35312361;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       onclick="window.open('Layout?location=3&amp;section=PALCO','location')" />
+    <rect
+       style="opacity:0.89899998;fill:#e183cf;fill-opacity:0.63819095;stroke:#000000;stroke-width:0.35312361;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect861"
+       width="16.073023"
+       height="27.599831"
+       x="-177.97726"
+       y="9.1111412"
+       transform="matrix(-1,0,-0.44530751,0.8953777,0,0)"
+       onclick="window.open('Layout?location=3&amp;section=PALCO','location')" />
+    <rect
+       transform="matrix(-1,0,-0.44530751,0.8953777,0,0)"
+       y="-21.987564"
+       x="-164.12872"
+       height="27.599831"
+       width="16.073023"
+       id="rect863"
+       style="opacity:0.89899998;fill:#e183cf;fill-opacity:0.63819095;stroke:#000000;stroke-width:0.35312361;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       onclick="window.open('Layout?location=3&amp;section=PALCO','location')" />
+    <rect
+       style="opacity:0.89899998;fill:#ff6356;fill-opacity:1;stroke:#000000;stroke-width:0.33414111;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect865"
+       width="6.5350733"
+       height="6.5350733"
+       x="198.48006"
+       y="135.66721" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.77497387px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.11937434;stroke-opacity:1"
+       x="209.0195"
+       y="142.29707"
+       id="text869"><tspan
+         sodipodi:role="line"
+         id="tspan867"
+         x="209.0195"
+         y="142.29707"
+         style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.11937434;stroke-opacity:1">Luneta</tspan></text>
+    <rect
+       y="143.62296"
+       x="198.48006"
+       height="6.5350733"
+       width="6.5350733"
+       id="rect871"
+       style="opacity:0.89899998;fill:#f5e34f;fill-opacity:1;stroke:#000000;stroke-width:0.33414111;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       y="151.5787"
+       x="198.48006"
+       height="6.5350733"
+       width="6.5350733"
+       id="rect877"
+       style="opacity:0.89899998;fill:#5685ff;fill-opacity:1;stroke:#000000;stroke-width:0.33414111;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <text
+       id="text881"
+       y="158.20857"
+       x="209.0195"
+       style="font-style:normal;font-weight:normal;font-size:4.77497387px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.11937434;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.11937434;stroke-opacity:1"
+         y="158.20857"
+         x="209.0195"
+         id="tspan879"
+         sodipodi:role="line">Mezzanine</tspan></text>
+    <rect
+       style="opacity:0.89899998;fill:#69c371;fill-opacity:1;stroke:#000000;stroke-width:0.33414111;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect883"
+       width="6.5350733"
+       height="6.5350733"
+       x="198.48006"
+       y="159.53445" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.77497387px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.11937434;stroke-opacity:1"
+       x="209.0195"
+       y="166.16431"
+       id="text887"><tspan
+         sodipodi:role="line"
+         id="tspan885"
+         x="209.0195"
+         y="166.16431"
+         style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.11937434;stroke-opacity:1">1er. Nivel</tspan></text>
+    <rect
+       y="167.49017"
+       x="198.48006"
+       height="6.5350733"
+       width="6.5350733"
+       id="rect889"
+       style="opacity:0.89899998;fill:#a069c3;fill-opacity:1;stroke:#000000;stroke-width:0.33414111;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <text
+       id="text893"
+       y="174.12004"
+       x="209.0195"
+       style="font-style:normal;font-weight:normal;font-size:4.77497387px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.11937434;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.11937434;stroke-opacity:1"
+         y="174.12004"
+         x="209.0195"
+         id="tspan891"
+         sodipodi:role="line">2do. Nivel</tspan></text>
+    <rect
+       style="opacity:0.89899998;fill:#41bcf0;fill-opacity:1;stroke:#000000;stroke-width:0.33414111;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect895"
+       width="6.5350733"
+       height="6.5350733"
+       x="198.48006"
+       y="175.44591" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:4.77497387px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.11937434;stroke-opacity:1"
+       x="209.0195"
+       y="182.07576"
+       id="text899"><tspan
+         sodipodi:role="line"
+         id="tspan897"
+         x="209.0195"
+         y="182.07576"
+         style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.11937434;stroke-opacity:1">Palcos 1er. Nivel</tspan></text>
+    <rect
+       style="opacity:0.89899998;fill:#e183cf;fill-opacity:0.63819095;stroke:#000000;stroke-width:0.33414111;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect901"
+       width="6.5350733"
+       height="6.5350733"
+       x="198.48006"
+       y="183.40163" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.1590395px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.25397599;stroke-opacity:1"
+       x="87.678246"
+       y="116.79349"
+       id="text905"
+       transform="scale(0.61212749,1.6336466)"><tspan
+         sodipodi:role="line"
+         id="tspan903"
+         x="87.678246"
+         y="116.79349"
+         style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.25397599;stroke-opacity:1">ESCENARIO</tspan></text>
+    <text
+       id="text875"
+       y="150.25282"
+       x="209.0195"
+       style="font-style:normal;font-weight:normal;font-size:4.77497387px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.11937434;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.11937434;stroke-opacity:1"
+         y="150.25282"
+         x="209.0195"
+         id="tspan873"
+         sodipodi:role="line">Platea</tspan></text>
+    <text
+       id="text949"
+       y="188.42575"
+       x="209.0195"
+       style="font-style:normal;font-weight:normal;font-size:4.77497387px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.11937434;stroke-opacity:1;"
+       xml:space="preserve"><tspan
+         style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.11937434;stroke-opacity:1;"
+         y="188.42575"
+         x="209.0195"
+         id="tspan947"
+         sodipodi:role="line">Palcos 2do. Nivel</tspan></text>
+  </g>
+</svg>
