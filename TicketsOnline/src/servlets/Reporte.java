@@ -64,7 +64,7 @@ public class Reporte extends HttpServlet {
 		req = request;
 		res = response;
 		
-		System.err.println("eventId = " + request.getSession().getAttribute("eventId"));
+		System.err.println("6 eventId = " + request.getSession().getAttribute("eventId"));
 		eventId = request.getSession().getAttribute("eventId").toString();
 		contexto = req.getSession().getServletContext().getRealPath("/rpt");
 		
@@ -86,8 +86,7 @@ public class Reporte extends HttpServlet {
 			msgError = "Favor de mandar el parametro nombre"; 
 			mandarMensajeResponse();
 		}
-		
-		
+
 	}
 	
 	private void ponerEnResponse() {

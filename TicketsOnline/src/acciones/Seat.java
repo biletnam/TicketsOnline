@@ -14,10 +14,11 @@ public class Seat extends Json{
 	private String index = null;
 	private String number = null;
 	private String location = null;
+	private double grandTotal = 0;
     
 	public String confirm(){
 		HttpSession session = ServletActionContext.getRequest().getSession();
-		System.err.println("eventId = " + session.getAttribute("eventId"));
+		System.err.println("2 eventId = " + session.getAttribute("eventId"));
 		eventId = session.getAttribute("eventId").toString();
 		System.err.println("userId = " + session.getAttribute("userId"));
 		String user = session.getAttribute("userId").toString();
@@ -43,6 +44,38 @@ public class Seat extends Json{
 			}
 		}catch(Exception e) {
 			e.printStackTrace();
+		}
+		
+		return SUCCESS;
+ 	}
+	
+	public String confirmSection(){
+		HttpSession session = ServletActionContext.getRequest().getSession();
+		int n = 0;
+		System.err.println("3 eventId = " + eventId);
+		System.err.println("location = " + location);
+		System.err.println("seccion = " + sectionId);
+		System.err.println("grandTotal = " + grandTotal);
+		System.err.println("userId = " + session.getAttribute("userId"));
+		String user = session.getAttribute("userId").toString();
+		
+		
+		try {
+			if (grandTotal == 0) {
+				new SQLServerConnection().actualizar("delete from tbButacasEnProceso where eventopkid = "+eventId+" and seccion = '"+sectionId+"' and descripcion = '"+location+"' and idSesion = "+user);
+			}
+			
+			n = new SQLServerConnection().consultar1ValorNumerico("select boletos from tbpreciosdescuentos where eventopkid = "+eventId+" and seccion = '"+sectionId+"' and descripcion = '"+location+"' ");
+			
+			if (n > 0){
+				new SQLServerConnection().actualizar("insert into tbButacasEnProceso (EventoPkId, Seccion, Butaca, NumeroButaca, CajeroPkId, Fecha, UsuarioId, Status, idSesion, Descripcion) values ("+eventId+", '"+sectionId+"', "+0+", '"+0+"', 2, getDate(), 1, 1, '"+user+"', '"+location+"') ");
+				setSuccess(true);
+			}else {
+				setSuccess(false);
+			}
+		}catch(Exception e) {
+			e.printStackTrace();
+			setSuccess(false);
 		}
 		
 		return SUCCESS;
@@ -109,6 +142,14 @@ public class Seat extends Json{
 
 	public void setLocation(String location) {
 		this.location = location;
+	}
+
+	public double getGrandTotal() {
+		return grandTotal;
+	}
+
+	public void setGrandTotal(double grandTotal) {
+		this.grandTotal = grandTotal;
 	}
 
 }

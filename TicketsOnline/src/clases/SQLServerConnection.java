@@ -26,7 +26,7 @@ public class SQLServerConnection{
 		   Context ctx = new InitialContext();
 		   Context envContext = (Context) ctx.lookup("java:/comp/env");
 //		   DataSource ds = (DataSource)envContext.lookup("jdbc/xptickets"); 	//CSAXXX
-		   DataSource ds = (DataSource)envContext.lookup("jdbc/autoboleto");
+		   DataSource ds = (DataSource)envContext.lookup("jdbc/autoboleto");	//CSAXXX
 		   con = ds.getConnection();
 	   }catch (Exception e){
 		   e.printStackTrace();
@@ -56,7 +56,7 @@ public class SQLServerConnection{
 		ArrayList<ArrayList<String>> matriz = new ArrayList<ArrayList<String>>();
 		int n = 0;
 		
-		System.err.println(_query);
+//		System.err.println(_query);
 		
 		abrir();
 		if (con != null){
@@ -88,7 +88,7 @@ public class SQLServerConnection{
 	public ArrayList<String> consultarVector(final String _query){
 		ArrayList<String> renglon = new ArrayList<String>();
 		
-		System.err.println(_query);
+//		System.err.println(_query);
 		
 		abrir();
 		try{
@@ -114,7 +114,7 @@ public class SQLServerConnection{
 	public int contar(final String _query){
 		int retorno = 0;
 		
-		System.out.println(_query);
+//		System.out.println(_query);
 		
 		abrir();
 		try{
@@ -161,7 +161,7 @@ public class SQLServerConnection{
 	public String consultar1Valor(final String _query){
 		String resultado = "";
 		
-		System.err.println(_query);
+//		System.err.println(_query);
 		
 		abrir();
 		try{
@@ -182,6 +182,8 @@ public class SQLServerConnection{
 	public int actualizar(final String _actualizacion) throws Exception{
 		int n = 0;
 		
+//		System.err.println(_actualizacion);
+		
 		abrir();
 		st = con.createStatement();
 		n = st.executeUpdate(_actualizacion);
@@ -196,6 +198,8 @@ public class SQLServerConnection{
 
 	public int consultar1ValorNumerico(final String _query) {
 		int resultado = 0;
+		
+//		System.out.println(_query);
 		
 		abrir();
 		try{

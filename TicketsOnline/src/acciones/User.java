@@ -18,6 +18,7 @@ public class User extends Json{
 	private String phone = null;
 	private String password1 = null;
 	private String password2 = null;
+	private String eventId = null;
     
 	public String add(){
 		int n = 0;
@@ -45,7 +46,7 @@ public class User extends Json{
 	public String login(){
 		HttpSession session = ServletActionContext.getRequest().getSession();
 		ArrayList<String> arrRow = null;
-		System.err.println("eventId = " + session.getAttribute("eventId"));
+		System.err.println("4 eventId = " + session.getAttribute("eventId"));
 		String eventId = session.getAttribute("eventId").toString();
 		
 		try {
@@ -92,11 +93,14 @@ public class User extends Json{
 	public String isLogued(){
 		HttpSession session = ServletActionContext.getRequest().getSession();
 		ArrayList<String> arrRow = null;
-		String eventId = null;
 		
 		try {
-			System.err.println("eventId = " + session.getAttribute("eventId"));
-			eventId = session.getAttribute("eventId").toString();
+			eventId = ServletActionContext.getRequest().getParameter("eventId");
+			System.err.println("5 eventId = " + session.getAttribute("eventId"));
+			
+			if (session.getAttribute("eventId") != null) {
+				eventId = session.getAttribute("eventId").toString();
+			}
 			
 			System.err.println("email = " + session.getAttribute("email"));
 			System.err.println("password = " + session.getAttribute("password"));
@@ -126,7 +130,6 @@ public class User extends Json{
 			e.printStackTrace();
 			setSuccess(false);
 		}
-		
 		return SUCCESS;
  	}
 

@@ -7,7 +7,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=2">
     <title>XPTickets - P&aacute;gina del evento <s:property value="description"/></title>
     <meta name="description" content="Detalles del evento">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -20,6 +20,8 @@
     <link rel="icon" href="../images/favicon.png">
 
     <script>
+      var eventId = <s:property value="id"/>; 
+    
 	  function resizeIframe(obj) {
 	    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
 	  }
@@ -232,7 +234,7 @@
         <div class="container content">
             <div class="row">
                 <div class="col-md-15">
-                    <iframe src="../seats.html" id="frame" name="frame" width="100%" frameborder="0" scrolling="no" onload="resizeIframe(this)"></iframe>
+                    <iframe src="../seats.html" id="frame" name="frame" width="100%" frameborder="0" scrolling="no"></iframe>
 					<iframe src="../html/payment.jsp" id="payment" name="payment" width="100%" frameborder="0" scrolling="no"></iframe>                    
                 	<iframe src="../html/minute-counter.html" id="minute-counter" name="minute-counter" width="100%" frameborder="0" scrolling="no"></iframe>
                 	<iframe id="frameTicketReceipt" name="frameTicketReceipt" width="100%" frameborder="0" scrolling="no" onload="resizeIframe(this)"></iframe>
@@ -267,8 +269,8 @@
                         <div class="tag-row">
                             <span>Copyright © 2018</span>
                             <span>xptix.com</span>
-                            <span>664 438 2762</span>
-                            <!--<span>664 315 71 08</span> CSAXXX-->
+                            <span>664 438 2762</span>	
+                            <!--<span>664 315 71 08</span>CSAXXX-->
                             <span>sistemas@xptix.com</span>
                         </div>
                     </div>

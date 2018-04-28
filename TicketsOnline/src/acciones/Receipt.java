@@ -87,7 +87,7 @@ public class Receipt extends ActionSupport{
 			if (s.getAttribute("phone") != null && s.getAttribute("phone").toString().compareTo("") > 0) {
 				phone = s.getAttribute("phone").toString();
 			}else {
-				s.setAttribute("phone", new SQLServerConnection().consultar1Valor("select phone from tbusuarios where UsuarioPkId = '"+userId+"' "));
+				s.setAttribute("phone", new SQLServerConnection().consultar1Valor("select Telefono from tbusuarios where UsuarioPkId = '"+userId+"' "));
 				phone = s.getAttribute("phone").toString();
 			}
 			
@@ -135,7 +135,7 @@ public class Receipt extends ActionSupport{
 			sb.append("join tbPreciosDescuentos b  ");
 			sb.append("on a.EventoPkId = b.EventoPkId and a.Seccion = b.Seccion and a.Butaca = b.Butaca ");
 			sb.append("where  ");
-			sb.append("a.idSesion = '").append(userId).append("' ");
+			sb.append("b.Activo = 1 and a.idSesion = '").append(userId).append("' ");
 			arrSeats = new SQLServerConnection().consultarMatriz(sb.toString());
 			sb.setLength(0);
 			System.err.println("****************Butacas en proceso = "+arrSeats);
@@ -284,9 +284,7 @@ public class Receipt extends ActionSupport{
 			place = arrRenglon.get(2).toString();
 		} catch (Exception e) {
 			e.printStackTrace(); 
-		} finally {
-			new acciones.Seat().releaseAll();
-		}
+		} 
 		
 		return SUCCESS;
  	}

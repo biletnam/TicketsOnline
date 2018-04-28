@@ -181,14 +181,15 @@ Ext.define('app.controller.Seats', {
     	var dialogo = Ext.MessageBox.wait('Espere por favor, validando asiento', 'Informacion');
     	
     	Ext.Ajax.request({
-    		url: 'Accion/confirmSeat',
+    		url: 'Accion/confirmSectionSeat',
     		params:{
     			seatId: id,
     			eventId: eventId,
     			sectionId: sectionId,
     			index: index,
     			number: number,
-    			location: location
+    			location: location,
+    			grandTotal: store.sum('subTotal')
     		},
     		method: 'POST',
    	        success: function(response, opts) {

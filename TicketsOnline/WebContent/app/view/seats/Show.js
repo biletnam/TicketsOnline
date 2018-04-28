@@ -60,6 +60,12 @@ Ext.define('app.view.seats.Show' ,{
     						//Seat frame adjust
     						element.target.style.height = altura + 'px';
     						Ext.getCmp('seatsshow').doLayout();
+    						var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+    						
+    						if (iOS){
+    							element.target.style.transform="scale(.5)";
+    						}
+    						
     				        window.top.resizeIframe(window.top.document.getElementById('frame'));
     					}
     				},

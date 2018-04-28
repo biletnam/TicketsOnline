@@ -486,6 +486,9 @@ Ext.onReady(function() {
     Ext.Ajax.request({
 		url: '../Accion/isLoguedUser',
 		method: 'POST',
+		params:{
+			eventId: eventId
+		},
 		success: function(response, opts) {
 			var result = JSON.parse(response.responseText);
 			var mensaje = result.msg;
