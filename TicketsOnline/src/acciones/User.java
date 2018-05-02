@@ -19,17 +19,18 @@ public class User extends Json{
 	private String password1 = null;
 	private String password2 = null;
 	private String eventId = null;
+	private String companyId = null;
     
 	public String add(){
 		int n = 0;
 
 		try {
-			n = new SQLServerConnection().consultar1ValorNumerico("select count(*) from tbUsuarios where Email = '" + email + "' ");
+			n = new SQLServerConnection(companyId).consultar1ValorNumerico("select count(*) from tbUsuarios where Email = '" + email + "' ");
 			
 			if (n > 0) {
 				setSuccess(false);
 			}else {
-				n = new SQLServerConnection().actualizar("insert into tbUsuarios (Email, Contrasena, Nombre, Direccion, Telefono) values ('"+email+"', '"+password1+"', '"+name+"', '"+address+"', '"+phone+"') ");
+				n = new SQLServerConnection(companyId).actualizar("insert into tbUsuarios (Email, Contrasena, Nombre, Direccion, Telefono) values ('"+email+"', '"+password1+"', '"+name+"', '"+address+"', '"+phone+"') ");
 				if (n > 0) {
 					setSuccess(true);
 				}else {
@@ -46,11 +47,11 @@ public class User extends Json{
 	public String login(){
 		HttpSession session = ServletActionContext.getRequest().getSession();
 		ArrayList<String> arrRow = null;
-		System.err.println("4 eventId = " + session.getAttribute("eventId"));
+//		System.err.println("4 eventId = " + session.getAttribute("eventId"));
 		String eventId = session.getAttribute("eventId").toString();
 		
 		try {
-			arrRow = new SQLServerConnection().consultarVector("select Nombre, Direccion, Telefono, Type, UsuarioPkId from tbUsuarios where Email = '"+email+"' and Contrasena = '"+password1+"' ");
+			arrRow = new SQLServerConnection(companyId).consultarVector("select Nombre, Direccion, Telefono, Type, UsuarioPkId from tbUsuarios where Email = '"+email+"' and Contrasena = '"+password1+"' ");
 	
 			if (arrRow.size() > 0) {
 				session.setAttribute("userId", arrRow.get(4).toString());
@@ -60,8 +61,10 @@ public class User extends Json{
 				session.setAttribute("address", arrRow.get(1).toString());
 				session.setAttribute("phone", arrRow.get(2).toString());
 				setUsrType(arrRow.get(3).toString());
-				session.setAttribute("eventDesc", new SQLServerConnection().consultar1Valor("select Titulo from tbEventos where eventoPkId = " + eventId));
-				session.setAttribute("eventDate", new SQLServerConnection().consultar1Valor("select CONVERT(varchar, FechaHora, 102) from tbEventos where eventoPkId = " + eventId));
+				session.setAttribute("eventDesc", new SQLServerConnection(companyId).consultar1Valor("select Titulo from tbEventos where eventoPkId = " + eventId));
+				session.setAttribute("eventDate", new SQLServerConnection(companyId).consultar1Valor("select CONVERT(varchar, FechaHora, 102) from tbEventos where eventoPkId = " + eventId));
+				
+				new SQLServerConnection(companyId).actualizar("delete from tbButacasenProceso where idSesion = "+arrRow.get(4).toString());
 				
 				setSuccess(true);
 			}else {
@@ -79,7 +82,7 @@ public class User extends Json{
 		String password = null;
 
 		try {
-			password = new SQLServerConnection().consultar1Valor("select Contrasena from tbUsuarios where Email = '"+email+"' ");
+			password = new SQLServerConnection(companyId).consultar1Valor("select Contrasena from tbUsuarios where Email = '"+email+"' ");
 			new Correo().enviar(email, "XPTickets - Recordatorio de contraseña", "Este es un mensaje enviado desde el sitio de XPTickets para recordar su contraseña, es la siguiente:<br><br><b>" + password + "</b><br><br>Saludos.");
 			setSuccess(true);
 		} catch (Exception e) {
@@ -96,18 +99,18 @@ public class User extends Json{
 		
 		try {
 			eventId = ServletActionContext.getRequest().getParameter("eventId");
-			System.err.println("5 eventId = " + session.getAttribute("eventId"));
+//			System.err.println("5 eventId = " + session.getAttribute("eventId"));
 			
 			if (session.getAttribute("eventId") != null) {
 				eventId = session.getAttribute("eventId").toString();
 			}
 			
-			System.err.println("email = " + session.getAttribute("email"));
-			System.err.println("password = " + session.getAttribute("password"));
+//			System.err.println("email = " + session.getAttribute("email"));
+//			System.err.println("password = " + session.getAttribute("password"));
 			if (session.getAttribute("email") != null && session.getAttribute("password") != null ) {
 				email = session.getAttribute("email").toString();
 				password1 = session.getAttribute("password").toString();
-				arrRow = new SQLServerConnection().consultarVector("select Nombre, Direccion, Telefono, type, UsuarioPkId from tbUsuarios where Email = '"+email+"' and Contrasena = '"+password1+"' ");
+				arrRow = new SQLServerConnection(companyId).consultarVector("select Nombre, Direccion, Telefono, type, UsuarioPkId from tbUsuarios where Email = '"+email+"' and Contrasena = '"+password1+"' ");
 
 				if (arrRow.size() > 0) {
 					session.setAttribute("userId", arrRow.get(4).toString());
@@ -117,8 +120,11 @@ public class User extends Json{
 					session.setAttribute("address", arrRow.get(1).toString());
 					session.setAttribute("phone", arrRow.get(2).toString());
 					setUsrType(arrRow.get(3).toString());
-					session.setAttribute("eventDesc", new SQLServerConnection().consultar1Valor("select Titulo from tbEventos where eventoPkId = " + eventId));
-					session.setAttribute("eventDate", new SQLServerConnection().consultar1Valor("select CONVERT(varchar, FechaHora, 102) from tbEventos where eventoPkId = " + eventId));
+					session.setAttribute("eventDesc", new SQLServerConnection(companyId).consultar1Valor("select Titulo from tbEventos where eventoPkId = " + eventId));
+					session.setAttribute("eventDate", new SQLServerConnection(companyId).consultar1Valor("select CONVERT(varchar, FechaHora, 102) from tbEventos where eventoPkId = " + eventId));
+					
+					new SQLServerConnection(companyId).actualizar("delete from tbButacasenProceso where idSesion = "+arrRow.get(4).toString());
+					
 					setSuccess(true);
 				}else {
 					setSuccess(false);
@@ -187,6 +193,14 @@ public class User extends Json{
 
 	public void setUserId(String userId) {
 		this.userId = userId;
+	}
+
+	public String getCompanyId() {
+		return companyId;
+	}
+
+	public void setCompanyId(String companyId) {
+		this.companyId = companyId;
 	}
 
 }

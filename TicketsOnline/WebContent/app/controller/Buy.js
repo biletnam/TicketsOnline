@@ -10,7 +10,6 @@ Ext.define('app.controller.Buy', {
     ],
     
     init: function() {
-        console.log('Inicializando controlador buy...');
         this.control({
         	'button[name=returnBtn02]':{
         		click: this.returnStage

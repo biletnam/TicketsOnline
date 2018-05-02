@@ -3,8 +3,6 @@ Ext.define('app.view.buy.Show' ,{
     alias: 'widget.buyshow',
     
     initComponent: function() {
-    	console.log('Inicializando vista buy...');
-
     	this.border = false;
     	this.bodyStyle = 'padding: 50px';
     	

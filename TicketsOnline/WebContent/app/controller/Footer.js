@@ -6,6 +6,5 @@ Ext.define('app.controller.Footer', {
     ],
     
     init: function() {
-        console.log('Inicializando controlador pie...');
     }
 });

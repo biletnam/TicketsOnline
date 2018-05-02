@@ -20,7 +20,6 @@ Ext.define('app.view.body.Show' ,{
     border: false,
     
     initComponent: function() {
-    	console.log('Inicializando vista cuerpo...');
     	this.callParent(arguments);
     }
     

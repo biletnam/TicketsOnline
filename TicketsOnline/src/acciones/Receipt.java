@@ -27,6 +27,7 @@ public class Receipt extends ActionSupport{
 	private boolean sendMail = false;
 	private String paymentID = null;
 	private ArrayList<Seat> seats = new ArrayList<Seat>();
+	private String companyId = null;
 	
      
 	public String get(){
@@ -52,42 +53,42 @@ public class Receipt extends ActionSupport{
 			System.err.println("****************PaymentId = "+paymentID);
 			
 			//Validation
-			System.err.println("evento = " + s.getAttribute("eventId"));
+//			System.err.println("evento = " + s.getAttribute("eventId"));
 			if (s.getAttribute("eventId") != null && s.getAttribute("eventId").toString().compareTo("") > 0) {
 				eventId = s.getAttribute("eventId").toString();
 			}else {
-				System.err.println("**************** No hay id de evento ****************");
+//				System.err.println("**************** No hay id de evento ****************");
 			}
 			
-			System.err.println("***************user = " + s.getAttribute("userId"));
+//			System.err.println("***************user = " + s.getAttribute("userId"));
 			if (s.getAttribute("userId") != null && s.getAttribute("userId").toString().compareTo("") > 0) {
 				userId = s.getAttribute("userId").toString();
 			}else {
-				System.err.println("**************** No hay id de user ****************");
+//				System.err.println("**************** No hay id de user ****************");
 			}
 			
-			System.err.println("name = " + s.getAttribute("name"));
+//			System.err.println("name = " + s.getAttribute("name"));
 			if (s.getAttribute("name") != null && s.getAttribute("name").toString().compareTo("") > 0) {
 				name = s.getAttribute("name").toString();
 			}else {
-				s.setAttribute("name", new SQLServerConnection().consultar1Valor("select Nombre from tbusuarios where UsuarioPkId = '"+userId+"' "));
+				s.setAttribute("name", new SQLServerConnection(companyId).consultar1Valor("select Nombre from tbusuarios where UsuarioPkId = '"+userId+"' "));
 				name = s.getAttribute("name").toString();
 			}
 			
-			System.err.println("email = " + s.getAttribute("email"));
+//			System.err.println("email = " + s.getAttribute("email"));
 			if (s.getAttribute("email") != null && s.getAttribute("email").toString().compareTo("") > 0) {
 				email = s.getAttribute("email").toString();
 			}else {
-				s.setAttribute("email", new SQLServerConnection().consultar1Valor("select email from tbusuarios where UsuarioPkId = '"+userId+"' "));
+				s.setAttribute("email", new SQLServerConnection(companyId).consultar1Valor("select email from tbusuarios where UsuarioPkId = '"+userId+"' "));
 				email = s.getAttribute("email").toString();
 			}
 			
-			System.err.println("phone = " + s.getAttribute("phone"));
+//			System.err.println("phone = " + s.getAttribute("phone"));
 			
 			if (s.getAttribute("phone") != null && s.getAttribute("phone").toString().compareTo("") > 0) {
 				phone = s.getAttribute("phone").toString();
 			}else {
-				s.setAttribute("phone", new SQLServerConnection().consultar1Valor("select Telefono from tbusuarios where UsuarioPkId = '"+userId+"' "));
+				s.setAttribute("phone", new SQLServerConnection(companyId).consultar1Valor("select Telefono from tbusuarios where UsuarioPkId = '"+userId+"' "));
 				phone = s.getAttribute("phone").toString();
 			}
 			
@@ -133,16 +134,16 @@ public class Receipt extends ActionSupport{
 			sb.append("from  ");
 			sb.append("tbButacasEnProceso a  ");
 			sb.append("join tbPreciosDescuentos b  ");
-			sb.append("on a.EventoPkId = b.EventoPkId and a.Seccion = b.Seccion and a.Butaca = b.Butaca ");
+			sb.append("on a.EventoPkId = b.EventoPkId and a.Seccion = b.Seccion and a.Descripcion = b.Descripcion and a.Butaca = b.Butaca ");
 			sb.append("where  ");
 			sb.append("b.Activo = 1 and a.idSesion = '").append(userId).append("' ");
-			arrSeats = new SQLServerConnection().consultarMatriz(sb.toString());
+			arrSeats = new SQLServerConnection(companyId).consultarMatriz(sb.toString());
 			sb.setLength(0);
-			System.err.println("****************Butacas en proceso = "+arrSeats);
+//			System.err.println("****************Butacas en proceso = "+arrSeats);
 			
 			for (int j = 0; j < arrSeats.size(); j++) {
 				arrRow = (ArrayList<String>) arrSeats.get(j);
-				System.err.println("Butaca = " + arrRow);
+//				System.err.println("Butaca = " + arrRow);
 				params[0] = arrRow.get(0).toString();		//BoletoPkId
 				params[1] = arrRow.get(1).toString();		//CajeroPkId
 				params[2] = arrRow.get(2).toString();		//EventoPkId
@@ -179,8 +180,8 @@ public class Receipt extends ActionSupport{
 				params[33] = arrRow.get(33).toString();	//TransaccionPkId
 				params[34] = arrRow.get(34).toString(); //RetVal
 				
-				boletoPkId = new SQLServerConnection().ejecutarSPUnRetorno("pc_tbboletosV2_save", params);	//CSAXX 
-//				boletoPkId = "1000";		//CSAXXX
+//				boletoPkId = new SQLServerConnection(companyId).ejecutarSPUnRetorno("pc_tbboletosV2_save", params);	//CSAXX 
+				boletoPkId = "1000";		//CSAXXX
 				description = arrRow.get(35).toString();	//Descripcion
 				row = arrRow.get(36).toString();	//Fila
 				
@@ -191,7 +192,7 @@ public class Receipt extends ActionSupport{
 					seats.add(seat);
 					
 					if (params[3].equals("0")) {
-						new SQLServerConnection().actualizar("update tbPreciosDescuentos set boletos = boletos - 1 where descripcion = '"+description+"' and seccion = '0' ");
+						new SQLServerConnection(companyId).actualizar("update tbPreciosDescuentos set boletos = boletos - 1 where descripcion = '"+description+"' and seccion = '0' ");
 					}
 				}
 				
@@ -200,7 +201,7 @@ public class Receipt extends ActionSupport{
 			}
 		
 			sb.append("select a.Titulo, a.FechaHora, b.Descripcion from tbEventos a left join tbEspaciosLugares b on a.ClaveLugar = b.Clave where a.EventoPkId = '"+eventId+"' ");
-			arrRenglon = new SQLServerConnection().consultarVector(sb.toString()); 
+			arrRenglon = new SQLServerConnection(companyId).consultarVector(sb.toString()); 
 			sb.setLength(0);
 			eventDescription = arrRenglon.get(0).toString();
 			dateTime = arrRenglon.get(1).toString();
@@ -209,7 +210,7 @@ public class Receipt extends ActionSupport{
 			if (sendMail) {
 				sb.append("Estimado cliente:");
 				sb.append("<br><br>Se genero el pago exitosamente con el folio ").append(paymentID).append(", se adjunta link para ver documento:");
-				sb.append("<br><br><a href=\"http://"+request.getServerName()+":"+request.getServerPort()+"/Accion2/viewReceipt?paymentID=").append(paymentID).append("\">Link</a>");
+				sb.append("<br><br><a href=\"http://"+request.getServerName()+":"+request.getServerPort()+"/Accion2/viewReceipt?paymentID=").append(paymentID).append("&companyId=").append(companyId).append("\">Link</a>");
 				sb.append("<br><br>Saludos.");
 
 				try {
@@ -221,7 +222,7 @@ public class Receipt extends ActionSupport{
 		} catch (Exception e) {
 			e.printStackTrace(); 
 		} finally {
-			new acciones.Seat().releaseAll();
+			new acciones.Seat().releaseAll(companyId);
 		}
 		
 		return SUCCESS;
@@ -258,12 +259,12 @@ public class Receipt extends ActionSupport{
 			sb.append("where ");
 			sb.append("FolioRecibo = '"+paymentID+"'");
 		
-			arrSeats = new SQLServerConnection().consultarMatriz(sb.toString());
+			arrSeats = new SQLServerConnection(companyId).consultarMatriz(sb.toString());
 			sb.setLength(0);
 			
 			seats = new ArrayList<Seat>();
 			
-			System.err.println(arrSeats);
+//			System.err.println(arrSeats);
 			
 			for (int j = 0; j < arrSeats.size(); j++) {
 				arrRow = (ArrayList<String>) arrSeats.get(j);
@@ -277,7 +278,7 @@ public class Receipt extends ActionSupport{
 			}
 	
 			sb.append("select a.Titulo, a.FechaHora, b.Descripcion from tbEventos a left join tbEspaciosLugares b on a.ClaveLugar = b.Clave where a.EventoPkId = "+eventId);
-			ArrayList<String> arrRenglon = new SQLServerConnection().consultarVector(sb.toString()); 
+			ArrayList<String> arrRenglon = new SQLServerConnection(companyId).consultarVector(sb.toString()); 
 			sb.setLength(0);
 			eventDescription = arrRenglon.get(0).toString();
 			dateTime = arrRenglon.get(1).toString();
@@ -375,6 +376,14 @@ public class Receipt extends ActionSupport{
 
 	public void setPaymentID(String paymentID) {
 		this.paymentID = paymentID;
+	}
+
+	public String getCompanyId() {
+		return companyId;
+	}
+
+	public void setCompanyId(String companyId) {
+		this.companyId = companyId;
 	}
 
 }

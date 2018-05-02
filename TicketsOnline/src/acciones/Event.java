@@ -20,6 +20,7 @@ public class Event extends ActionSupport{
 	
 	private HttpServletRequest request = null;
 	private String id = VACIO;
+	//Event
 	private String productorId = VACIO;
 	private String tittle = VACIO;
 	private String placeId = VACIO;
@@ -35,11 +36,19 @@ public class Event extends ActionSupport{
 	private String wholeDate = VACIO;
 	private String time = VACIO;
 	private String phone = VACIO;
+	private String companyId = VACIO;
+	//Company
+	private String nameCompany = VACIO;
+	private String phoneCompany = VACIO;
+	private String emailCompany = VACIO;
+	private String payPalKey = VACIO;
      
 	public String get(){
 		request = ServletActionContext.getRequest();
 		id = request.getParameter("id").toString();
+		companyId = request.getParameter("companyId").toString();
 		request.getSession().setAttribute("eventId", id);
+		request.getSession().setAttribute("companyId", companyId);
 		StringBuffer sb = new StringBuffer();
 		ArrayList<String> arr = null;
 
@@ -55,9 +64,10 @@ public class Event extends ActionSupport{
 			sb.append("join tbProductores d on a.ProductorPkId = d.ProductorPkId ");
 			sb.append("where ");
 			sb.append("a.EventoPkId = '").append(id).append("' ");
-			arr = new SQLServerConnection().consultarVector(sb.toString());
+			arr = new SQLServerConnection(companyId).consultarVector(sb.toString());
+			sb.setLength(0);
 			
-			System.err.println(arr);
+//			System.err.println(arr);
 			
 			if (arr.size() > 0) {
 				id = arr.get(0).toString();
@@ -76,6 +86,21 @@ public class Event extends ActionSupport{
 				wholeDate = arr.get(13).toString();
 				time = arr.get(14).toString();
 				phone = arr.get(15).toString();
+				arr.clear();
+			}
+			
+			sb.append("select name, email, phone, payPalKey from Configuracion.BasesDatos where companyId = ").append(companyId);
+			arr = new SQLServerConnection().consultarVector(sb.toString());
+			sb.setLength(0);
+			
+//			System.err.println(arr);
+			
+			if (arr.size() > 0) {
+				nameCompany = arr.get(0).toString();
+				emailCompany = arr.get(1).toString();
+				phoneCompany = arr.get(2).toString();
+				payPalKey = arr.get(3).toString();
+				arr.clear();
 			}
 			
 		} catch (Exception e) {
@@ -85,7 +110,7 @@ public class Event extends ActionSupport{
 		return SUCCESS;
  	}
 	
-	public ArrayList<ArrayList<String>> getCurrent(){
+	public ArrayList<ArrayList<String>> getCurrent(final String companyId_){
 		StringBuffer sb = new StringBuffer();
 		ArrayList<ArrayList<String>> mat = null;
 
@@ -104,13 +129,13 @@ public class Event extends ActionSupport{
 			sb.append("and a.agotado = 0 "); 
 			sb.append("and a.fechaHora >= getdate() ");
 			sb.append("order by a.FechaHora ");
-			mat = new SQLServerConnection().consultarMatriz(sb.toString());
+			mat = new SQLServerConnection(companyId_).consultarMatriz(sb.toString());
 		} catch (Exception e) {
 			e.printStackTrace();
 			mat = new ArrayList<ArrayList<String>>();
 		} 
 		
-		System.err.println(mat);
+//		System.err.println(mat);
 		
 		return mat;
  	}
@@ -241,6 +266,46 @@ public class Event extends ActionSupport{
 
 	public void setPhone(String phone) {
 		this.phone = phone;
+	}
+
+	public String getCompanyId() {
+		return companyId;
+	}
+
+	public void setCompanyId(String companyId) {
+		this.companyId = companyId;
+	}
+
+	public String getNameCompany() {
+		return nameCompany;
+	}
+
+	public void setNameCompany(String nameCompany) {
+		this.nameCompany = nameCompany;
+	}
+
+	public String getPhoneCompany() {
+		return phoneCompany;
+	}
+
+	public void setPhoneCompany(String phoneCompany) {
+		this.phoneCompany = phoneCompany;
+	}
+
+	public String getEmailCompany() {
+		return emailCompany;
+	}
+
+	public void setEmailCompany(String emailCompany) {
+		this.emailCompany = emailCompany;
+	}
+
+	public String getPayPalKey() {
+		return payPalKey;
+	}
+
+	public void setPayPalKey(String payPalKey) {
+		this.payPalKey = payPalKey;
 	}
 	
 }

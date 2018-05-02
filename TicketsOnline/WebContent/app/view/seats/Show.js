@@ -22,7 +22,6 @@ Ext.define('app.view.seats.Show' ,{
     },
     border: false,
     initComponent: function() {
-    	console.log('Inicializando vista seats...');
     	this.items = [
     		{
 	            xtype: 'toolbar',
@@ -49,8 +48,8 @@ Ext.define('app.view.seats.Show' ,{
                     tag: 'iframe',
                     id: 'location',
                     name: 'location',
-                    src: 'Accion2/Layout?location=237&section=1'			//CSAXXX
-//                    src: 'Accion2/Layout?location=2&section=1'			//CSAXXX
+                    src: 'Accion2/Layout?location='+window.parent.eventId+'&section=1&companyId='+window.parent.companyId			//CSAXXX
+//                    src: 'Accion2/Layout?location=2&section=1&companyId='+companyId			//CSAXXX
                 },
     			listeners:{
     				load:{

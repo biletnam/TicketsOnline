@@ -6,7 +6,6 @@ Ext.define('app.controller.Poster', {
     ],
     
     init: function() {
-        console.log('Inicializando controlador poster...');
         this.control({
         	'button[name=reservBtn]':{
         		click: this.openWindow

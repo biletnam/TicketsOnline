@@ -6,7 +6,6 @@ function actionSeat(seat_){
 
 function back(layout_){
 	window.history.back();
-	console.log(Ext.getCmp('gridShow'));
 	Ext.getCmp('gridShow').fireEvent('onLayoutBack');
 }
 
@@ -21,8 +20,6 @@ Ext.define('app.view.stage.Show' ,{
     border: false,
     
     initComponent: function() {
-    	console.log('Inicializando vista stage...');
-    	
     	this.items = [
     		{
     			xtype: 'image',
@@ -31,7 +28,7 @@ Ext.define('app.view.stage.Show' ,{
     			autoEl: {
                     tag: 'iframe',
                     id: 'location',
-                    src: '/TicketsOnline/svg/location/1.svg',
+//                    src: '/TicketsOnline/svg/location/1.svg',
                     height: '1000px'
                 },
     			flex: 3,

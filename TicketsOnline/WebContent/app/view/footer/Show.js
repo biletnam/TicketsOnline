@@ -4,7 +4,6 @@ Ext.define('app.view.footer.Show' ,{
     border: true,
 
     initComponent: function() {
-    	console.log('Inicializando vista pie...');
     	this.items = [
     		{
     		},

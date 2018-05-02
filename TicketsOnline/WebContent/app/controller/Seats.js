@@ -8,7 +8,6 @@ Ext.define('app.controller.Seats', {
     ],
     
     init: function() {
-        console.log('Inicializando controlador seats...');
         this.control({
         	'image[name=seatsLayout]':{
         		resize: function(){
@@ -99,7 +98,8 @@ Ext.define('app.controller.Seats', {
     			sectionId: sectionId,
     			index: index,
     			number: number,
-    			location: location
+    			location: location,
+    			companyId: window.parent.companyId
     		},
     		method: 'POST',
    	        success: function(response, opts) {
@@ -133,7 +133,7 @@ Ext.define('app.controller.Seats', {
    				    	comissionTotal = store.sum('commision');
    				    	
    				    	try{
-   				    		totalMasComision = (grandTotal + comissionTotal) * 1.06;
+   				    		totalMasComision = grandTotal * 1.06;
    				    		top.payment.amount = totalMasComision.toFixed(2);
    				    	}catch(e){
    				    		console.error(e);
@@ -150,7 +150,6 @@ Ext.define('app.controller.Seats', {
 	         failure: function(response, opts){
 	        	dialogo.hide();
 				result = JSON.parse(response.responseText);
-   				console.log(mensaje);
 				mensaje = result.msg;
 				Ext.MessageBox.alert('Informacion','Estimado cliente, este asiento se encuentra en proceso de compra, por lo cual no es posible seleccionarlo');
 			 }
@@ -189,7 +188,8 @@ Ext.define('app.controller.Seats', {
     			index: index,
     			number: number,
     			location: location,
-    			grandTotal: store.sum('subTotal')
+    			grandTotal: store.sum('subTotal'),
+    			companyId: window.parent.companyId
     		},
     		method: 'POST',
    	        success: function(response, opts) {
@@ -206,7 +206,7 @@ Ext.define('app.controller.Seats', {
    				    	comissionTotal = store.sum('commision');
    				    	
    				    	try{
-   				    		totalMasComision = (grandTotal + comissionTotal) * 1.06;
+   				    		totalMasComision = grandTotal * 1.06;
    				    		top.payment.amount = totalMasComision.toFixed(2);
    				    	}catch(e){
    				    		console.error('Error en calculo de total');
@@ -222,7 +222,6 @@ Ext.define('app.controller.Seats', {
 	         failure: function(response, opts){
 	        	dialogo.hide();
 				result = JSON.parse(response.responseText);
-   				console.log(mensaje);
 				mensaje = result.msg;
 				Ext.MessageBox.alert('Informacion','Estimado cliente, este asiento se encuentra en proceso de compra, por lo cual no es posible seleccionarlo');
 			 }
@@ -238,16 +237,20 @@ Ext.define('app.controller.Seats', {
     
     onLayoutBack2: function(){
     	this.onLayoutBack();
-    	window.parent.location.href = 'index.jsp';
     	window.parent.resizeIframe(window.parent.document.getElementById('frame'));
     	Ext.Ajax.request({
-    		url: 'Accion/releaseAllSeat',
-    		method: 'POST'
-   	     })
+	    	url: 'Accion/releaseAllSeat',
+	    	method: 'POST',
+	    	params:{
+	    		companyId: window.parent.companyId
+	    	},
+	    	success: function(response, opts) {
+	    		window.parent.location.href = 'index.jsp?companyId='+window.parent.companyId;
+	    	}
+   	    });
     },
     
     onseatsLayoutLoad: function(obj){
-    	console.log(obj);
     }
     
 });

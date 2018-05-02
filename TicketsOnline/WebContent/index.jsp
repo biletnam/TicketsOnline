@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@page import="acciones.Event"%>
+<%@page import="clases.Company"%>
 <%@page import="java.util.ArrayList"%>
 
 <%
@@ -10,6 +11,7 @@
 	
 	companyId = request.getParameter("companyId") == null? "4" : request.getParameter("companyId").toString();  
 	request.getSession().setAttribute("companyId", companyId);
+	Company comp = new Company(companyId); 
 %>
 <%@ taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html>
@@ -21,7 +23,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>XP Tickets</title>
+    <title><%=comp.getName() %></title>
     <meta name="description" content="Nightlife, night club and bar / pub HTML template with dark / black design and style.">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <link rel="stylesheet" href="scripts/bootstrap/css/bootstrap.css">
@@ -44,19 +46,19 @@
                     <div class="scroll-hide">
                         <div class="container">
                             <a class="navbar-brand center" href="#">
-                                <img src="images/system/logo.png" />
+                                <img src="images/<%=companyId%>/system/logo.png" />
                             </a>
                         </div>
                     </div>
                     <div class="navbar-header">
-                        <a class="navbar-brand" href="index.jsp"><img alt="" src="images/system/logo.png" /></a>
+                        <a class="navbar-brand" href="index.jsp"><src="images/<%=companyId%>/system/logo.png" /></a>
                         <button type="button" class="navbar-toggle">
                             <i class="fa fa-bars"></i>
                         </button>
                     </div>
                     <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav no-margins">
-                            <li><a href="index.jsp">Home</a></li>
+                            <li><a href="index.jsp?companyId=<%=companyId%>">Home</a></li>
                         </ul>
                     </div>
                 </div>
@@ -67,7 +69,7 @@
         <div class="flexslider advanced-slider slider" data-options="animation:fade,slideshowSpeed:5000">
             <ul class="slides">
             	<%
-            		ArrayList<ArrayList<String>> arrEventos = new Event().getCurrent();
+            		ArrayList<ArrayList<String>> arrEventos = new Event().getCurrent(companyId);
             		ArrayList<String> arrEvento = null;
             		
             		for (int i = 0; i < arrEventos.size(); i++){
@@ -79,7 +81,7 @@
                         </div>
                         <div class="container">
                             <hr class="space" />
-                            <img alt="" class="pos-slider pos-left pos-bottom anima anima-fade-bottom" style="z-index:0" width="530" src="images/slider/<%=arrEvento.get(0).toString()%>.png" />
+                            <img alt="" class="pos-slider pos-left pos-bottom anima anima-fade-bottom" style="z-index:0" width="530" src="images/<%=companyId%>/slider/<%=arrEvento.get(0).toString()%>.png" />
                             <div class=" pos-slider pos-right text-right">
                                 <h1 class="text-bold text-xl anima" style="z-index:9"><%=arrEvento.get(8).toString()%></h1>
                                 <p class="text-m anima" style="z-index:9"><b><%=arrEvento.get(13).toString()%></b></p>
@@ -110,7 +112,7 @@
             	%>
                 <div class="col-md-4">
                     <div class="advs-box advs-box-multiple boxed" data-anima="scale-rotate" data-trigger="hover">
-                        <a class="img-box" href="Accion2/getEvent?id=<%=arrEvento.get(0).toString()%>"><img alt="" class="anima" src="images/art/<%=arrEvento.get(0).toString()%>.jpg" /></a>
+                        <a class="img-box" href="Accion2/getEvent?id=<%=arrEvento.get(0).toString()%>&companyId=<%=companyId%>"><img alt="" class="anima" src="images/<%=companyId%>/art/<%=arrEvento.get(0).toString()%>.jpg" /></a>
                         <div class="circle anima-rotate-20 anima"><%=arrEvento.get(10).toString()%> <span><%=arrEvento.get(11).toString()%>, <%=arrEvento.get(12).toString()%></span></div>
                         <div class="advs-box-content">
                             <h3><%=arrEvento.get(8).toString()%></h3>
@@ -223,13 +225,13 @@
 	           			arrEvento = arrEventos.get(i);
             	%>
                     <div class="grid-item col-md-3">
-                        <a class="img-box" href="images/gallery/bestMoments/<%=arrEvento.get(0).toString()%>_1.jpg">
-                            <img alt="" src="images/gallery/bestMoments/<%=arrEvento.get(0).toString()%>_1.jpg">
+                        <a class="img-box" href="images/<%=companyId%>/gallery/bestMoments/<%=arrEvento.get(0).toString()%>_1.jpg">
+                            <img alt="" src="images/<%=companyId%>/gallery/bestMoments/<%=arrEvento.get(0).toString()%>_1.jpg">
                         </a>
                     </div>
                     <div class="grid-item col-md-3">
-                        <a class="img-box" href="images/gallery/bestMoments/<%=arrEvento.get(0).toString()%>_2.jpg">
-                            <img alt="" src="images/gallery/bestMoments/<%=arrEvento.get(0).toString()%>_2.jpg">
+                        <a class="img-box" href="images/<%=companyId%>/gallery/bestMoments/<%=arrEvento.get(0).toString()%>_2.jpg">
+                            <img alt="" src="images/<%=companyId%>/gallery/bestMoments/<%=arrEvento.get(0).toString()%>_2.jpg">
                         </a>
                     </div>
                     	<%
@@ -270,7 +272,7 @@
             <hr class="h" />
             <h1>CONTACTO</h1>
             <p class="text-bold">
-                sistemas@xptix.com
+                <%=comp.geteMail() %>
             </p>
             <hr class="space s" />
             <!-- <a class="anima-button circle-button btn-sm" href="contacts.html"><i class="fa fa-map-marker"></i>Localice Nuestras Taquillas </a> -->
@@ -285,7 +287,7 @@
                     <div class="copy-row">
                         <div class="tag-row">
                             <span>Copyright © 2018</span>
-                            <span>XP Tickets</span>
+                            <span><%=comp.getName() %></span>
                         </div>
                     </div>
                 </div>

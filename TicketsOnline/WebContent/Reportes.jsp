@@ -7,7 +7,10 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<!--<![endif]-->
+<script>
+	var companyId = <%=request.getParameter("companyId")%>;
+	var eventId = <%=request.getParameter("eventId")%>;
+</script>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -60,19 +63,19 @@
                      <div class="scroll-hide">
                         <div class="container">
                             <a class="navbar-brand center" href="#">
-                                <img src="images/system//logo.png" alt="logo" />
+                                <img src="images/<%=request.getParameter("companyId")%>/system/logo.png" alt="logo" />
                             </a>
                         </div>
                     </div>
                     <div class="navbar-header">
-                        <a class="navbar-brand" href="index.jsp"><img src="images/system/logo.png" alt="logo" /></a>
+                        <a class="navbar-brand" href="index.jsp"><img src="images/<%=request.getParameter("companyId")%>/system/logo.png" alt="logo" /></a>
                         <button type="button" class="navbar-toggle">
                             <i class="fa fa-bars"></i>
                         </button>
                     </div>
                     <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav no-margins" id="menu">
-                            <li><a href="index.jsp">Home</a></li>
+                            <li><a href="index.jsp?companyId=<%=request.getParameter("companyId")%>">Home</a></li>
                         </ul>
                     </div>
                 </div>

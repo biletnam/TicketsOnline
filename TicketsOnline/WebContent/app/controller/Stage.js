@@ -6,7 +6,6 @@ Ext.define('app.controller.Stage', {
     ],
     
     init: function() {
-        console.log('Inicializando controlador stage...');
         this.control({
         	'button[name=returnBtn]':{
         		click: this.returnCard

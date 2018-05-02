@@ -22,16 +22,22 @@ Ext.define('app.controller.GlobalSale', {
     },
     
     queryMovements: function(btn){
-    	Ext.getCmp('grid01').store.load();
+    	
+    	Ext.getCmp('grid01').store.load({
+    		params: {
+	    		eventId: eventId,
+	    		companyId: companyId
+    		}
+    	});
 	},
 	
 	pdfMovements: function(btn){
 //		window.open('Reporte?nombre=GlobalSale&@EventoPkId=2&@FechaInicial=2018-01-01&@FechaFinal=2020-04-08&@Todo=false&@CajeroPkId=2&tipo=pdf'); //CSAXXX
-		window.open('Reporte?nombre=GlobalSale&@EventoPkId=237&@FechaInicial=2018-01-01&@FechaFinal=2020-04-08&@Todo=false&@CajeroPkId=2&tipo=pdf'); //CSAXXX
+		window.open('Reporte?nombre=GlobalSale'+companyId+'&@EventoPkId='+eventId+'&@FechaInicial=2018-01-01&@FechaFinal=2020-04-08&@Todo=false&@CajeroPkId=2&tipo=pdf&companyId='+companyId); //CSAXXX
 	},
 	
 	xlsMovements: function(btn){
 //		window.open('Reporte?nombre=GlobalSale&@EventoPkId=2&@FechaInicial=2018-01-01&@FechaFinal=2020-04-08&@Todo=false&@CajeroPkId=2&tipo=vnd.ms-excel'); //CSAXXX
-		window.open('Reporte?nombre=GlobalSale&@EventoPkId=237&@FechaInicial=2018-01-01&@FechaFinal=2020-04-08&@Todo=false&@CajeroPkId=2&tipo=vnd.ms-excel'); //CSAXXX
+		window.open('Reporte?nombre=GlobalSale'+companyId+'&@EventoPkId='+eventId+'&@FechaInicial=2018-01-01&@FechaFinal=2020-04-08&@Todo=false&@CajeroPkId=2&tipo=vnd.ms-excel&companyId='+companyId); //CSAXXX
 	}
 });

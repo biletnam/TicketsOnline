@@ -3,7 +3,6 @@ Ext.define('app.view.header.Show' ,{
     alias: 'widget.headershow',
 
     initComponent: function() {
-    	console.log('Inicializando vista encabezado...');
     	this.layout = 'fit';
         this.border = false;
     	this.items = [

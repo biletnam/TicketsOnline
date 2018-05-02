@@ -14,7 +14,6 @@ Ext.define('app.view.poster.Show' ,{
 	},
     
     initComponent: function() {
-    	console.log('Inicializando vista poster...');
     	this.items = [
     		{
     			xtype: 'image',

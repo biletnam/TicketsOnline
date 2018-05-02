@@ -158,7 +158,7 @@ Ext.onReady(function() {
                         
                         if (target) {
                             win = Ext.widget('window', {
-                                title: 'Condicines de Uso',
+                                title: 'Condiciones de Uso',
                                 modal: true,
                                 html: Ext.getDom('legalese').innerHTML,
                                 width: 900,
@@ -271,6 +271,9 @@ Ext.onReady(function() {
                     	form.submit({
                     		clientValidation: true,
                     		url: '../Accion/addUser',
+                    		params:{
+                    			companyId: companyId
+                    		},
                     		success: function(response, opts) {
                     			Ext.MessageBox.alert('Informaci&oacute;n', 'Usuario dado de alta satisfactoriamente, ya puede iniciar sesi&oacute;n.');
                     			showLogin();
@@ -349,7 +352,7 @@ Ext.onReady(function() {
 	        },{
 		        xtype: 'label',
 	            name: 'texto',
-	            html: 'Reg&iacute;strate en XPTickets, es necesario para iniciar con tu compra en linea, adem&aacute;s podr&aacute;s recibir promociones exclusivas.<br>Aun no estoy registrado, <a href="#"  onclick="showRegister();">Reg&iacute;strate (dar click aqu&iacute;)</a>.<br><br>**Recuerde tener las ventanas emergentes (popups) encendidas.',
+	            html: 'Es necesario registrarte para iniciar con tu compra en linea, adem&aacute;s podr&aacute;s recibir promociones exclusivas.<br>Aun no estoy registrado, <a href="#"  onclick="showRegister();">Reg&iacute;strate (dar click aqu&iacute;)</a>.<br><br>**Recuerde tener las ventanas emergentes (popups) encendidas.',
 	        }
         ],
         dockedItems: [{
@@ -424,6 +427,9 @@ Ext.onReady(function() {
                     	form.submit({
                     		clientValidation: true,
                     		url: '../Accion/rememberUser',
+                    		params:{
+                    			companyId: companyId
+                    		},
                     		success: function(form, action) {
                     			Ext.MessageBox.alert('Informaci&oacute;n','Se acaba de enviar la contrase&ntilde;a al correo indicado de manera exitosa.');
                     		},
@@ -448,6 +454,9 @@ Ext.onReady(function() {
                     	form.submit({
                     		clientValidation: true,
                     		url: '../Accion/loginUser',
+                    		params:{
+                    			companyId: companyId
+                    		},
                     		success: function(form, response) {
                    				usrType = response.result.usrType;
                     			win.close();
@@ -458,7 +467,7 @@ Ext.onReady(function() {
                     				 var a = document.createElement("a");
                     				 
                     				 a.textContent = "Reportes";
-                    				 a.setAttribute('href', "../Reportes.jsp");
+                    				 a.setAttribute('href', "../Reportes.jsp?companyId="+companyId+"&eventId="+eventId);
                     				 li.appendChild(a);
                     				 ul.appendChild(li);
                     			}
@@ -487,7 +496,8 @@ Ext.onReady(function() {
 		url: '../Accion/isLoguedUser',
 		method: 'POST',
 		params:{
-			eventId: eventId
+			eventId: eventId,
+			companyId: companyId
 		},
 		success: function(response, opts) {
 			var result = JSON.parse(response.responseText);
@@ -506,7 +516,7 @@ Ext.onReady(function() {
     				 var a = document.createElement("a");
     				 
     				 a.textContent = "Reportes";
-    				 a.setAttribute('href', "../Reportes.jsp");
+    				 a.setAttribute('href', "../Reportes.jsp?companyId="+companyId+"&eventId="+eventId);
     				 li.appendChild(a);
     				 ul.appendChild(li);
     			}

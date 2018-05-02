@@ -10,7 +10,6 @@ Ext.define('app.controller.Grid', {
     ],
     
     init: function() {
-        console.log('Inicializando controlador grid...');
         this.control({
         	'gridshow':{
         		onLayoutBack: this.onLayoutBack

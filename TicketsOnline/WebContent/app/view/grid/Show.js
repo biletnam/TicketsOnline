@@ -3,7 +3,6 @@ Ext.define('app.view.grid.Show' ,{
     alias: 'widget.gridshow',
     
     initComponent: function() {
-    	console.log('Inicializando vista grid...');
     	this.layout = 
     		{
     			type: 'vbox',

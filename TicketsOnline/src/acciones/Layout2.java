@@ -21,6 +21,7 @@ public class Layout2 extends ActionSupport{
 	private String section = null;
 	private StringBuffer path = new StringBuffer();
 	private String svg = null;
+	private String companyId = null;
      
 	public String execute(){
 		getParameters();
@@ -38,8 +39,7 @@ public class Layout2 extends ActionSupport{
 		//Seats
 		try {
 			section = section.replace('_', ' ');
-			//arrSeats = new SQLServerConnection().consultarMatriz("select PrecioDescuentoPkId, seccion, descripcion, precio, butaca, fila, NumeroButaca, status, cargoPorServicio, EventoPkId from tbPreciosDescuentos where EventoPkId = "+location+" and Activo = 1 and Seccion != '0' order by Seccion, Descripcion, Butaca ");
-			arrSeats = new SQLServerConnection().consultarMatriz("select PrecioDescuentoPkId, seccion, descripcion, precio, butaca, fila, NumeroButaca, status, cargoPorServicio, EventoPkId from tbPreciosDescuentos where EventoPkId = "+location+" and Seccion = '"+section+"' order by Butaca ");
+			arrSeats = new SQLServerConnection(companyId).consultarMatriz("select PrecioDescuentoPkId, seccion, descripcion, precio, butaca, fila, NumeroButaca, status, cargoPorServicio, EventoPkId from tbPreciosDescuentos where EventoPkId = "+location+" and Seccion = '"+section+"' order by Butaca ");
 		} catch (Exception e1) {
 			arrSeats = new ArrayList<ArrayList<String>>();
 			e1.printStackTrace();
@@ -53,7 +53,7 @@ public class Layout2 extends ActionSupport{
 		
 		//Non Numbered
 		try {
-			arrNonNumbered = new SQLServerConnection().consultarMatriz("select PrecioDescuentoPkId, seccion, descripcion, precio, butaca, fila, NumeroButaca, status, cargoPorServicio, EventoPkId from tbPreciosDescuentos where EventoPkId = "+location+" and Activo = 1 and Seccion = '0' order by Seccion, Descripcion, Butaca ");
+			arrNonNumbered = new SQLServerConnection(companyId).consultarMatriz("select PrecioDescuentoPkId, seccion, descripcion, precio, butaca, fila, NumeroButaca, status, cargoPorServicio, EventoPkId from tbPreciosDescuentos where EventoPkId = "+location+" and Activo = 1 and Seccion = '0' order by Seccion, Descripcion, Butaca ");
 		} catch (Exception e1) {
 			arrNonNumbered = new ArrayList<ArrayList<String>>();
 			e1.printStackTrace();
@@ -76,9 +76,9 @@ public class Layout2 extends ActionSupport{
 	@SuppressWarnings("deprecation")
 	private void getParameters() {
 		if (getLocation() != null && getSection() != null) { 
-			path.append(request.getRealPath(File.separator)).append("\\svg\\section\\").append(getLocation()).append("_").append(getSection()).append(".svg");
+			path.append(request.getRealPath(File.separator)).append("\\svg\\").append(companyId).append("\\section\\").append(getLocation()).append("_").append(getSection()).append(".svg");
 		}else if (getLocation() != null){
-			path.append(request.getRealPath(File.separator)).append("\\svg\\location\\").append(getLocation()).append(".svg");
+			path.append(request.getRealPath(File.separator)).append("\\svg\\").append(companyId).append("\\location\\").append(getLocation()).append(".svg");
 		}
 	}
 
@@ -105,4 +105,13 @@ public class Layout2 extends ActionSupport{
 	public void setSvg(String svg) {
 		this.svg = svg;
 	}
+
+	public String getCompanyId() {
+		return companyId;
+	}
+
+	public void setCompanyId(String companyId) {
+		this.companyId = companyId;
+	}
+
 }

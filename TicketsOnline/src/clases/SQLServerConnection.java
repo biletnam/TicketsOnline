@@ -20,13 +20,33 @@ public class SQLServerConnection{
 	private ResultSet rs = null;
 	private PreparedStatement ps = null;
 	private CallableStatement sp = null;
+	private String companyId = null;
+	
+	public SQLServerConnection(final String companyId_) {
+		companyId = companyId_;
+	}
+	
+	public SQLServerConnection() {
+		companyId = null;
+	}
 	
 	private void abrir(){
 	   try{
 		   Context ctx = new InitialContext();
 		   Context envContext = (Context) ctx.lookup("java:/comp/env");
-//		   DataSource ds = (DataSource)envContext.lookup("jdbc/xptickets"); 	//CSAXXX
-		   DataSource ds = (DataSource)envContext.lookup("jdbc/autoboleto");	//CSAXXX
+		   DataSource ds = null;
+		   String dataSource = null;
+		   
+		   if (companyId == null) {
+			   ds = (DataSource)envContext.lookup("jdbc/xptickets"); 	//CSAXXX
+			   //ds = (DataSource)envContext.lookup("jdbc/autoboleto");	//CSAXXX
+			   System.err.println("Conexion local");
+		   }else {
+			   dataSource = new SQLServerConnection().consultar1Valor("select datasource from Configuracion.BasesDatos where companyId = " + companyId);
+			   ds = (DataSource)envContext.lookup(dataSource); 	//CSAXXX
+			   System.err.println("Conexion por empresa " + dataSource);
+		   }
+		   
 		   con = ds.getConnection();
 	   }catch (Exception e){
 		   e.printStackTrace();
@@ -56,7 +76,7 @@ public class SQLServerConnection{
 		ArrayList<ArrayList<String>> matriz = new ArrayList<ArrayList<String>>();
 		int n = 0;
 		
-//		System.err.println(_query);
+		System.err.println(_query);
 		
 		abrir();
 		if (con != null){
@@ -199,7 +219,7 @@ public class SQLServerConnection{
 	public int consultar1ValorNumerico(final String _query) {
 		int resultado = 0;
 		
-//		System.out.println(_query);
+		System.out.println(_query);
 		
 		abrir();
 		try{
@@ -226,6 +246,8 @@ public class SQLServerConnection{
 		ArrayList<ArrayList<String>> matriz = new ArrayList<ArrayList<String>>();
 		StringBuffer storedProcedure = new StringBuffer();
 		int n = 0;
+		
+		System.out.println(nombre_);
 		
 		try {
 			storedProcedure.append("{ call ").append(nombre_).append(" (");
@@ -283,6 +305,8 @@ public class SQLServerConnection{
 	public String ejecutarSPUnRetorno(final String nombre_, final String[] valoresParametros_){
 		StringBuffer storedProcedure = new StringBuffer();
 		String valor = "";
+		
+		System.out.println(nombre_);
 		
 		try {
 			storedProcedure.append("{ call ").append(nombre_).append(" (");

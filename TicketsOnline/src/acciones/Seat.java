@@ -15,26 +15,27 @@ public class Seat extends Json{
 	private String number = null;
 	private String location = null;
 	private double grandTotal = 0;
+	private String companyId = null;
     
 	public String confirm(){
 		HttpSession session = ServletActionContext.getRequest().getSession();
-		System.err.println("2 eventId = " + session.getAttribute("eventId"));
+//		System.err.println("2 eventId = " + session.getAttribute("eventId"));
 		eventId = session.getAttribute("eventId").toString();
-		System.err.println("userId = " + session.getAttribute("userId"));
+//		System.err.println("userId = " + session.getAttribute("userId"));
 		String user = session.getAttribute("userId").toString();
 		
 		try {
-			if (new SQLServerConnection().contar("select count(*) from tbButacasEnProceso where EventoPkId = "+eventId+" and Seccion = '"+sectionId+"' and Butaca = "+index+" and idSesion != '" + user + "'") > 0) {
+			if (new SQLServerConnection(companyId).contar("select count(*) from tbButacasEnProceso where EventoPkId = "+eventId+" and Seccion = '"+sectionId+"' and Butaca = "+index+" and idSesion != '" + user + "'") > 0) {
 				setMsg("Ocupado");
 				setState(1);	//Ocupado
 				setSuccess(false);
-			}else if (new SQLServerConnection().actualizar("delete from tbButacasEnProceso where EventoPkId = "+eventId+" and Seccion = '"+sectionId+"' and Seccion != '0' and Butaca = "+index+" and idSesion = '" + user + "' ") > 0) {
+			}else if (new SQLServerConnection(companyId).actualizar("delete from tbButacasEnProceso where EventoPkId = "+eventId+" and Seccion = '"+sectionId+"' and Seccion != '0' and Butaca = "+index+" and idSesion = '" + user + "' ") > 0) {
 				setMsg("Se borraron");
 				setState(0);	//Libre
 				setSuccess(true);
 			}else {
 				try {
-					new SQLServerConnection().actualizar("insert into tbButacasEnProceso (EventoPkId, Seccion, Butaca, NumeroButaca, CajeroPkId, Fecha, UsuarioId, Status, idSesion, Descripcion) values ("+eventId+", '"+sectionId+"', "+index+", '"+number+"', 2, getDate(), 1, 1, '"+user+"', '"+location+"') ");
+					new SQLServerConnection(companyId).actualizar("insert into tbButacasEnProceso (EventoPkId, Seccion, Butaca, NumeroButaca, CajeroPkId, Fecha, UsuarioId, Status, idSesion, Descripcion) values ("+eventId+", '"+sectionId+"', "+index+", '"+number+"', 2, getDate(), 1, 1, '"+user+"', '"+location+"') ");
 					setState(2);		//Apartar
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -52,23 +53,23 @@ public class Seat extends Json{
 	public String confirmSection(){
 		HttpSession session = ServletActionContext.getRequest().getSession();
 		int n = 0;
-		System.err.println("3 eventId = " + eventId);
-		System.err.println("location = " + location);
-		System.err.println("seccion = " + sectionId);
-		System.err.println("grandTotal = " + grandTotal);
-		System.err.println("userId = " + session.getAttribute("userId"));
+//		System.err.println("3 eventId = " + eventId);
+//		System.err.println("location = " + location);
+//		System.err.println("seccion = " + sectionId);
+//		System.err.println("grandTotal = " + grandTotal);
+//		System.err.println("userId = " + session.getAttribute("userId"));
 		String user = session.getAttribute("userId").toString();
 		
 		
 		try {
 			if (grandTotal == 0) {
-				new SQLServerConnection().actualizar("delete from tbButacasEnProceso where eventopkid = "+eventId+" and seccion = '"+sectionId+"' and descripcion = '"+location+"' and idSesion = "+user);
+				new SQLServerConnection(companyId).actualizar("delete from tbButacasEnProceso where eventopkid = "+eventId+" and seccion = '"+sectionId+"' and descripcion = '"+location+"' and idSesion = "+user);
 			}
 			
-			n = new SQLServerConnection().consultar1ValorNumerico("select boletos from tbpreciosdescuentos where eventopkid = "+eventId+" and seccion = '"+sectionId+"' and descripcion = '"+location+"' ");
+			n = new SQLServerConnection(companyId).consultar1ValorNumerico("select boletos from tbpreciosdescuentos where eventopkid = "+eventId+" and seccion = '"+sectionId+"' and descripcion = '"+location+"' ");
 			
 			if (n > 0){
-				new SQLServerConnection().actualizar("insert into tbButacasEnProceso (EventoPkId, Seccion, Butaca, NumeroButaca, CajeroPkId, Fecha, UsuarioId, Status, idSesion, Descripcion) values ("+eventId+", '"+sectionId+"', "+0+", '"+0+"', 2, getDate(), 1, 1, '"+user+"', '"+location+"') ");
+				new SQLServerConnection(companyId).actualizar("insert into tbButacasEnProceso (EventoPkId, Seccion, Butaca, NumeroButaca, CajeroPkId, Fecha, UsuarioId, Status, idSesion, Descripcion) values ("+eventId+", '"+sectionId+"', "+0+", '"+0+"', 2, getDate(), 1, 1, '"+user+"', '"+location+"') ");
 				setSuccess(true);
 			}else {
 				setSuccess(false);
@@ -81,14 +82,31 @@ public class Seat extends Json{
 		return SUCCESS;
  	}
 	
-	public String releaseAll(){
+	public String releaseAll(final String companyId_){ 
 		HttpSession session = ServletActionContext.getRequest().getSession();
 		String user = null;
 		
+		companyId = companyId_;
+		
 		try {
-			System.err.println("userId = " + session.getAttribute("userId"));
+//			System.err.println("userId = " + session.getAttribute("userId"));
 			user = session.getAttribute("userId").toString();
-			new SQLServerConnection().actualizar("delete from tbButacasEnProceso where idSesion = '" + user + "' ");
+			new SQLServerConnection(companyId).actualizar("delete from tbButacasEnProceso where idSesion = '" + user + "' ");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return SUCCESS;
+ 	}
+	
+	public String releaseAll(){ 
+		HttpSession session = ServletActionContext.getRequest().getSession();
+		String user = null;
+		companyId = ServletActionContext.getRequest().getParameter("companyId");
+		
+		try {
+			user = session.getAttribute("userId").toString();
+			new SQLServerConnection(companyId).actualizar("delete from tbButacasEnProceso where idSesion = '" + user + "' ");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -150,6 +168,14 @@ public class Seat extends Json{
 
 	public void setGrandTotal(double grandTotal) {
 		this.grandTotal = grandTotal;
+	}
+
+	public String getCompanyId() {
+		return companyId;
+	}
+
+	public void setCompanyId(String companyId) {
+		this.companyId = companyId;
 	}
 
 }

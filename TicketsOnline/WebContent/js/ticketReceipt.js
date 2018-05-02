@@ -11,7 +11,6 @@ function showTicketReceipt(url_){
 }
 
 Ext.onReady(function() {
-   
     var windowT = Ext.widget('window',{
     	title: 'Comprobante de pago enviado a su email',
     	id: 'windowTicketReceipt',
@@ -20,7 +19,7 @@ Ext.onReady(function() {
     	closable: true,
     	listeners:{
             'close':function(win){
-            	window.location.href = '../index.jsp';
+            	window.location.href = '../index.jsp?companyId='+companyId;
              }
     	}
     });
