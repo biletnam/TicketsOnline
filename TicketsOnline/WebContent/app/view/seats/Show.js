@@ -48,8 +48,7 @@ Ext.define('app.view.seats.Show' ,{
                     tag: 'iframe',
                     id: 'location',
                     name: 'location',
-                    src: 'Accion2/Layout?location='+window.parent.eventId+'&section=1&companyId='+window.parent.companyId			//CSAXXX
-//                    src: 'Accion2/Layout?location=2&section=1&companyId='+companyId			//CSAXXX
+                    src: 'Accion2/Layout?location='+window.parent.eventId+'&companyId='+window.parent.companyId			//CSAXXX
                 },
     			listeners:{
     				load:{

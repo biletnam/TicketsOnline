@@ -22,6 +22,7 @@ public class Layout2 extends ActionSupport{
 	private StringBuffer path = new StringBuffer();
 	private String svg = null;
 	private String companyId = null;
+	private boolean isMain = true;
      
 	public String execute(){
 		getParameters();
@@ -36,21 +37,25 @@ public class Layout2 extends ActionSupport{
 		ArrayList<ArrayList<String>> arrNonNumbered = null;
 		ArrayList<String> arrRow = null;
 		
-		//Seats
-		try {
-			section = section.replace('_', ' ');
-			arrSeats = new SQLServerConnection(companyId).consultarMatriz("select PrecioDescuentoPkId, seccion, descripcion, precio, butaca, fila, NumeroButaca, status, cargoPorServicio, EventoPkId from tbPreciosDescuentos where EventoPkId = "+location+" and Seccion = '"+section+"' order by Butaca ");
-		} catch (Exception e1) {
-			arrSeats = new ArrayList<ArrayList<String>>();
-			e1.printStackTrace();
-		}
+		System.out.println(isMain);
 		
-		for (int i = 0; i < arrSeats.size(); i++) {
-			arrRow = arrSeats.get(i);
-			seats.add(new Seat(arrRow.get(0).toString(), arrRow.get(1).toString(), arrRow.get(2).toString(), arrRow.get(3).toString(), arrRow.get(4).toString(), arrRow.get(5).toString(), arrRow.get(6).toString(), arrRow.get(7).toString(), arrRow.get(8).toString(), arrRow.get(9).toString()));
-			arrRow.clear();
+		if (!isMain) {
+			//Seats
+			try {
+				section = section.replace('_', ' ');
+				arrSeats = new SQLServerConnection(companyId).consultarMatriz("select PrecioDescuentoPkId, seccion, descripcion, precio, butaca, fila, NumeroButaca, status, cargoPorServicio, EventoPkId from tbPreciosDescuentos where EventoPkId = "+location+" and Seccion = '"+section+"' order by Butaca ");
+			} catch (Exception e1) {
+				arrSeats = new ArrayList<ArrayList<String>>();
+				e1.printStackTrace();
+			}
+			
+			for (int i = 0; i < arrSeats.size(); i++) {
+				arrRow = arrSeats.get(i);
+				seats.add(new Seat(arrRow.get(0).toString(), arrRow.get(1).toString(), arrRow.get(2).toString(), arrRow.get(3).toString(), arrRow.get(4).toString(), arrRow.get(5).toString(), arrRow.get(6).toString(), arrRow.get(7).toString(), arrRow.get(8).toString(), arrRow.get(9).toString()));
+				arrRow.clear();
+			}
 		}
-		
+			
 		//Non Numbered
 		try {
 			arrNonNumbered = new SQLServerConnection(companyId).consultarMatriz("select PrecioDescuentoPkId, seccion, descripcion, precio, butaca, fila, NumeroButaca, status, cargoPorServicio, EventoPkId from tbPreciosDescuentos where EventoPkId = "+location+" and Activo = 1 and Seccion = '0' order by Seccion, Descripcion, Butaca ");
@@ -77,8 +82,10 @@ public class Layout2 extends ActionSupport{
 	private void getParameters() {
 		if (getLocation() != null && getSection() != null) { 
 			path.append(request.getRealPath(File.separator)).append("\\svg\\").append(companyId).append("\\section\\").append(getLocation()).append("_").append(getSection()).append(".svg");
+			isMain = false;
 		}else if (getLocation() != null){
-			path.append(request.getRealPath(File.separator)).append("\\svg\\").append(companyId).append("\\location\\").append(getLocation()).append(".svg");
+			path.append(request.getRealPath(File.separator)).append("\\svg\\").append(companyId).append("\\section\\").append(getLocation()).append(".svg");
+			isMain = true;
 		}
 	}
 
