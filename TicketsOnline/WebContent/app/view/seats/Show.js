@@ -61,7 +61,7 @@ Ext.define('app.view.seats.Show' ,{
     						var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
     						
     						if (iOS){
-    							element.target.style.transform="scale(.5)";
+    							element.target.style.transform="scale(.3)";
     						}
     						
     				        window.top.resizeIframe(window.top.document.getElementById('frame'));

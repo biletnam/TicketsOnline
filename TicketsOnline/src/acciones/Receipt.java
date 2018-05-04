@@ -180,8 +180,8 @@ public class Receipt extends ActionSupport{
 				params[33] = arrRow.get(33).toString();	//TransaccionPkId
 				params[34] = arrRow.get(34).toString(); //RetVal
 				
-				boletoPkId = new SQLServerConnection(companyId).ejecutarSPUnRetorno("pc_tbboletosV2_save", params);	//CSAXX 
-//				boletoPkId = "1000";		//CSAXXX
+//				boletoPkId = new SQLServerConnection(companyId).ejecutarSPUnRetorno("pc_tbboletosV2_save", params);	//CSAXX 
+				boletoPkId = "1000";		//CSAXXX
 				description = arrRow.get(35).toString();	//Descripcion
 				row = arrRow.get(36).toString();	//Fila
 				

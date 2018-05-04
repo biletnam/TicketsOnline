@@ -20,7 +20,7 @@
     paypal.Button.render({
 
         // Set your environment
-        env: 'production', // sandbox | production
+        env: 'sandbox', // sandbox | production
 
         // Specify the style of the button
 
