@@ -50,7 +50,7 @@ public class Receipt extends ActionSupport{
 			s = request.getSession();
 			paymentID = request.getParameter("paymentID");
 			
-			System.err.println("****************PaymentId = "+paymentID);
+//			System.err.println("****************PaymentId = "+paymentID);
 			
 			//Validation
 //			System.err.println("evento = " + s.getAttribute("eventId"));
@@ -180,12 +180,12 @@ public class Receipt extends ActionSupport{
 				params[33] = arrRow.get(33).toString();	//TransaccionPkId
 				params[34] = arrRow.get(34).toString(); //RetVal
 				
-//				boletoPkId = new SQLServerConnection(companyId).ejecutarSPUnRetorno("pc_tbboletosV2_save", params);	//CSAXX 
-				boletoPkId = "1000";		//CSAXXX
+				boletoPkId = new SQLServerConnection(companyId).ejecutarSPUnRetorno("pc_tbboletosV2_save", params);	//CSAXX 
+//				boletoPkId = "1000";		//CSAXXX
 				description = arrRow.get(35).toString();	//Descripcion
 				row = arrRow.get(36).toString();	//Fila
 				
-				System.err.println("ID Boleto = "+boletoPkId);
+//				System.err.println("ID Boleto = "+boletoPkId);
 				
 				if (boletoPkId.compareTo("0") > 0) {
 					seat = new Seat(boletoPkId, params[3], description, params[18], params[21], row, params[22], params[23], params[25], params[2]);

@@ -9,7 +9,10 @@
 	
 	String companyId = null;
 	
-	companyId = request.getParameter("companyId") == null? "4" : request.getParameter("companyId").toString();  
+	companyId = request.getParameter("companyId") == null? "4" : request.getParameter("companyId").toString();
+	
+	if (companyId.indexOf("/") < 0){
+	
 	request.getSession().setAttribute("companyId", companyId);
 	Company comp = new Company(companyId); 
 %>
@@ -316,3 +319,6 @@
     </footer>
 </body>
 </html>
+<%
+	}
+%>

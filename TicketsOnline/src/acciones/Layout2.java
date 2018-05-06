@@ -37,7 +37,7 @@ public class Layout2 extends ActionSupport{
 		ArrayList<ArrayList<String>> arrNonNumbered = null;
 		ArrayList<String> arrRow = null;
 		
-		System.out.println(isMain);
+//		System.out.println(isMain);
 		
 		if (!isMain) {
 			//Seats

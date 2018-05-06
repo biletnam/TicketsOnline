@@ -40,11 +40,11 @@ public class SQLServerConnection{
 		   if (companyId == null) {
 			   ds = (DataSource)envContext.lookup("jdbc/xptickets"); 	//CSAXXX
 			   //ds = (DataSource)envContext.lookup("jdbc/autoboleto");	//CSAXXX
-			   System.err.println("Conexion local");
+//			   System.err.println("Conexion local");
 		   }else {
 			   dataSource = new SQLServerConnection().consultar1Valor("select datasource from Configuracion.BasesDatos where companyId = " + companyId);
 			   ds = (DataSource)envContext.lookup(dataSource); 	//CSAXXX
-			   System.err.println("Conexion por empresa " + dataSource);
+//			   System.err.println("Conexion por empresa " + dataSource);
 		   }
 		   
 		   con = ds.getConnection();
@@ -76,7 +76,7 @@ public class SQLServerConnection{
 		ArrayList<ArrayList<String>> matriz = new ArrayList<ArrayList<String>>();
 		int n = 0;
 		
-		System.err.println(_query);
+//		System.err.println(_query);
 		
 		abrir();
 		if (con != null){
@@ -219,7 +219,7 @@ public class SQLServerConnection{
 	public int consultar1ValorNumerico(final String _query) {
 		int resultado = 0;
 		
-		System.out.println(_query);
+//		System.out.println(_query);
 		
 		abrir();
 		try{
@@ -247,7 +247,7 @@ public class SQLServerConnection{
 		StringBuffer storedProcedure = new StringBuffer();
 		int n = 0;
 		
-		System.out.println(nombre_);
+//		System.out.println(nombre_);
 		
 		try {
 			storedProcedure.append("{ call ").append(nombre_).append(" (");
@@ -306,7 +306,7 @@ public class SQLServerConnection{
 		StringBuffer storedProcedure = new StringBuffer();
 		String valor = "";
 		
-		System.out.println(nombre_);
+//		System.out.println(nombre_);
 		
 		try {
 			storedProcedure.append("{ call ").append(nombre_).append(" (");
