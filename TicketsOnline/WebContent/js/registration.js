@@ -38,7 +38,7 @@ Ext.onReady(function() {
     	name: 'formPanelRegister',
     	hidden: true,
         frame: true,
-        width: 500,
+//        width: 500,
         bodyPadding: 10,
         bodyBorder: false,
 
@@ -144,7 +144,7 @@ Ext.onReady(function() {
             fieldLabel: 'Condiciones de uso',
             hideLabel: true,
             style: 'margin-top:15px',
-            boxLabel: 'He leido y aceptado las <a href="#" class="terms">condiciones de uso (dar click aqu&iacute;)</a>.',
+            boxLabel: 'He leido y aceptado las condiciones <br>de uso <a href="#" class="terms">(dar click aqu&iacute;)</a>.',
 
             // Listener to open the Terms of Use page link in a modal window
             listeners: {
@@ -161,8 +161,8 @@ Ext.onReady(function() {
                                 title: 'Condiciones de Uso',
                                 modal: true,
                                 html: Ext.getDom('legalese').innerHTML,
-                                width: 900,
-                                height: 500,
+//                                width: 900,
+//                                height: 500,
                                 bodyStyle: 'padding: 10px 20px;',
                                 autoScroll: true,
                                 
@@ -254,7 +254,7 @@ Ext.onReady(function() {
                 xtype: 'button',
                 disabled: false,
                 text: 'Regresar',
-                width: 100,
+//                width: 100,
                 handler: function() {
                 	showLogin();
                 }
@@ -263,7 +263,7 @@ Ext.onReady(function() {
                 formBind: true,
                 disabled: true,
                 text: 'Registrar',
-                width: 100,
+//                width: 100,
                 handler: function() {
                     var form = this.up('form').getForm();
 
@@ -293,7 +293,7 @@ Ext.onReady(function() {
     	id: 'formPanelLogin',
     	name: 'formPanelLogin',
         frame: true,
-        width: 500,
+//        width: 500,
         bodyPadding: 10,
 
         defaults: {
@@ -352,7 +352,7 @@ Ext.onReady(function() {
 	        },{
 		        xtype: 'label',
 	            name: 'texto',
-	            html: 'Es necesario registrarte para iniciar con tu compra en linea, adem&aacute;s podr&aacute;s recibir promociones exclusivas.<br>Aun no estoy registrado, <a href="#"  onclick="showRegister();">Reg&iacute;strate (dar click aqu&iacute;)</a>.<br><br>**Recuerde tener las ventanas emergentes (popups) encendidas.',
+	            html: 'Es necesario registrarte para iniciar con tu compra <br>en l&iacute;nea, adem&aacute;s podr&aacute;s recibir promociones exclusivas.<br>Aun no estoy registrado, <a href="#"  onclick="showRegister();">Reg&iacute;strate (dar click aqu&iacute;)</a>.',
 	        }
         ],
         dockedItems: [{
@@ -418,7 +418,7 @@ Ext.onReady(function() {
                 formBind: true,
                 disabled: true,
                 text: 'Recordar contrase&ntilde;a',
-                width: 140,
+//                width: 140,
                 handler: function() {
                     var form = this.up('form').getForm();
                     var win = this.up('form').up('window');
@@ -445,7 +445,7 @@ Ext.onReady(function() {
                 formBind: true,
                 disabled: true,
                 text: 'Iniciar sesi&oacute;n',
-                width: 100,
+//                width: 100,
                 handler: function() {
                     var form = this.up('form').getForm();
                     var win = this.up('form').up('window');
@@ -523,7 +523,7 @@ Ext.onReady(function() {
     			
 				dialog = Ext.MessageBox.show({
 		           msg: 'Consultando asientos...',
-		           width:300,
+//		           width:300,
 		           wait:true,
 		           waitConfig: {interval:100}
 		        });

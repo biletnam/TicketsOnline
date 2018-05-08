@@ -15,7 +15,7 @@
 <tbody class="">
 <tr class="">
 <td>
-<center class=""><img src="../images/<s:property value="companyId"/>/system/logo.png"></center>
+<center class=""><img src="../images/company/<s:property value="companyId"/>/system/logo.png"></center>
 </td>
 </tr>
 <tr class="">

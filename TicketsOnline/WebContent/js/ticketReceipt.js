@@ -4,7 +4,7 @@ Ext.require([
 
 function showTicketReceipt(url_){
 	var w = Ext.getCmp('windowTicketReceipt');
-	var html = '<iframe src="'+url_+'" width="450" height="800"/>';
+	var html = '<iframe src="'+url_+'" width="350" height="800"/>';
 		
 	w.html = html;
 	w.show();

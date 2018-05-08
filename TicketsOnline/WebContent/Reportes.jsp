@@ -63,12 +63,12 @@
                      <div class="scroll-hide">
                         <div class="container">
                             <a class="navbar-brand center" href="#">
-                                <img src="images/<%=request.getParameter("companyId")%>/system/logo.png" alt="logo" />
+                                <img src="images/company/<%=request.getParameter("companyId")%>/system/logo.png" alt="logo" />
                             </a>
                         </div>
                     </div>
                     <div class="navbar-header">
-                        <a class="navbar-brand" href="index.jsp"><img src="images/<%=request.getParameter("companyId")%>/system/logo.png" alt="logo" /></a>
+                        <a class="navbar-brand" href="index.jsp"><img src="images/company/<%=request.getParameter("companyId")%>/system/logo.png" alt="logo" /></a>
                         <button type="button" class="navbar-toggle">
                             <i class="fa fa-bars"></i>
                         </button>

@@ -26,7 +26,7 @@
 
         style: {
             layout: 'vertical',  // horizontal | vertical
-            size:   'large',    // medium | large | responsive
+            size:   'responsive',    // medium | large | responsive
             shape:  'pill',      // pill | rect
             color:  'gold'       // gold | blue | silver | black
         },

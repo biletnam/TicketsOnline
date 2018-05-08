@@ -48,7 +48,7 @@ Ext.define('app.view.seats.Show' ,{
                     tag: 'iframe',
                     id: 'location',
                     name: 'location',
-                    src: 'Accion2/Layout?location='+window.parent.eventId+'&companyId='+window.parent.companyId			//CSAXXX
+                    src: 'Accion2/Layout?location='+window.parent.eventId+'&companyId='+window.parent.companyId+'&placeId='+window.parent.placeId			
                 },
     			listeners:{
     				load:{
@@ -58,12 +58,12 @@ Ext.define('app.view.seats.Show' ,{
     						//Seat frame adjust
     						element.target.style.height = altura + 'px';
     						Ext.getCmp('seatsshow').doLayout();
-    						var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
-    						
-    						if (iOS){
-    							element.target.style.transform="scale(.3)";
-    						}
-    						
+//    						var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+//    						
+//    						if (iOS){
+//    							element.target.style.transform="scale(.3)";
+//    						}
+//    						
     				        window.top.resizeIframe(window.top.document.getElementById('frame'));
     					}
     				},
@@ -88,18 +88,13 @@ Ext.define('app.view.seats.Show' ,{
     	    		    items:
     	    		    [
     	    		    	{
-    	    		    		xtype: 'panel',
-    	    		    		border: false,
-    	    		    		flex: 1
-    	    		    	},
-    	    		    	{
 		    		    		xtype: 'grid',
 		    	    			name: 'seatsGrid',
 		    	    			id: 'seatsGrid',
 		    	    			cls: 'custom-grid', 
 		    	    			border : true,
 		    	    			store: Ext.data.StoreManager.lookup('Grid'),
-		    	    			flex: 3,
+		    	    			flex: 8,
 		    	    	        columns: [
 		    	    	        	{
 		    	    	        		text: 'Asiento',
@@ -134,12 +129,7 @@ Ext.define('app.view.seats.Show' ,{
 		    	    	                style: 'text-align:left',
 		    	    	        	}
 		    	    	        ] 
-    	    		    	},
-    	    		    	{
-    	    		    		xtype: 'panel',
-    	    		    		border: false,
-    	    		    		flex: 1
-    	    		    	},
+    	    		    	}
     	    		    ]
     	    		},
     	    		{
@@ -151,13 +141,8 @@ Ext.define('app.view.seats.Show' ,{
     	    		    items:
     	    		    [
     	    		    	{
-    	    		    		xtype: 'panel',
-    	    		    		flex: 1,
-    	    		    		border: false,
-    	    		    	},
-    	    		    	{
     	    					xtype: 'form',
-    	    					flex: 3,
+    	    					flex: 8,
     	    					border: false,
     	    					defaultType: 'textfield',
     	    					defaults:{
@@ -214,12 +199,7 @@ Ext.define('app.view.seats.Show' ,{
     	    							}
     	    						},
     	    					]
-    	    		    	},
-    	    		    	{
-    	    		    		xtype: 'panel',
-    	    		    		flex: 1,
-    	    		    		border: false,
-    	    		    	},
+    	    		    	}
     	    		    ]
     	    		}
     		    ],

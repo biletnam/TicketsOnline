@@ -630,7 +630,7 @@ var FlipClock;
 		 * The name of the clock face class in use
 		 */	
 		 
-		clockFace: 'HourlyCounter',
+		clockFace: 'MinuteCounter',
 		 
 		/**
 		 * The name of the clock face class in use

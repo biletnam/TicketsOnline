@@ -22,6 +22,7 @@ public class Layout2 extends ActionSupport{
 	private StringBuffer path = new StringBuffer();
 	private String svg = null;
 	private String companyId = null;
+	private String placeId = null;
 	private boolean isMain = true;
      
 	public String execute(){
@@ -80,11 +81,11 @@ public class Layout2 extends ActionSupport{
 	
 	@SuppressWarnings("deprecation")
 	private void getParameters() {
-		if (getLocation() != null && getSection() != null) { 
-			path.append(request.getRealPath(File.separator)).append("\\svg\\").append(companyId).append("\\section\\").append(getLocation()).append("_").append(getSection()).append(".svg");
+		if (getPlaceId() != null && getSection() != null) { 
+			path.append(request.getRealPath(File.separator)).append("\\svg\\").append(getPlaceId()).append("\\").append(getSection()).append(".svg");
 			isMain = false;
-		}else if (getLocation() != null){
-			path.append(request.getRealPath(File.separator)).append("\\svg\\").append(companyId).append("\\section\\").append(getLocation()).append(".svg");
+		}else if (getPlaceId() != null){
+			path.append(request.getRealPath(File.separator)).append("\\svg\\").append(getPlaceId()).append("\\main.svg");
 			isMain = true;
 		}
 	}
@@ -119,6 +120,14 @@ public class Layout2 extends ActionSupport{
 
 	public void setCompanyId(String companyId) {
 		this.companyId = companyId;
+	}
+
+	public String getPlaceId() {
+		return placeId;
+	}
+
+	public void setPlaceId(String placeId) {
+		this.placeId = placeId;
 	}
 
 }

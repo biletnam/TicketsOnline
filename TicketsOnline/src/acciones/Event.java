@@ -37,6 +37,8 @@ public class Event extends ActionSupport{
 	private String time = VACIO;
 	private String phone = VACIO;
 	private String companyId = VACIO;
+	private String artistId = VACIO;
+	
 	//Company
 	private String nameCompany = VACIO;
 	private String phoneCompany = VACIO;
@@ -56,12 +58,14 @@ public class Event extends ActionSupport{
 			sb.append("select ");
 			sb.append("a.EventoPkId, a.ProductorPkId, a.Titulo, a.ClaveLugar, a.FechaHora, ");
 			sb.append("b.Descripcion, b.lat, b.lon, c.nombreArtista, c.tipoEvento, ");
-			sb.append("c.diaCorto, c.mesCorto, c.anoCorto, c.fechaCompleta, c.hora, d.Telefono ");
+			sb.append("c.diaCorto, c.mesCorto, c.anoCorto, c.fechaCompleta, c.hora, d.Telefono, ");
+			sb.append("b.clave, e.artistaPkId, e.nombre ");
 			sb.append("from ");
 			sb.append("tbEventos a ");
 			sb.append("join tbEspaciosLugares b on a.ClaveLugar = b.Clave ");
 			sb.append("join Configuracion.tbEventosComplemento c on a.EventoPkId = c.EventoPkId ");
 			sb.append("join tbProductores d on a.ProductorPkId = d.ProductorPkId ");
+			sb.append("join tbArtistas e on a.artistaPkId = e.artistaPkId ");
 			sb.append("where ");
 			sb.append("a.EventoPkId = '").append(id).append("' ");
 			arr = new SQLServerConnection(companyId).consultarVector(sb.toString());
@@ -78,7 +82,7 @@ public class Event extends ActionSupport{
 				description = arr.get(5).toString();
 				latitude = arr.get(6).toString();
 				longitude = arr.get(7).toString();
-				artistName = arr.get(8).toString();
+				artistName = arr.get(18).toString();
 				eventType = arr.get(9).toString();
 				shortDay = arr.get(10).toString();
 				shortMonth = arr.get(11).toString();
@@ -86,6 +90,7 @@ public class Event extends ActionSupport{
 				wholeDate = arr.get(13).toString();
 				time = arr.get(14).toString();
 				phone = arr.get(15).toString();
+				artistId = arr.get(17).toString();
 				arr.clear();
 			}
 			
@@ -118,12 +123,14 @@ public class Event extends ActionSupport{
 			sb.append("select ");
 			sb.append("a.EventoPkId, a.ProductorPkId, a.Titulo, a.ClaveLugar, a.FechaHora, ");
 			sb.append("b.Descripcion, b.lat, b.lon, c.nombreArtista, c.tipoEvento, ");
-			sb.append("c.diaCorto, c.mesCorto, c.anoCorto, c.fechaCompleta, c.hora, d.Telefono ");
+			sb.append("c.diaCorto, c.mesCorto, c.anoCorto, c.fechaCompleta, c.hora, d.Telefono, ");
+			sb.append("b.clave, e.artistaPkId, e.nombre ");
 			sb.append("from ");
 			sb.append("tbEventos a ");
 			sb.append("join tbEspaciosLugares b on a.ClaveLugar = b.Clave ");
 			sb.append("join Configuracion.tbEventosComplemento c on a.EventoPkId = c.EventoPkId ");
 			sb.append("join tbProductores d on a.ProductorPkId = d.ProductorPkId ");
+			sb.append("join tbArtistas e on a.artistaPkId = e.artistaPkId ");
 			sb.append("where ");
 			sb.append("a.cancelado = 0 "); 
 			sb.append("and a.agotado = 0 "); 
@@ -306,6 +313,14 @@ public class Event extends ActionSupport{
 
 	public void setPayPalKey(String payPalKey) {
 		this.payPalKey = payPalKey;
+	}
+
+	public String getArtistId() {
+		return artistId;
+	}
+
+	public void setArtistId(String artistId) {
+		this.artistId = artistId;
 	}
 	
 }

@@ -22,6 +22,7 @@
     <script>
       var companyId = <s:property value="companyId"/>; 
       var eventId = <s:property value="id"/>;
+      var placeId = <s:property value="placeId"/>;
       var key = '<s:property value="payPalKey"/>';
     
 	  function resizeIframe(obj) {
@@ -134,12 +135,12 @@
                     <div class="scroll-hide">
                         <div class="container">
                             <a class="navbar-brand center" href="#">
-                                <img src="../images/<s:property value="companyId"/>/system/logo.png" alt="logo" />
+                                <img src="../images/company/<s:property value="companyId"/>/system/logo.png" alt="logo" />
                             </a>
                         </div>
                     </div>
                     <div class="navbar-header">
-                        <a class="navbar-brand" href="../index.jsp?companyId=<s:property value="companyId"/>"><img src="../images/<s:property value="companyId"/>/system/logo.png" alt="logo" /></a>
+                        <a class="navbar-brand" href="../index.jsp?companyId=<s:property value="companyId"/>"><img src="../images/company/<s:property value="companyId"/>/system/logo.png" alt="logo" /></a>
                         <button type="button" class="navbar-toggle">
                             <i class="fa fa-bars"></i>
                         </button>
@@ -168,7 +169,7 @@
             </div>
         </div>
     </header>
-    <div class="header-title ken-burn ken-burn-center" data-parallax="scroll" data-position="top" data-natural-height="670" data-natural-width="1300" data-image-src="../images/<s:property value="companyId"/>/wide/<s:property value="id"/>.jpg">
+    <div class="header-title ken-burn ken-burn-center" data-parallax="scroll" data-position="top" data-natural-height="670" data-natural-width="1300" data-image-src="../images/artist/<s:property value="artistId"/>/wide/1.jpg">
         <div class="container">
             <div class="title-base">
                 <h1 class="text-xl"><s:property value="artistName"/></h1>
@@ -199,23 +200,23 @@
                             <div class="flexslider slider visible-dir-nav nav-inner">
                                 <ul class="slides">
                                     <li>
-                                        <a class="img-box img-scale-rotate lightbox grayscale" href="../images/<s:property value="companyId"/>/gallery/mini/<s:property value="id"/>_1.jpg" data-lightbox-anima="show-scale">
-                                            <img alt="" src="../images/<s:property value="companyId"/>/gallery/mini/<s:property value="id"/>_1.jpg" />
+                                        <a class="img-box img-scale-rotate lightbox grayscale" href="../images/artist/<s:property value="artistId"/>/gallery/mini/1.jpg" data-lightbox-anima="show-scale">
+                                            <img alt="" src="../images/artist/<s:property value="artistId"/>/gallery/mini/1.jpg" />
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="img-box img-scale-rotate lightbox grayscale" href="../images/<s:property value="companyId"/>/gallery/mini/<s:property value="id"/>_2.jpg" data-lightbox-anima="show-scale">
-                                            <img alt="" src="../images/<s:property value="companyId"/>/gallery/mini/<s:property value="id"/>_2.jpg" />
+                                        <a class="img-box img-scale-rotate lightbox grayscale" href="../images/artist/<s:property value="artistId"/>/gallery/mini/2.jpg" data-lightbox-anima="show-scale">
+                                            <img alt="" src="../images/artist/<s:property value="artistId"/>/gallery/mini/2.jpg" />
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="img-box img-scale-rotate lightbox grayscale" href="../images/<s:property value="companyId"/>/gallery/mini/<s:property value="id"/>_3.jpg" data-lightbox-anima="show-scale">
-                                            <img alt="" src="../images/<s:property value="companyId"/>/gallery/mini/<s:property value="id"/>_3.jpg" />
+                                        <a class="img-box img-scale-rotate lightbox grayscale" href="../images/artist/<s:property value="artistId"/>/gallery/mini/3.jpg" data-lightbox-anima="show-scale">
+                                            <img alt="" src="../images/artist/<s:property value="artistId"/>/gallery/mini/3.jpg" />
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="img-box img-scale-rotate lightbox grayscale" href="../images/<s:property value="companyId"/>/gallery/mini/<s:property value="id"/>_4.jpg" data-lightbox-anima="show-scale">
-                                            <img alt="" src="../images/<s:property value="companyId"/>/gallery/mini/<s:property value="id"/>_4.jpg" />
+                                        <a class="img-box img-scale-rotate lightbox grayscale" href="../images/artist/<s:property value="artistId"/>/gallery/mini/4.jpg" data-lightbox-anima="show-scale">
+                                            <img alt="" src="../images/artist/<s:property value="artistId"/>/gallery/mini/4.jpg" />
                                         </a>
                                     </li>
                                 </ul>
@@ -223,8 +224,8 @@
                         </div>
                         <div class="col-md-3">
                             <p>FLYER OFICIAL</p>
-                            <a class="img-box lightbox" href="../images/<s:property value="companyId"/>/flyer/<s:property value="id"/>_S.png" data-lightbox-anima="show-scale">
-                                <img alt="" src="../images/<s:property value="companyId"/>/flyer/<s:property value="id"/>_B.png">
+                            <a class="img-box lightbox" href="../images/company/<s:property value="companyId"/>/flyer/<s:property value="id"/>_S.png" data-lightbox-anima="show-scale">
+                                <img alt="" src="../images/company/<s:property value="companyId"/>/flyer/<s:property value="id"/>_B.png">
                             </a>
                         </div>
                     </div>
@@ -237,7 +238,7 @@
             <div class="row">
                 <div class="col-md-15">
                     <iframe src="../seats.html" id="frame" name="frame" width="100%" frameborder="0" scrolling="no"></iframe>
-					<iframe src="../html/payment.jsp?companyId=<s:property value="companyId"/>" id="payment" name="payment" width="100%" frameborder="0" scrolling="no"></iframe>                    
+					<iframe src="../html/payment.jsp?companyId=<s:property value="companyId"/>" id="payment" name="payment" width="100%" height="200px" frameborder="0" scrolling="no"></iframe>                    
                 	<iframe src="../html/minute-counter.html" id="minute-counter" name="minute-counter" width="100%" frameborder="0" scrolling="no"></iframe>
                 	<iframe id="frameTicketReceipt" name="frameTicketReceipt" width="100%" frameborder="0" scrolling="no" onload="resizeIframe(this)"></iframe>
                 </div>

@@ -27,7 +27,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><%=comp.getName() %></title>
-    <meta name="description" content="Nightlife, night club and bar / pub HTML template with dark / black design and style.">
+    <meta name="description" content="La mejor Experiencia en compra de boletos de sus eventos favoritos">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <link rel="stylesheet" href="scripts/bootstrap/css/bootstrap.css">
     <script src="scripts/script.js"></script>
@@ -49,12 +49,12 @@
                     <div class="scroll-hide">
                         <div class="container">
                             <a class="navbar-brand center" href="#">
-                                <img src="images/<%=companyId%>/system/logo.png" />
+                                <img src="images/company/<%=companyId%>/system/logo.png" />
                             </a>
                         </div>
                     </div>
                     <div class="navbar-header">
-                        <a class="navbar-brand" href="index.jsp"><src="images/<%=companyId%>/system/logo.png" /></a>
+                        <a class="navbar-brand" href="index.jsp"><src="images/company/<%=companyId%>/system/logo.png" /></a>
                         <button type="button" class="navbar-toggle">
                             <i class="fa fa-bars"></i>
                         </button>
@@ -84,8 +84,8 @@
                         </div>
                         <div class="container">
                             <hr class="space" />
-                            <img alt="" class="pos-slider pos-left pos-bottom anima anima-fade-bottom" style="z-index:0" width="530" src="images/<%=companyId%>/slider/<%=arrEvento.get(0).toString()%>.png" />
-                            <div class=" pos-slider pos-right text-right">
+                            <img class="pos-slider pos-center pos-bottom anima anima-fade-bottom" style="z-index:0" src="images/artist/<%=arrEvento.get(17).toString()%>/slider/1.png" />
+                            <div class=" pos-slider pos-center text-center">
                                 <h1 class="text-bold text-xl anima" style="z-index:9"><%=arrEvento.get(8).toString()%></h1>
                                 <p class="text-m anima" style="z-index:9"><b><%=arrEvento.get(13).toString()%></b></p>
                                 <p class="anima"><%=arrEvento.get(5).toString()%><br/></p>
@@ -115,7 +115,7 @@
             	%>
                 <div class="col-md-4">
                     <div class="advs-box advs-box-multiple boxed" data-anima="scale-rotate" data-trigger="hover">
-                        <a class="img-box" href="Accion2/getEvent?id=<%=arrEvento.get(0).toString()%>&companyId=<%=companyId%>"><img alt="" class="anima" src="images/<%=companyId%>/art/<%=arrEvento.get(0).toString()%>.jpg" /></a>
+                        <a class="img-box" href="Accion2/getEvent?id=<%=arrEvento.get(0).toString()%>&companyId=<%=companyId%>&placeId=<%=arrEvento.get(16).toString()%>"><img class="anima" src="images/company/<%=companyId%>/art/<%=arrEvento.get(0).toString()%>.jpg" /></a>
                         <div class="circle anima-rotate-20 anima"><%=arrEvento.get(10).toString()%> <span><%=arrEvento.get(11).toString()%>, <%=arrEvento.get(12).toString()%></span></div>
                         <div class="advs-box-content">
                             <h3><%=arrEvento.get(8).toString()%></h3>
@@ -124,7 +124,7 @@
                                 <%=arrEvento.get(5).toString()%>
                                 <%=arrEvento.get(14).toString()%>
                             </p>
-                            <a class="anima-button circle-button btn-sm" href="Accion2/getEvent?id=2"><i class="fa fa-long-arrow-right"></i>Comprar Boletos </a>
+                            <a class="anima-button circle-button btn-sm" href="Accion2/getEvent?id=<%=arrEvento.get(0).toString()%>&companyId=<%=companyId%>&placeId=<%=arrEvento.get(16).toString()%>"><i class="fa fa-long-arrow-right"></i>Comprar Boletos </a>
                         </div>
                     </div>
                 </div>
@@ -228,13 +228,13 @@
 	           			arrEvento = arrEventos.get(i);
             	%>
                     <div class="grid-item col-md-3">
-                        <a class="img-box" href="images/<%=companyId%>/gallery/bestMoments/<%=arrEvento.get(0).toString()%>_1.jpg">
-                            <img alt="" src="images/<%=companyId%>/gallery/bestMoments/<%=arrEvento.get(0).toString()%>_1.jpg">
+                        <a class="img-box" href="images/artist/<%=arrEvento.get(17).toString()%>/gallery/bestMoments/1.jpg">
+                            <img alt="" src="images/artist/<%=arrEvento.get(17).toString()%>/gallery/bestMoments/1.jpg">
                         </a>
                     </div>
                     <div class="grid-item col-md-3">
-                        <a class="img-box" href="images/<%=companyId%>/gallery/bestMoments/<%=arrEvento.get(0).toString()%>_2.jpg">
-                            <img alt="" src="images/<%=companyId%>/gallery/bestMoments/<%=arrEvento.get(0).toString()%>_2.jpg">
+                        <a class="img-box" href="images/artist/<%=arrEvento.get(17).toString()%>/gallery/bestMoments/2.jpg">
+                            <img alt="" src="images/artist/<%=arrEvento.get(17).toString()%>/gallery/bestMoments/2.jpg">
                         </a>
                     </div>
                     	<%
